@@ -8,10 +8,15 @@
 	<module name="language_menu" order="4" preload="yes"/>
 	<module name="captcha" order="0" preload="no"/>
 
+	<module name="articles" order="1" preload="no"/>
+	<module name="news" order="2" preload="no"/>
+	<module name="contact_form" order="3" preload="no"/>
+	<module name="gallery" order="4" preload="no"/>
+
 	<user
 		fullname="Administrator"
 		username="admin"
 		password=""
 		level="10"
-	/>
+		/>
 </document>

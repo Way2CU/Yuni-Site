@@ -1,0 +1,62 @@
+/**
+ * Content Style Sheet
+ * Yuni Program
+ *
+ * Copyright (c) 2017. by Way2CU, http://way2cu.com
+ * Authors: Mladen Mijatov
+ */
+
+
+// popups
+div.popup {
+	position: fixed;
+	top: 20vw;
+	left: 50%;
+	width: 80vw;
+	padding: @paragraph_spacing;
+	box-sizing: border-box;
+
+	border: 1px solid @color_dark;
+	background-color: fade(@color_dark, 80);
+	box-shadow: 2px 0px 3px fade(@color_dark, 30);
+	transform: translateX(-50%);
+	pointer-events: none;
+	opacity: 0;
+
+	&:target {
+		pointer-events: auto;
+		opacity: 1;
+	}
+
+	// close button
+	a.close {
+		position: absolute;
+		top: 0.5rem;
+		right: 0.5rem;
+		width: @finger_size;
+		height: @finger_size;
+
+		border: 1px solid @color_bright;
+		border-radius: 50%;
+		background-color: @color_dark;
+
+		&:before,
+		&:after {
+			position: absolute;
+			top: 15%;
+			left: calc(~'50% - 0.1rem');
+			width: 0.2rem;
+			height: 70%;
+			content: '';
+
+			background-color: @color_bright;
+			line-height: 0;
+			transform: rotate(45deg);
+			transform-origin: 50% 50%;
+		}
+
+		&:after {
+			transform: rotate(-45deg);
+		}
+	}
+}

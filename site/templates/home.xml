@@ -8,8 +8,13 @@
 		</head>
 
 		<body>
+			<!-- Floating menu and title -->
 			<cms:template file="parts/header.xml"/>
 
+			<!-- Main menu -->
+			<cms:template file="parts/main_menu.xml"/>
+
+			<!-- Footer and copyright -->
 			<cms:template file="parts/footer.xml"/>
 		</body>
 	</html>

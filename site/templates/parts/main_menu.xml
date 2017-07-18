@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE document SYSTEM "../../../units/schema/language.dtd">
+<document>
+	<!-- Menu links -->
+	<nav id="main">
+		<a href="#courses" class="courses">
+			<cms:text constant="menu_courses"/>
+		</a>
+		<a href="#program" class="program">
+			<cms:text constant="menu_program"/>
+		</a>
+		<a href="URL::make(array(), 'contact_us.xml')" cms:eval="href">
+			<cms:text constant="menu_contact_us"/>
+		</a>
+		<a href="#registration" class="registration">
+			<cms:text constant="menu_registration"/>
+		</a>
+	</nav>
+
+	<nav id="other">
+		<a href="URL::make(array(), 'locations.xml')" cms:eval="href">
+			<cms:text constant="menu_locations"/>
+		</a>
+		<a href="URL::make(array(), 'calendar.xml')" cms:eval="href">
+			<cms:text constant="menu_calendar"/>
+		</a>
+	</nav>
+
+	<!-- Sub-menu content -->
+	<div class="popup" id="courses">
+		<a class="close" href="#"/>
+	</div>
+
+	<div class="popup" id="program">
+		<a class="close" href="#"/>
+	</div>
+
+	<div class="popup" id="registration">
+		<a class="close" href="#"/>
+	</div>
+</document>

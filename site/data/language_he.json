@@ -1,5 +1,12 @@
 {
     "site_title": "Yuni",
     "copyright_holder": "Copyright &copy;2017. by <a href=\"http://way2cu.com\" target=\"_blank\">Way2CU</a>.",
-    "copyright_rights": "All rights reserved."
+    "copyright_rights": "All rights reserved.",
+
+	"menu_courses": "Courses",
+	"menu_program": "Program",
+	"menu_contact_us": "Contact us",
+	"menu_registration": "Registration",
+	"menu_locations": "Locations",
+	"menu_calendar": "Calendar"
 }

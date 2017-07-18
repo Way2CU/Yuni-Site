@@ -33,6 +33,18 @@
 
 // regular button with colored background
 .regular-button() {
+	border: 0.1rem solid @color_green;
+	background-image: url(../images/squiggle_background.svg);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+
+	&:hover {
+		border-color: lighten(@color_green, 20);
+	}
+
+	&:active {
+		border-color: darken(@color_green, 20);
+	}
 }
 
 // main menu button with single icon

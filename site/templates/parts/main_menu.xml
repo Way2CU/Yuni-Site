@@ -4,30 +4,41 @@
 	<!-- Menu links -->
 	<nav id="main">
 		<a href="#program" class="program">
-			<cms:svg file="sprite.svg" symbol="icon-book"/>
+			<svg>
+				<cms:svg file="squiggle.svg"/>
+				<cms:svg file="sprite.svg" symbol="icon-book"/>
+			</svg>
 			<cms:text constant="menu_program"/>
 		</a>
 		<a href="#courses" class="courses">
-			<cms:svg file="sprite.svg" symbol="icon-hat"/>
+			<svg>
+				<cms:svg file="squiggle.svg"/>
+				<cms:svg file="sprite.svg" symbol="icon-hat"/>
+			</svg>
 			<cms:text constant="menu_courses"/>
 		</a>
 		<a href="#registration" class="registration">
-			<cms:svg file="sprite.svg" symbol="icon-diploma"/>
+			<svg>
+				<cms:svg file="squiggle.svg"/>
+				<cms:svg file="sprite.svg" symbol="icon-diploma"/>
+			</svg>
 			<cms:text constant="menu_registration"/>
 		</a>
 		<a href="URL::make(array(), 'contact_us.xml')" cms:eval="href">
-			<cms:svg file="sprite.svg" symbol="icon-envelope"/>
+			<svg>
+				<cms:svg file="squiggle.svg"/>
+				<cms:svg file="sprite.svg" symbol="icon-envelope"/>
+			</svg>
 			<cms:text constant="menu_contact_us"/>
 		</a>
 	</nav>
 
+	<!-- Additional links -->
 	<nav id="other">
-		<a href="URL::make(array(), 'calendar.xml')" cms:eval="href">
-			<cms:svg file="sprite.svg" symbol="icon-courses"/>
+		<a class="calendar" href="URL::make(array(), 'calendar.xml')" cms:eval="href">
 			<cms:text constant="menu_calendar"/>
 		</a>
-		<a href="URL::make(array(), 'locations.xml')" cms:eval="href">
-			<cms:svg file="sprite.svg" symbol="icon-courses"/>
+		<a class="locations" href="URL::make(array(), 'locations.xml')" cms:eval="href">
 			<cms:text constant="menu_locations"/>
 		</a>
 	</nav>

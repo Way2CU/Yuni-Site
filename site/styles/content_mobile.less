@@ -8,7 +8,7 @@
 
 nav#main {
 	margin: 0;
-	margin-bottom: @section_spacing;
+	margin-bottom: @section_spacing / 2;
 	padding: 3rem;
 	padding-bottom: 0;
 	box-sizing: border-box;
@@ -22,12 +22,22 @@ nav#main {
 
 nav#other {
 	margin: 0;
-	padding: 7rem;
+	padding: 4rem;
 	padding-top: 0;
 	box-sizing: border-box;
 
 	a {
+		display: inline-block;
+		padding-top: 70px;
+
+		background-position: center top;
+		background-repeat: no-repeat;
+		background-size: 64px 64px;
+
 		.main-menu-button(@color_contact);
+
+		&.calendar { background-image: url(../images/calendar.png); }
+		&.locations { background-image: url(../images/location.png); }
 	}
 }
 

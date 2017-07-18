@@ -9,7 +9,6 @@
 	"/locations/{s:location}": "loacation_info.xml",
 	"/courses/{s:course}": "course.xml",
 	"/program/{s:program}": "program.xml",
-	"/registration": "registration.xml",
 	"/registration/acceptance": "registration_acceptance.xml",
 	"/registration/acceptance/{s:document}": "registration_acceptance_document.xml",
 	"/registration/sign-up": "registration_signup.xml",

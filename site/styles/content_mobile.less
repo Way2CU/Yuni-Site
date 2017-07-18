@@ -13,10 +13,12 @@ nav#main {
 	padding-bottom: 0;
 	box-sizing: border-box;
 
-	a {
-		.main-menu-button(@color_contact);
-	}
+	a { .main-menu-button(@color_contact); }
+	a.program { .main-menu-button(@color_program); }
+	a.courses { .main-menu-button(@color_courses); }
+	a.registration { .main-menu-button(@color_registration); }
 }
+
 
 nav#other {
 	margin: 0;
@@ -30,7 +32,6 @@ nav#other {
 }
 
 
-// popups
 div.popup {
 	position: fixed;
 	top: 20vw;
@@ -45,6 +46,8 @@ div.popup {
 	transform: translateX(-50%);
 	pointer-events: none;
 	opacity: 0;
+
+	color: @color_bright;
 
 	&:target {
 		pointer-events: auto;
@@ -63,6 +66,11 @@ div.popup {
 		border-radius: 50%;
 		background-color: @color_dark;
 
+		html[dir=rtl] & {
+			right: auto;
+			left: 0.5rem;
+		}
+
 		&:before,
 		&:after {
 			position: absolute;
@@ -80,6 +88,43 @@ div.popup {
 
 		&:after {
 			transform: rotate(-45deg);
+		}
+	}
+
+	// popup menu titles
+	&#program h2 { color: @color_program; }
+	&#courses h2 { color: @color_courses; }
+	&#registration h2 { color: @color_registration; }
+
+	h2 svg {
+		display: inline-block;
+		vertical-align: middle;
+		width: 1em;
+		height: 1em;
+		margin-right: @header_spacing / 2;
+		fill: currentColor;
+
+		html[dir=rtl] & {
+			margin-right: 0;
+			margin-left: @header_spacing / 2;
+		}
+	}
+
+	// popup menus
+	nav {
+		a {
+			display: block;
+			padding: calc(~'(' @finger_size ~'- 1em) / 2');
+
+			border-bottom: 1px solid mix(@color_bright, @color_dark, 40);
+
+			color: @color_bright;
+			text-decoration: none;
+
+			// skip border on last item
+			&:last-of-type {
+				border: 0;
+			}
 		}
 	}
 }

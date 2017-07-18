@@ -8,5 +8,8 @@
 	"menu_contact_us": "Contact us",
 	"menu_registration": "Registration",
 	"menu_locations": "Locations",
-	"menu_calendar": "Calendar"
+	"menu_calendar": "Calendar",
+	"menu_registration_acceptance": "Acceptance",
+	"menu_registration_signup": "Sign-up",
+	"menu_registration_faq": "Frequently asked questions"
 }

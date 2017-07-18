@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE document SYSTEM "../../../units/schema/language.dtd">
 <document>
-	<!-- Embed site sprite -->
-	<cms:svg file="sprite.svg"/>
-
 	<header class="mobile_title">
 	</header>
 </document>

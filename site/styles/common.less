@@ -37,4 +37,17 @@
 
 // main menu button with single icon
 .main-menu-button(@color) {
+	display: inline-block;
+	margin-bottom: @paragraph_spacing;
+
+	text-align: center;
+	text-decoration: none;
+
+	.elements-in-row(2, @paragraph_spacing);
+
+	svg {
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
 }

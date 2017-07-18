@@ -1,3 +1,18 @@
 {
-	"/": "home.xml"
+	"/": "home.xml",
+	"/contact-us": "contact_us.xml",
+	"/news": "news.xml",
+	"/calendar": "calendar.xml",
+	"/user/sign-up": "sign_up.xml",
+	"/user/control-panel": "control_panel.xml",
+	"/locations": "locations.xml",
+	"/locations/{s:location}": "loacation_info.xml",
+	"/courses/{s:course}": "course.xml",
+	"/program/{s:program}": "program.xml",
+	"/registration": "registration.xml",
+	"/registration/acceptance": "registration_acceptance.xml",
+	"/registration/acceptance/{s:document}": "registration_acceptance_document.xml",
+	"/registration/sign-up": "registration_signup.xml",
+	"/registration/sign-up/{s:document}": "registration_signup_document.xml",
+	"/registration/faq": "registration_faq.xml"
 }

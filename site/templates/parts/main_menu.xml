@@ -34,10 +34,10 @@
 
 	<!-- Sub-menu content -->
 	<div class="popup" id="program">
-		<h2>
+		<h3>
 			<cms:svg file="sprite.svg" symbol="icon-book"/>
 			<cms:text constant="menu_program"/>
-		</h2>
+		</h3>
 		<nav>
 			<cms:module
 				name="articles"
@@ -50,10 +50,10 @@
 	</div>
 
 	<div class="popup" id="courses">
-		<h2>
+		<h3>
 			<cms:svg file="sprite.svg" symbol="icon-hat"/>
 			<cms:text constant="menu_courses"/>
-		</h2>
+		</h3>
 		<nav>
 			<cms:module
 				name="articles"
@@ -66,10 +66,10 @@
 	</div>
 
 	<div class="popup" id="registration">
-		<h2>
+		<h3>
 			<cms:svg file="sprite.svg" symbol="icon-diploma"/>
 			<cms:text constant="menu_registration"/>
-		</h2>
+		</h3>
 		<nav>
 			<a
 				href="URL::make(array(), 'registration_acceptance.xml')"

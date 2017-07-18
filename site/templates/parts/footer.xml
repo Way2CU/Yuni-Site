@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE document SYSTEM "../../../units/schema/language.dtd">
+<document>
+	<footer>
+		<cms:template file="stock/copyright.xml">
+			<param name="light" value=""/>
+			<param name="holder" value="copyright_holder"/>
+			<param name="text" value="copyright_rights"/>
+		</cms:template>
+	</footer>
+</document>

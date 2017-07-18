@@ -8,6 +8,9 @@
 		</head>
 
 		<body>
+			<cms:template file="parts/header.xml"/>
+
+			<cms:template file="parts/footer.xml"/>
 		</body>
 	</html>
 </document>

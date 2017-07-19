@@ -1,0 +1,21 @@
+/**
+ * Animations Style Sheet
+ * Yuni Program
+ *
+ * Copyright (c) 2017. by Way2CU, http://way2cu.com
+ * Authors: Mladen Mijatov
+ */
+
+@keyframes blinking {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
+
+.blinking-animation() {
+	animation-name: blinking;
+	animation-duration: 1s;
+	animation-fill-mode: both;
+	animation-timing-function: linear;
+	animation-direction: alternate;
+	animation-iteration-count: infinite;
+}

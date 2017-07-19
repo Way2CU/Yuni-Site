@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE document SYSTEM "../../../units/schema/language.dtd">
+<document>
+	<div id="'no'.$params['id']" cms:eval="id">
+		<h3><cms:var param="title" multilanguage="yes"/></h3>
+		<cms:markdown param="content" multilanguage="yes"/>
+
+		<small class="timestamp"><cms:var param="date"/></small>
+	</div>
+</document>

@@ -51,6 +51,9 @@ Site.is_mobile = function() {
 Site.on_load = function() {
 	if (Site.is_mobile())
 		Site.mobile_menu = new Caracal.MobileMenu();
+
+	// create news system
+	Site.news = new NewsSystem('news', 0, 2000, 500);
 };
 
 

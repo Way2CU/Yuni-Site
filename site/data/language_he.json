@@ -11,5 +11,8 @@
 	"menu_calendar": "Calendar",
 	"menu_registration_acceptance": "Acceptance",
 	"menu_registration_signup": "Sign-up",
-	"menu_registration_faq": "Frequently asked questions"
+	"menu_registration_faq": "Frequently asked questions",
+	"menu_news": "News",
+
+	"facebook_link": "Visi us on Facebook"
 }

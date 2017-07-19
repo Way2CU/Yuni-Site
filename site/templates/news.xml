@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE document SYSTEM "../units/schema/language.dtd">
+<!DOCTYPE document SYSTEM "../../units/schema/language.dtd">
 <document>
 	<html lang="$language" dir="$language_rtl ? 'rtl' : 'ltr'" cms:eval="lang,dir">
 		<head>
-			<title><cms:text constant="site_title"/></title>
+			<title>
+				<cms:text constant="site_title"/>
+				<cms:raw text=" - "/>
+				<cms:text constant="menu_news"/>
+			</title>
 			<cms:module name="head_tag" action="print_tag"/>
 		</head>
 
@@ -11,19 +15,15 @@
 			<!-- Floating menu and title -->
 			<cms:template file="parts/header.xml"/>
 
-			<!-- News -->
-			<div id="news">
+			<h1><cms:text constant="menu_news"/></h1>
+			<section id="news">
 				<cms:module
 					name="news"
 					action="show_list"
-					limit="3"
 					order_asc="0"
-					template="parts/news_short.xml"
+					template="parts/news.xml"
 					/>
-			</div>
-
-			<!-- Main menu -->
-			<cms:template file="parts/main_menu.xml"/>
+			</section>
 
 			<!-- Footer and copyright -->
 			<cms:template file="parts/footer.xml"/>

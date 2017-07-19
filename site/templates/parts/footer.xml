@@ -2,6 +2,14 @@
 <!DOCTYPE document SYSTEM "../../../units/schema/language.dtd">
 <document>
 	<footer>
+		<!-- Links -->
+		<div class="links">
+			<a href="http://facebook.com" target="_blank">
+				<cms:text constant="facebook_link"/>
+			</a>
+		</div>
+
+		<!-- Copyright -->
 		<cms:template file="stock/copyright.xml">
 			<param name="light" value=""/>
 			<param name="holder" value="copyright_holder"/>

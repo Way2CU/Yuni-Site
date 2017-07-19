@@ -5,6 +5,7 @@
 		<!-- Links -->
 		<div class="links">
 			<a href="http://facebook.com" target="_blank">
+				<cms:svg file="sprite.svg" symbol="icon-facebook"/>
 				<cms:text constant="facebook_link"/>
 			</a>
 		</div>

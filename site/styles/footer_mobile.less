@@ -17,9 +17,25 @@ footer {
 
 		text-align: center;
 
-		a[href|="facebook.com"] {
+		a[href*="facebook.com"] {
 			display: inline-block;
-			padding-left: 2rem;
+			.finger-size-padding();
+
+			color: @color_bright;
+			text-decoration: none;
+
+			svg {
+				display: inline-block;
+				vertical-align: middle;
+				width: 2em;
+				height: 2em;
+				margin-right: @paragraph_spacing / 2;
+
+				html[dir=rtl] & {
+					margin-left: @paragraph_spacing / 2;
+					margin-right: 0;
+				}
+			}
 		}
 	}
 

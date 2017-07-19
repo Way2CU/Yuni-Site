@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE document SYSTEM "../../units/schema/language.dtd">
+<document>
+	<html lang="$language" dir="$language_rtl ? 'rtl' : 'ltr'" cms:eval="lang,dir">
+		<head>
+			<title>
+				<cms:text constant="site_title"/>
+				<cms:raw text=" - "/>
+				<cms:text constant="menu_calendar"/>
+			</title>
+			<cms:module name="head_tag" action="print_tag"/>
+		</head>
+
+		<body>
+			<!-- Floating menu and title -->
+			<cms:template file="parts/header.xml"/>
+
+			<h1><cms:text constant="menu_calendar"/></h1>
+			<section id="calendar">
+			</section>
+
+			<!-- Footer and copyright -->
+			<cms:template file="parts/footer.xml"/>
+		</body>
+	</html>
+</document>

@@ -6,7 +6,6 @@
 	"/user/sign-up": "sign_up.xml",
 	"/user/control-panel": "control_panel.xml",
 	"/locations": "locations.xml",
-	"/locations/{s:location}": "loacation_info.xml",
 	"/courses/{s:course}": "course.xml",
 	"/program/{s:program}": "program.xml",
 	"/registration/acceptance": "registration_acceptance.xml",

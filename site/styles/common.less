@@ -20,8 +20,9 @@
 @color_program: @color_yellow;
 @color_contact: @color_gray;
 @color_registration: @color_red;
-@color_background: @color_bright;
-@color_text: @color_dark;
+@color_background: #30492f;
+@color_text: @color_bright;
+@color_news_title: @color_green;
 
 // common site spacing
 @section_spacing: 4rem;
@@ -31,9 +32,21 @@
 @input_padding: 0.5rem;
 @finger_size: 2.5rem;
 
+// regular link with underline
+.regular-link() {
+	color: @color_green;
+	text-decoration: underline;
+
+	&:hover {
+		text-decoration: none;
+		background-color: lighten(@color_yellow, 30);
+	}
+}
+
 // regular button with colored background
 .regular-button() {
 	border: 0.1rem solid @color_green;
+	border-radius: 0.5rem;
 	background-image: url(../images/squiggle_background.svg);
 	background-repeat: no-repeat;
 	background-size: 100% 100%;

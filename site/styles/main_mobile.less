@@ -9,6 +9,7 @@
 @import (reference) 'common.less';
 @import (reference) 'stock/functions.less';
 @import 'fonts.less';
+@import 'animations.less';
 // @import 'header_mobile.less';
 @import 'content_mobile.less';
 @import 'footer_mobile.less';
@@ -17,7 +18,7 @@
 
 
 body {
-	background-color: #30492f;
+	background-color: @color_background;
 	background-image: url(../images/background.jpg);
 	background-attachment: fixed;
 	background-repeat: repeat;
@@ -33,6 +34,14 @@ h5 {
 	margin: 0;
 	margin-bottom: @header_spacing;
 	padding: 0;
+}
+
+h1 {
+	padding: 0.5rem;
+	background-color: @color_yellow;
+
+	color: @color_dark;
+	text-align: center;
 }
 
 p {

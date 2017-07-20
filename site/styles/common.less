@@ -45,11 +45,22 @@
 
 // regular button with colored background
 .regular-button() {
+	display: inline-block;
+	margin: @paragraph_spacing / 4;
+	padding: @button_padding;
+
 	border: 0.1rem solid @color_green;
 	border-radius: 0.5rem;
-	background-image: url(../images/squiggle_background.svg);
+	background-image:
+		url(../images/squiggle_background.svg),
+		url(../images/squiggle_background.svg),
+		url(../images/squiggle_background.svg);
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
+	background-position: 0px 0px, 1px 0px, 0px 1px;
+
+	color: @color_bright;
+	text-decoration: none;
 
 	&:hover {
 		border-color: lighten(@color_green, 20);
@@ -85,5 +96,24 @@
 			fill: @color;
 			transform: translate(20%, 20%) scale(0.6);
 		}
+	}
+}
+
+// popup with different states
+.popup() {
+	position: fixed;
+	top: 20vw;
+	left: 50%;
+	width: 80vw;
+	box-sizing: border-box;
+
+	box-shadow: 2px 0px 3px fade(@color_dark, 30);
+	transform: translateX(-50%);
+	pointer-events: none;
+	opacity: 0;
+
+	&:target {
+		pointer-events: auto;
+		opacity: 1;
 	}
 }

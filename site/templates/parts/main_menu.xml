@@ -31,6 +31,69 @@
 			</svg>
 			<cms:text constant="menu_contact_us"/>
 		</a>
+
+		<!-- Sub-menu popups -->
+		<div class="popup" id="program">
+			<h3>
+				<cms:svg file="sprite.svg" symbol="icon-book"/>
+				<cms:text constant="menu_program"/>
+			</h3>
+			<nav>
+				<cms:module
+					name="articles"
+					action="show_list"
+					template="parts/popup_menu_item.xml"
+					group="program"
+					>
+					<param name="section" value="program"/>
+				</cms:module>
+			</nav>
+			<a class="close" href="#"/>
+		</div>
+		<div class="popup" id="courses">
+			<h3>
+				<cms:svg file="sprite.svg" symbol="icon-hat"/>
+				<cms:text constant="menu_courses"/>
+			</h3>
+			<nav>
+				<cms:module
+					name="articles"
+					action="show_list"
+					template="parts/popup_menu_item.xml"
+					group="courses"
+					>
+					<param name="section" value="course"/>
+				</cms:module>
+			</nav>
+			<a class="close" href="#"/>
+		</div>
+		<div class="popup" id="registration">
+			<h3>
+				<cms:svg file="sprite.svg" symbol="icon-diploma"/>
+				<cms:text constant="menu_registration"/>
+			</h3>
+			<nav>
+				<a
+					href="URL::make(array(), 'registration_acceptance.xml')"
+					cms:eval="href"
+					>
+					<cms:text constant="menu_registration_acceptance"/>
+				</a>
+				<a
+					href="URL::make(array(), 'registration_signup.xml')"
+					cms:eval="href"
+					>
+					<cms:text constant="menu_registration_signup"/>
+				</a>
+				<a
+					href="URL::make(array(), 'registration_faq.xml')"
+					cms:eval="href"
+					>
+					<cms:text constant="menu_registration_faq"/>
+				</a>
+			</nav>
+			<a class="close" href="#"/>
+		</div>
 	</nav>
 
 	<!-- Additional links -->
@@ -42,65 +105,4 @@
 			<cms:text constant="menu_locations"/>
 		</a>
 	</nav>
-
-	<!-- Sub-menu content -->
-	<div class="popup" id="program">
-		<h3>
-			<cms:svg file="sprite.svg" symbol="icon-book"/>
-			<cms:text constant="menu_program"/>
-		</h3>
-		<nav>
-			<cms:module
-				name="articles"
-				action="show_list"
-				template="parts/popup_menu_item.xml"
-				group="programs"
-				/>
-		</nav>
-		<a class="close" href="#"/>
-	</div>
-
-	<div class="popup" id="courses">
-		<h3>
-			<cms:svg file="sprite.svg" symbol="icon-hat"/>
-			<cms:text constant="menu_courses"/>
-		</h3>
-		<nav>
-			<cms:module
-				name="articles"
-				action="show_list"
-				template="parts/popup_menu_item.xml"
-				group="courses"
-				/>
-		</nav>
-		<a class="close" href="#"/>
-	</div>
-
-	<div class="popup" id="registration">
-		<h3>
-			<cms:svg file="sprite.svg" symbol="icon-diploma"/>
-			<cms:text constant="menu_registration"/>
-		</h3>
-		<nav>
-			<a
-				href="URL::make(array(), 'registration_acceptance.xml')"
-				cms:eval="href"
-				>
-				<cms:text constant="menu_registration_acceptance"/>
-			</a>
-			<a
-				href="URL::make(array(), 'registration_signup.xml')"
-				cms:eval="href"
-				>
-				<cms:text constant="menu_registration_signup"/>
-			</a>
-			<a
-				href="URL::make(array(), 'registration_faq.xml')"
-				cms:eval="href"
-				>
-				<cms:text constant="menu_registration_faq"/>
-			</a>
-		</nav>
-		<a class="close" href="#"/>
-	</div>
 </document>

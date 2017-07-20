@@ -20,7 +20,31 @@
 				<cms:module
 					name="articles"
 					action="show_group"
-					text_id=""
+					text_id="region-center"
+					template="parts/location_group.xml"
+					/>
+				<cms:module
+					name="articles"
+					action="show_group"
+					text_id="region-sharon"
+					template="parts/location_group.xml"
+					/>
+				<cms:module
+					name="articles"
+					action="show_group"
+					text_id="region-north"
+					template="parts/location_group.xml"
+					/>
+				<cms:module
+					name="articles"
+					action="show_group"
+					text_id="region-south"
+					template="parts/location_group.xml"
+					/>
+				<cms:module
+					name="articles"
+					action="show_group"
+					text_id="region-jerusalem"
 					template="parts/location_group.xml"
 					/>
 			</section>

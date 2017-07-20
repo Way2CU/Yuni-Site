@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE document SYSTEM "../../../units/schema/language.dtd">
+<document>
+	<!-- Location menu item -->
+	<a href="'#'.$params['text_id']" cms:eval="href">
+		<cms:var param="title" multilanguage="yes"/>
+	</a>
+
+	<!-- Location details -->
+	<div class="popup" id="$params['text_id']" cms:eval="id">
+		<h3><cms:var param="title" multilanguage="yes"/></h3>
+		<div>
+			<cms:markdown param="content" multilanguage="yes"/>
+			<a class="close" href="#"><cms:text constant="close"/></a>
+		</div>
+	</div>
+</document>

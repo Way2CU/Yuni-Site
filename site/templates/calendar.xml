@@ -15,8 +15,8 @@
 			<!-- Floating menu and title -->
 			<cms:template file="parts/header.xml"/>
 
-			<h1><cms:text constant="menu_calendar"/></h1>
 			<section id="calendar">
+				<h1><cms:text constant="menu_calendar"/></h1>
 			</section>
 
 			<!-- Footer and copyright -->

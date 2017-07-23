@@ -15,8 +15,8 @@
 			<!-- Floating menu and title -->
 			<cms:template file="parts/header.xml"/>
 
-			<h1><cms:text constant="menu_locations"/></h1>
 			<section id="locations">
+				<h1><cms:text constant="menu_locations"/></h1>
 				<cms:module
 					name="articles"
 					action="show_group"

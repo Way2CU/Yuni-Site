@@ -15,8 +15,17 @@
 			<!-- Floating menu and title -->
 			<cms:template file="parts/header.xml"/>
 
-			<h1><cms:text constant="menu_news"/></h1>
 			<section id="contact">
+				<h1><cms:text constant="menu_news"/></h1>
+
+				<!-- Additional information -->
+				<cms:module
+					name="articles"
+					action="show"
+					text_id="contact_form"
+					/>
+
+				<!-- Contact form itself -->
 				<cms:module
 					name="contact_form"
 					action="show"

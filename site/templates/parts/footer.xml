@@ -4,6 +4,9 @@
 	<footer>
 		<!-- Links -->
 		<div class="links">
+			<a href="http://math.biu.ac.il" target="_blank">
+				<cms:svg file="sprite.svg" symbol="icon-university"/>
+			</a>
 			<a href="http://facebook.com" target="_blank">
 				<cms:svg file="sprite.svg" symbol="icon-facebook"/>
 				<cms:text constant="facebook_link"/>

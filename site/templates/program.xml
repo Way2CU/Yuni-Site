@@ -12,6 +12,7 @@
 					name="articles"
 					action="show"
 					text_id="$_REQUEST['program']"
+					group="program"
 					template="parts/article_title.xml"
 					cms:eval="text_id"
 					/>
@@ -30,6 +31,7 @@
 					name="gallery"
 					action="show_image"
 					text_id="$_REQUEST['program']"
+					group="program"
 					cms:eval="text_id"
 					/>
 
@@ -37,6 +39,7 @@
 					name="articles"
 					action="show"
 					text_id="$_REQUEST['program']"
+					group="program"
 					cms:eval="text_id"
 					/>
 			</section>

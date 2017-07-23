@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE document SYSTEM "../../../units/schema/language.dtd">
+<document>
+	<a
+		href="URL::make(array('document' => $params['text_id']), 'registration_acceptance_document.xml')"
+		cms:eval="href"
+		>
+		<cms:var param="title" multilanguage="yes"/>
+	</a>
+</document>

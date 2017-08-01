@@ -1,0 +1,332 @@
+/**
+ * Content Style Sheet
+ * Yuni Program
+ *
+ * Copyright (c) 2017. by Way2CU, http://way2cu.com
+ * Authors: Mladen Mijatov
+ */
+
+// main menu
+nav#main {
+	width: 1000px;
+	margin: auto;
+	margin-bottom: @section_spacing / 2;
+	padding: 0 3rem;
+	box-sizing: border-box;
+
+	// menu items
+	> a { .main-menu-button(@color_contact, 4); }
+	> a.program { .main-menu-button(@color_program, 4); }
+	> a.courses { .main-menu-button(@color_courses, 4); }
+	> a.registration { .main-menu-button(@color_registration, 4); }
+
+	// sub-menu popups
+	div.popup {
+		.popup();
+		width: 400px;
+		padding: @paragraph_spacing;
+		border: 1px solid @color_dark;
+		background-color: fade(@color_dark, 80);
+		color: @color_bright;
+
+		// close button
+		a.close {
+			position: absolute;
+			top: 0.5rem;
+			right: 0.5rem;
+			width: @finger_size;
+			height: @finger_size;
+
+			border: 1px solid @color_bright;
+			border-radius: 50%;
+			background-color: @color_dark;
+
+			html[dir=rtl] & {
+				right: auto;
+				left: 0.5rem;
+			}
+
+			&:before,
+			&:after {
+				position: absolute;
+				top: 15%;
+				left: calc(~'50% - 0.1rem');
+				width: 0.2rem;
+				height: 70%;
+				content: '';
+
+				background-color: @color_bright;
+				line-height: 0;
+				transform: rotate(45deg);
+				transform-origin: 50% 50%;
+			}
+
+			&:after {
+				transform: rotate(-45deg);
+			}
+		}
+
+		// popup menu titles
+		&#program h3 { color: @color_program; }
+		&#courses h3 { color: @color_courses; }
+		&#registration h3 { color: @color_registration; }
+
+		h3 svg {
+			display: inline-block;
+			vertical-align: middle;
+			width: 1em;
+			height: 1em;
+			margin-right: @header_spacing / 2;
+			fill: currentColor;
+
+			html[dir=rtl] & {
+				margin-right: 0;
+				margin-left: @header_spacing / 2;
+			}
+		}
+
+		// popup menus
+		nav {
+			a {
+				display: block;
+				.finger-size-padding();
+
+				border-bottom: 1px solid mix(@color_bright, @color_dark, 40);
+
+				color: @color_bright;
+				text-decoration: none;
+
+				// skip border on last item
+				&:last-of-type {
+					border: 0;
+				}
+
+				&:active,
+				&:focus {
+					background-color: @color_bright;
+					color: @color_dark;
+				}
+			}
+		}
+	}
+}
+
+
+// additional links on home page
+nav#other {
+	width: 400px;
+	margin: auto;
+	padding: 4rem;
+	padding-top: 0;
+	box-sizing: border-box;
+
+	a {
+		display: inline-block;
+		padding-top: 70px;
+
+		background-position: center top;
+		background-repeat: no-repeat;
+		background-size: 64px 64px;
+
+		.main-menu-button(@color_contact);
+
+		&.calendar { background-image: url(../images/calendar.png); }
+		&.locations { background-image: url(../images/location.png); }
+	}
+}
+
+
+// inner page menu
+nav#page {
+	margin: 0;
+	padding: 1rem 4rem;
+
+	a {
+		.regular-button();
+		display: block;
+		text-align: center;
+	}
+}
+
+
+// home page news container
+div#news {
+	width: 400px;
+	position: relative;
+	min-height: 1rem;
+	margin: 2rem auto;
+	padding: 1rem;
+
+	border: 0.1rem solid fade(@color_gray, 50);
+	border-radius: 0.3rem;
+	background-color: fade(@color_dark, 50);
+
+	text-align: center;
+
+	a.news {
+		position: absolute;
+		top: 0rem;
+		left: 0rem;
+		right: 0rem;
+		padding: 1rem;
+		opacity: 0;
+
+		color: @color_gray;
+		text-decoration: none;
+	}
+}
+
+// news page section
+section#news {
+	padding: 1rem;
+
+	div {
+		margin-bottom: @header_spacing;
+		padding: 1rem;
+
+		background-color: @color_bright;
+		color: @color_dark;
+
+		h3 {
+			padding-bottom: @header_spacing;
+			color: @color_news_title;
+			border-bottom: 1px solid @color_gray;
+		}
+
+		// highlighted news when clicking from home page carousel
+		&:target h3:before {
+			display: inline-block;
+			content: '';
+
+			width: 0;
+			height: 0;
+			border: 0.4em solid transparent;
+			border-left-color: @color_news_title;
+
+			.blinking-animation();
+
+			html[dir=rtl] & {
+				border-left-color: transparent;
+				border-right-color: @color_news_title;
+			}
+		}
+
+		a {
+			.regular-link()
+		}
+
+		// remove margin from last paragraph
+		p:last-child {
+			margin-bottom: 0;
+		}
+
+		small.timestamp {
+			color: mix(@color_bright, @color_dark, 50);
+		}
+	}
+}
+
+
+// locations page and popups
+section#locations {
+
+	// individual location
+	article {
+		width: 800px;
+		margin: 0 auto;
+		margin-bottom: @paragraph_spacing;
+		padding: 1rem;
+
+		text-align: center;
+
+		// link for displaying location information
+		> a {
+			.regular-button();
+		}
+
+		// location detailed information
+		div.popup {
+			.popup();
+			width: 400px;
+			border-radius: 0.5rem;
+			text-align: initial;
+
+			// popup title
+			h3 {
+				margin: 0;
+				padding: @button_padding;
+
+				border-radius: 0.5rem 0.5rem 0 0;
+				background-color: @color_green;
+
+				color: @color_bright;
+				text-align: center;
+			}
+
+			// popup content
+			div {
+				padding: @input_padding;
+				background-color: @color_bright;
+				border-radius: 0 0 0.5rem 0.5rem;
+
+				color: @color_dark;
+
+				a:not(.close) {
+					.regular-link();
+				}
+			}
+
+			a.close {
+				.regular-button();
+			}
+		}
+	}
+}
+
+
+// program and course pages
+section#program,
+section#course {
+	line-height: 0;
+
+	// page image
+	> img {
+		width: 100%;
+	}
+
+	article {
+		position: relative;
+		line-height: 1;
+
+		// inspirational title above page title
+		h1 + h3 {
+			position: absolute;
+			bottom: 100%;
+			left: 0;
+			right: 0;
+			margin: 0;
+			padding: @button_padding;
+
+			background-color: fade(@color_dark, 70);
+			text-align: center;
+		}
+
+		// regular page components
+		p {
+			padding: 0 calc(~'(100% - 800px) / 2');
+		}
+
+		a {
+			.regular-button();
+		}
+
+		hr {
+			display: block;
+			height: 1px;
+			margin-bottom: @paragraph_spacing;
+
+			border: 0;
+			background-color: fade(@color_gray, 50);
+		}
+	}
+}

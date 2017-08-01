@@ -72,7 +72,7 @@
 }
 
 // main menu button with single icon
-.main-menu-button(@color) {
+.main-menu-button(@color, @elements: 2) {
 	display: inline-block;
 	margin-bottom: @paragraph_spacing;
 
@@ -80,12 +80,17 @@
 	text-align: center;
 	text-decoration: none;
 
-	.elements-in-row(2, @paragraph_spacing);
+	.elements-in-row(@elements, @paragraph_spacing);
 
-	svg {
+	> svg {
 		display: block;
-		width: 100%;
-		height: 100%;
+		width: 10rem;
+		height: 10rem;
+		margin-left: auto;
+		margin-right: auto;
+
+		border-radius: 0.5rem;
+		background-color: fade(@color_dark, 30);
 
 		svg:first-child {
 			stroke: @color;

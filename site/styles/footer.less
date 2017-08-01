@@ -1,0 +1,61 @@
+/**
+ * Footer Style Sheet
+ * Yuni Program
+ *
+ * Copyright (c) 2017. by Way2CU, http://way2cu.com
+ * Authors: Mladen Mijatov
+ */
+
+footer {
+	div.links {
+		padding: 1rem;
+		padding-bottom: calc(~'(100vw / 12.8) + 1rem');  // keep the aspect ratio with padding
+		background-image: url(../images/footer2.png);
+		background-position: center bottom;
+		background-repeat: no-repeat;
+		background-size: 100vw auto;
+
+		text-align: center;
+
+		a[href*="math.biu.ac.il"] {
+			display: inline-block;
+			padding: 1rem;
+
+			color: @color_bright;
+			text-decoration: none;
+
+			svg {
+				fill: currentColor;
+				max-height: 4rem;
+			}
+		}
+
+		a[href*="facebook.com"] {
+			display: inline-block;
+			.finger-size-padding();
+
+			color: @color_bright;
+			text-decoration: none;
+
+			svg {
+				display: inline-block;
+				vertical-align: middle;
+				width: 2em;
+				height: 2em;
+				margin-right: @paragraph_spacing / 2;
+
+				html[dir=rtl] & {
+					margin-left: @paragraph_spacing / 2;
+					margin-right: 0;
+				}
+			}
+		}
+	}
+
+	div.copyright {
+		text-align: center;
+		background-color: black;
+		background-position: calc(~'50% - 100px');
+		color: @color_gray;
+	}
+}

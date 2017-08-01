@@ -9,25 +9,23 @@
 @import (reference) 'common.less';
 @import (reference) 'stock/functions.less';
 @import 'fonts.less';
-// @import 'header.less';
-// @import 'content.less';
-// @import 'footer.less';
+@import 'animations.less';
+@import 'header.less';
+@import 'content.less';
+@import 'footer.less';
 
 @import (css) 'stock/copyright.css';
 
 
 body {
+	padding-top: 3rem;
 	background-color: @color_background;
+	background-image: url(../images/background2.jpg);
+	background-attachment: fixed;
+	background-repeat: repeat;
+	background-size: cover;
+
 	color: @color_text;
-
-	font-family: generic;
-}
-
-input,
-select,
-textarea,
-button {
-	font-family: generic;
 }
 
 h1,
@@ -38,6 +36,14 @@ h5 {
 	margin: 0;
 	margin-bottom: @header_spacing;
 	padding: 0;
+}
+
+h1 {
+	padding: 0.5rem;
+	background-color: @color_yellow;
+
+	color: @color_dark;
+	text-align: center;
 }
 
 p {

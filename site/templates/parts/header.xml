@@ -2,28 +2,26 @@
 <!DOCTYPE document SYSTEM "../../../units/schema/language.dtd">
 <document>
 	<header class="mobile_title">
-		<cms:mobile>
-			<a class="menu">
-				<cms:svg file="sprite.svg" symbol="icon-menu"/>
-			</a>
+		<a class="menu">
+			<cms:svg file="sprite.svg" symbol="icon-menu"/>
+		</a>
 
-			<a
-				href="URL::make()"
-				class="logo"
-				title="site_title"
-				cms:eval="href"
-				cms:constant="title"
-				>
-				<cms:svg file="sprite.svg" symbol="icon-logo"/>
-			</a>
+		<a
+			href="URL::make()"
+			class="logo"
+			title="site_title"
+			cms:eval="href"
+			cms:constant="title"
+			>
+			<cms:svg file="sprite.svg" symbol="icon-logo"/>
+		</a>
 
-			<a
-				class="login"
-				title="menu_login"
-				cms:constant="title"
-				>
-				<cms:svg file="sprite.svg" symbol="icon-login"/>
-			</a>
-		</cms:mobile>
+		<a
+			class="login"
+			title="menu_login"
+			cms:constant="title"
+			>
+			<cms:svg file="sprite.svg" symbol="icon-login"/>
+		</a>
 	</header>
 </document>

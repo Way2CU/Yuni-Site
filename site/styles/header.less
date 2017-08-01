@@ -1,0 +1,47 @@
+/**
+ * Header Style Sheet
+ * Yuni Program
+ *
+ * Copyright (c) 2017. by Way2CU, http://way2cu.com
+ * Authors: Mladen Mijatov
+ */
+
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	padding: @header_spacing / 2;
+
+	border-bottom: 1px solid fade(@color_bright, 20);
+	background-color: @color_dark;
+	box-shadow: 0px 2px 3px fade(@color_dark, 50);
+
+	line-height: 0;
+	text-align: center;
+
+	a {
+		@size: 2.3rem;
+		display: inline-block;
+
+		svg {
+			display: inline-block;
+			fill: @color_bright;
+			max-height: @size;
+		}
+
+		&.logo {
+			width: 300px;
+			text-align: center;
+
+			svg {
+				width: 100%;
+			}
+		}
+
+		&.login svg,
+		&.menu svg {
+			width: @size;
+		}
+	}
+}

@@ -1,11 +1,11 @@
 ---
 site:
-  domain: sample.com
+  domain: yuni.co.il
   # subdomain: test
   # alias: domain.com
   root: httpdocs
-  username: sample
-  caracal_branch: master
+  username: yuni
+  caracal_branch: v0.4
   # ip_address: 0.0.0.0
   # owner: Some Person
   # plan: Unlimited

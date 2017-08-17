@@ -17,6 +17,16 @@
 
 			<section id="calendar">
 				<h1><cms:text constant="menu_calendar"/></h1>
+
+				<!-- Google Calendar embed code -->
+				<iframe
+					src="https://calendar.google.com/calendar/embed?src=yuniexcel%40gmail.com&ctz=Asia/Jerusalem"
+					style="border: 0"
+					width="800"
+					height="600"
+					frameborder="0"
+					scrolling="no"
+					/>
 			</section>
 
 			<!-- Footer and copyright -->

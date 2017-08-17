@@ -19,6 +19,7 @@
 		<a
 			class="login"
 			title="menu_login"
+			href="https://app.tepez.co.il/#/f/56a89b709fb3c5d71f296707/run/"
 			cms:constant="title"
 			>
 			<cms:svg file="sprite.svg" symbol="icon-login"/>

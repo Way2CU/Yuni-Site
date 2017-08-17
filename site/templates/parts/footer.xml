@@ -7,7 +7,7 @@
 			<a href="http://math.biu.ac.il" target="_blank">
 				<cms:svg file="sprite.svg" symbol="icon-university"/>
 			</a>
-			<a href="http://facebook.com" target="_blank">
+			<a href="https://www.facebook.com/%D7%94%D7%AA%D7%9B%D7%A0%D7%99%D7%AA-%D7%9C%D7%A0%D7%95%D7%A2%D7%A8-%D7%9E%D7%95%D7%9B%D7%A9%D7%A8-%D7%91%D7%9E%D7%AA%D7%9E%D7%98%D7%99%D7%A7%D7%94-132623920141109/?ref=ts&fref=ts&sw_fnr_id=1900490535&fnr_t=0" target="_blank">
 				<cms:svg file="sprite.svg" symbol="icon-facebook"/>
 				<cms:text constant="facebook_link"/>
 			</a>

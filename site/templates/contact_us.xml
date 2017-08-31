@@ -29,7 +29,7 @@
 				<cms:module
 					name="contact_form"
 					action="show"
-					text_id="contact"
+					text_id="contact-us"
 					/>
 			</section>
 

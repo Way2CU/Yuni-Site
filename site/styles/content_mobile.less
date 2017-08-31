@@ -328,3 +328,80 @@ section#course {
 		}
 	}
 }
+
+section#contact {
+	article {
+		text-align: center;
+		padding: 1rem;
+		width: 80%;
+		margin: 0 auto;
+
+		& h1 {
+			display: none;
+		}
+
+		& hr {
+			height: 0px;
+			width: 80%;
+			background-color: @color_contact;
+			margin-bottom: 1rem;
+		}
+	}
+
+	form {
+		padding: 1rem;
+
+		label {
+			width: 100%;
+
+			input {
+				box-sizing: border-box;
+				display: block;
+				width: 100%;
+				padding: 0.7rem 0.2rem;
+				border: transparent;
+				border-radius: 3px;
+				margin-bottom: 1rem;
+			}
+
+			span {
+				display: block;
+				width: 30%;
+
+				&:before {
+					content: "";
+					display: inline-block;
+					vertical-align: middle;
+					background-image: url(../images/form-icons.svg);
+					background-repeat: no-repeat;
+					background-position: 0px 0px;
+					background-size: 300px 100px;
+					width: 50px;
+					height: 50px;
+				}
+			}
+
+			&:nth-of-type(1) span:before {
+				background-position: -10px -30px;
+			}
+
+			&:nth-of-type(2) span:before {
+				background-position: -160px -30px;
+			}
+
+			&:nth-of-type(3) span:before {
+				background-position: -85px -30px;
+			}
+		}
+
+		div.controls {
+			text-align: center;
+
+			button {
+				.regular-button();
+				padding-left: 2rem;
+				padding-right: 2rem;
+			}
+		}
+	}
+}

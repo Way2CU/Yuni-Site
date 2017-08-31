@@ -26,6 +26,10 @@
 			<cms:template file="parts/header.xml"/>
 
 			<section id="program">
+				<svg>
+					<cms:svg file="squiggle.svg"/>
+					<cms:svg file="sprite.svg" symbol="icon-book"/>
+				</svg>
 				<!-- Page image -->
 				<cms:module
 					name="gallery"

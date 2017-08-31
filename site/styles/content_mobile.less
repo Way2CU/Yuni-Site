@@ -281,6 +281,7 @@ section#locations {
 section#program,
 section#course {
 	line-height: 0;
+	position: relative;
 
 	// page image
 	> img {
@@ -326,6 +327,50 @@ section#course {
 		> ol {
 			padding: 2rem (@paragraph_spacing * 2);
 		}
+	}
+}
+
+section#program > svg {
+	display: block;
+	width: 7rem;
+	height: 7rem;
+	position: absolute;
+	top: 5vw;
+	left: 35vw;
+
+	border-radius: 0.5rem;
+	background-color: fade(@color_dark, 30);
+
+	svg:first-child {
+		stroke: @color_program;
+		fill: none;
+	}
+
+	svg:last-child {
+		fill: @color_program;
+		transform: translate(20%, 20%) scale(0.6);
+	}
+}
+
+section#course > svg {
+	display: block;
+	width: 7rem;
+	height: 7rem;
+	position: absolute;
+	top: 5vw;
+	left: 35vw;
+
+	border-radius: 0.5rem;
+	background-color: fade(@color_dark, 30);
+
+	svg:first-child {
+		stroke: @color_program;
+		fill: none;
+	}
+
+	svg:last-child {
+		fill: @color_program;
+		transform: translate(20%, 20%) scale(0.6);
 	}
 }
 

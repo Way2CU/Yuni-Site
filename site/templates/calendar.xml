@@ -19,14 +19,13 @@
 				<h1><cms:text constant="menu_calendar"/></h1>
 
 				<!-- Google Calendar embed code -->
-				<iframe
-					src="https://calendar.google.com/calendar/embed?src=yuniexcel%40gmail.com&ctz=Asia/Jerusalem"
-					style="border: 0"
-					width="800"
-					height="600"
-					frameborder="0"
-					scrolling="no"
-					/>
+				<cms:mobile>
+					<cms:raw file="calendar_mobile.txt"/>
+				</cms:mobile>
+
+				<cms:desktop>
+					<cms:raw file="calendar_desktop.txt"/>
+				</cms:desktop>
 			</section>
 
 			<!-- Footer and copyright -->

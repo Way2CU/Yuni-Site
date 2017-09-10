@@ -19,6 +19,14 @@
 			<section>
 				<h1><cms:text constant="menu_registration_faq"/></h1>
 
+				<!-- Article for additional information -->
+				<cms:module
+					name="articles"
+					action="show"
+					text_id="faq"
+					/>
+
+				<!-- Questions and answers themselves. -->
 				<cms:module
 					name="faq"
 					action="show_list"

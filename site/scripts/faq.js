@@ -17,7 +17,7 @@ function FAQ() {
 	 * Complete object initialization.
 	 */
 	self.init = function() {
-		$('div#faq dt').each(function(index) {
+		$('dl dt').each(function(index) {
 			var question = $(this);
 			var answer = question.next();
 

@@ -20,10 +20,6 @@
 				<h1><cms:text constant="menu_registration_acceptance"/></h1>
 
 				<nav id="page">
-					<a href="https://app.tepez.co.il/#/f/56a89b709fb3c5d71f296707/run">
-						<cms:text constant="entrance_exams_link"/>
-					</a>
-
 					<!-- Show dynamically remaining page links -->
 					<cms:module
 						name="articles"

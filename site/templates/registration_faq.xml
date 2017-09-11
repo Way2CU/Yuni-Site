@@ -9,6 +9,7 @@
 				<cms:text constant="menu_registration_faq"/>
 			</title>
 
+			<cms:script src="_BASEURL.'/site/scripts/faq.js'" cms:eval="src"/>
 			<cms:module name="head_tag" action="print_tag"/>
 		</head>
 
@@ -17,13 +18,21 @@
 			<cms:template file="parts/header.xml"/>
 
 			<section>
-				<h1><cms:text constant="menu_registration_faq"/></h1>
-
+				<!-- Article for additional information -->
 				<cms:module
-					name="faq"
-					action="show_list"
-					template="parts/faq_item.xml"
+					name="articles"
+					action="show"
+					text_id="faq"
 					/>
+
+				<!-- Questions and answers themselves. -->
+				<dl>
+					<cms:module
+						name="faq"
+						action="show_list"
+						template="parts/faq_item.xml"
+						/>
+				</dl>
 			</section>
 
 			<!-- Footer and copyright -->

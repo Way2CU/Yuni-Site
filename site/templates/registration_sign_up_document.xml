@@ -6,13 +6,13 @@
 			<title>
 				<cms:text constant="site_title"/>
 				<cms:raw text=" - "/>
-				<cms:text constant="menu_registration_signup"/>
+				<cms:text constant="menu_registration_sign_up"/>
 				<cms:raw text=" - "/>
 				<cms:module
 					name="articles"
 					action="show"
 					text_id="$_REQUEST['document']"
-					group="registration-signup"
+					group="registration-sign-up"
 					template="parts/article_title.xml"
 					cms:eval="text_id"
 					/>
@@ -31,7 +31,7 @@
 					name="gallery"
 					action="show_image"
 					text_id="$_REQUEST['document']"
-					group="registration-signup"
+					group="registration-sign-up"
 					cms:eval="text_id"
 					/>
 
@@ -39,7 +39,7 @@
 					name="articles"
 					action="show"
 					text_id="$_REQUEST['document']"
-					group="registration-signup"
+					group="registration-sign-up"
 					cms:eval="text_id"
 					/>
 			</section>

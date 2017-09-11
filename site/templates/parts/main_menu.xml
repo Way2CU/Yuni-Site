@@ -80,10 +80,10 @@
 					<cms:text constant="menu_registration_acceptance"/>
 				</a>
 				<a
-					href="URL::make(array(), 'registration_signup.xml')"
+					href="URL::make(array(), 'registration_sign_up.xml')"
 					cms:eval="href"
 					>
-					<cms:text constant="menu_registration_signup"/>
+					<cms:text constant="menu_registration_sign_up"/>
 				</a>
 				<a
 					href="URL::make(array(), 'registration_faq.xml')"

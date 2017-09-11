@@ -17,7 +17,7 @@
 			<!-- Floating menu and title -->
 			<cms:template file="parts/header.xml"/>
 
-			<section>
+			<section id="faq">
 				<!-- Article for additional information -->
 				<cms:module
 					name="articles"

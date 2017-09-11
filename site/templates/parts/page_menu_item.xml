@@ -2,7 +2,7 @@
 <!DOCTYPE document SYSTEM "../../../units/schema/language.dtd">
 <document>
 	<a
-		href="URL::make(array('document' => $params['text_id']), 'registration_acceptance_document.xml')"
+		href="URL::make(array('document' => $params['text_id']), $template['file'])"
 		cms:eval="href"
 		>
 		<cms:var param="title" multilanguage="yes"/>

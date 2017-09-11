@@ -36,7 +36,9 @@
 						action="show_list"
 						group="registration-sign-up"
 						template="parts/page_menu_item.xml"
-						/>
+						>
+						<param name="file" value="registration_sign_up_document.xml"/>
+					</cms:module>
 				</nav>
 			</section>
 

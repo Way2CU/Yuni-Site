@@ -7,7 +7,6 @@
  */
 
 // main menu
-
 nav#main {
 	margin: 0;
 	margin-bottom: @section_spacing / 2;
@@ -456,6 +455,34 @@ section#contact {
 				.regular-button();
 				padding-left: 2rem;
 				padding-right: 2rem;
+			}
+		}
+	}
+}
+
+section#faq {
+	article p {
+		padding: 1rem;
+	}
+
+	dl {
+		padding: 1rem;
+
+		dt {
+			&:before {
+				display: inline-block;
+				width: 0;
+				height: 0;
+				content: '';
+
+				border: 5px solid transparent;
+				border-right-color: white;
+				transform: rotate(0deg);
+				transition: transform 0.5s;
+			}
+
+			&.expanded:before {
+				transform: rotate(-90deg);
 			}
 		}
 	}

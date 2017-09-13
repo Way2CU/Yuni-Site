@@ -12,6 +12,7 @@
 	<module name="news" order="2" preload="no"/>
 	<module name="contact_form" order="3" preload="no"/>
 	<module name="gallery" order="4" preload="no"/>
+	<module name="sendgrid" order="5" preload="no"/>
 
 	<user
 		fullname="Administrator"

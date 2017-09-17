@@ -316,143 +316,157 @@ section#course {
 		}
 
 		// regular page components
-		p {
+		> p {
 			padding: 0 calc(~'(100% - 800px) / 2');
-			}
 
-			a {
-			.regular-button();
+			> a {
+				.regular-button();
+				.elements-in-row(4, 2rem);
+				text-align: center;
 			}
+		}
 
-			hr {
+		blockquote {
+
+			> p {
+				text-align: center;
+
+				> a {
+					width: 20%;
+					.regular-button();
+				}
+			}
+		}
+
+		hr {
 			display: block;
 			height: 1px;
 			margin-bottom: @paragraph_spacing;
 
 			border: 0;
 			background-color: fade(@color_gray, 50);
-			}
+		}
 
-			> ul,
-			> ol {
+		> ul,
+		> ol {
 			padding: 2rem calc(~'(100% - 700px) / 2');
-			}
-			}
-			}
+		}
+	}
+}
 
-			section#program > svg {
-			display: block;
-			width: 10rem;
-			height: 10rem;
-			position: absolute;
-			top: 15vw;
-			left: 45vw;
+section#program > svg {
+	display: block;
+	width: 10rem;
+	height: 10rem;
+	position: absolute;
+	top: 15vw;
+	left: 45vw;
 
-			border-radius: 0.5rem;
-			background-color: fade(@color_dark, 30);
+	border-radius: 0.5rem;
+	background-color: fade(@color_dark, 30);
 
-			svg:first-child {
-			stroke: @color_program;
-			fill: none;
-			}
+	svg:first-child {
+		stroke: @color_program;
+		fill: none;
+	}
 
-			svg:last-child {
-			fill: @color_program;
-			transform: translate(20%, 20%) scale(0.6);
-			}
-			}
+	svg:last-child {
+		fill: @color_program;
+		transform: translate(20%, 20%) scale(0.6);
+	}
+}
 
-			section#course > svg {
-			display: block;
-			width: 10rem;
-			height: 10rem;
-			position: absolute;
-			top: 15vw;
-			left: 45vw;
+section#course > svg {
+	display: block;
+	width: 10rem;
+	height: 10rem;
+	position: absolute;
+	top: 15vw;
+	left: 45vw;
 
-			border-radius: 0.5rem;
-			background-color: fade(@color_dark, 30);
+	border-radius: 0.5rem;
+	background-color: fade(@color_dark, 30);
 
-			svg:first-child {
-			stroke: @color_program;
-			fill: none;
-			}
+	svg:first-child {
+		stroke: @color_program;
+		fill: none;
+	}
 
-			svg:last-child {
-			fill: @color_program;
-			transform: translate(20%, 20%) scale(0.6);
-			}
-			}
+	svg:last-child {
+		fill: @color_program;
+		transform: translate(20%, 20%) scale(0.6);
+	}
+}
 
-			section#contact {
-			article {
-			text-align: center;
-			padding: 1rem;
-			width: 80%;
-			margin: 0 auto;
+section#contact {
+	article {
+		text-align: center;
+		padding: 1rem;
+		width: 80%;
+		margin: 0 auto;
 
-			& h1 {
+		& h1 {
 			display: none;
-			}
+		}
 
-			& hr {
+		& hr {
 			height: 0px;
 			width: 80%;
 			background-color: @color_contact;
 			margin-bottom: 1rem;
-			}
-			}
+		}
+	}
 
-			form {
-			width: 50%;
-			display: block;
-			margin: 0 auto;
-			padding: 1rem;
+	form {
+		width: 50%;
+		display: block;
+		margin: 0 auto;
+		padding: 1rem;
 
-			label {
+		label {
 			width: 100%;
 
 			input {
-			box-sizing: border-box;
-			display: block;
-			width: 100%;
-			padding: 0.7rem 0.2rem;
-			border: transparent;
-			border-radius: 3px;
-			margin-bottom: 1rem;
+				box-sizing: border-box;
+				display: block;
+				width: 100%;
+				padding: 0.7rem 0.2rem;
+				border: transparent;
+				border-radius: 3px;
+				margin-bottom: 1rem;
 			}
 
 			span {
-			display: block;
-			width: 30%;
+				display: block;
+				width: 30%;
 
-			&:before {
-			content: "";
-			display: inline-block;
-			vertical-align: middle;
-			background-image: url(../images/form-icons.svg);
-			background-repeat: no-repeat;
-			background-position: 0px 0px;
-			background-size: 300px 100px;
-			width: 50px;
-			height: 50px;
-			}
+				&:before {
+					content: "";
+					display: inline-block;
+					vertical-align: middle;
+					background-image: url(../images/form-icons.svg);
+					background-repeat: no-repeat;
+					background-position: 0px 0px;
+					background-size: 300px 100px;
+					width: 50px;
+					height: 50px;
+				}
 			}
 
 			&:nth-of-type(1) span:before {
-			background-position: -10px -30px;
+				background-position: -10px -30px;
 			}
 
 			&:nth-of-type(2) span:before {
-			background-position: -160px -30px;
+				background-position: -160px -30px;
 			}
 
 			&:nth-of-type(3) span:before {
-			background-position: -85px -30px;
+				background-position: -85px -30px;
 			}
-			}
+		}
 
-			div.controls {
+		div.controls {
 			text-align: center;
 
 			button {

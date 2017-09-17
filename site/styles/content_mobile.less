@@ -309,19 +309,35 @@ section#course {
 		}
 
 		// regular page components
-		p {
+		> p {
 			padding: 0 @paragraph_spacing;
 
 			& img {
 				max-width: 100%;
 			}
+
+			> a {
+				.elements-in-row(2, 1rem);
+				.regular-button();
+				text-align: center;
+			}
 		}
 
-		a {
-			.elements-in-row(2, 1rem);
-			.regular-button();
-			text-align: center;
+		blockquote {
+			margin: 0;
+			padding: 0 1rem;
+
+			 & > p {
+			 	text-align: center;
+
+			 	& > a {
+			 		width: 40%;
+			 		.regular-button();
+			 	}
+			 }
 		}
+
+
 
 		hr {
 			display: block;

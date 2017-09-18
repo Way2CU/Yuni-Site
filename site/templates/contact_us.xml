@@ -16,7 +16,7 @@
 			<cms:template file="parts/header.xml"/>
 
 			<section id="contact">
-				<h1><cms:text constant="menu_news"/></h1>
+				<h1><cms:text constant="menu_contact_us"/></h1>
 
 				<!-- Additional information -->
 				<cms:module

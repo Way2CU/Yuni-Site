@@ -315,12 +315,26 @@ section#course {
 		}
 
 		// regular page components
-		p {
+		> p {
 			padding: 0 calc(~'(100% - 800px) / 2');
+
+			> a {
+				.regular-button();
+				.elements-in-row(4, 2rem);
+				text-align: center;
+			}
 		}
 
-		a {
-			.regular-button();
+		blockquote {
+
+			> p {
+				text-align: center;
+
+				> a {
+					width: 20%;
+					.regular-button();
+				}
+			}
 		}
 
 		hr {

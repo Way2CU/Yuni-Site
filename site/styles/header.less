@@ -64,7 +64,7 @@ header {
 		}
 
 		// menu items container
-		nav {
+		> nav {
 			position: absolute;
 			top: 100%;
 			right: 0;
@@ -102,29 +102,47 @@ header {
 					}
 				}
 
+				// menu section colors
 				&.program {
 					color: @color_program;
-					&:hover { background-color: darken(@color_program, 20); }
 				}
 
 				&.courses {
 					color: @color_courses;
-					&:hover { background-color: darken(@color_courses, 20); }
 				}
 
 				&.registration {
 					color: @color_registration;
-					&:hover { background-color: darken(@color_registration, 20); }
 				}
 
-				&:hover {
+				// allow highlight only on links with href
+				&.contact:hover {
 					color: @color_bright;
 					background-color: darken(@color_contact, 20);
 				}
+
+				// custom inner menu highliths
+				&.program + nav a:hover {
+					background-color: darken(@color_program, 20);
+				}
+
+				&.courses + nav a:hover {
+					background-color: darken(@color_courses, 20);
+				}
+
+				&.registration + nav a:hover {
+					background-color: darken(@color_registration, 20);
+				}
+			}
+
+			// second level menus
+			nav a {
+				display: block;
+				padding: 1em;
 			}
 		}
 
-		&:hover nav {
+		&:hover > nav {
 			opacity: 1;
 			pointer-events: auto;
 		}

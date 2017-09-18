@@ -63,7 +63,7 @@
 					</a>
 				</nav>
 
-				<a href="URL::make(array(), 'contact_us.xml')" cms:eval="href">
+				<a class="contact" href="URL::make(array(), 'contact_us.xml')" cms:eval="href">
 					<cms:svg file="sprite.svg" symbol="icon-envelope"/>
 					<cms:text constant="menu_contact_us"/>
 				</a>

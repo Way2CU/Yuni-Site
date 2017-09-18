@@ -2,9 +2,73 @@
 <!DOCTYPE document SYSTEM "../../../units/schema/language.dtd">
 <document>
 	<header class="mobile_title">
-		<a class="menu">
-			<cms:svg file="sprite.svg" symbol="icon-menu"/>
-		</a>
+		<div class="menu">
+			<a href="javascript: void(0);"><cms:svg file="sprite.svg" symbol="icon-menu"/></a>
+			<nav>
+				<!-- Program menu -->
+				<a class="program">
+					<cms:svg file="sprite.svg" symbol="icon-book"/>
+					<cms:text constant="menu_program"/>
+				</a>
+				<nav>
+					<cms:module
+						name="articles"
+						action="show_list"
+						template="parts/popup_menu_item.xml"
+						group="program"
+						>
+						<param name="section" value="program"/>
+					</cms:module>
+				</nav>
+
+				<!-- Courses menu -->
+				<a class="courses">
+					<cms:svg file="sprite.svg" symbol="icon-hat"/>
+					<cms:text constant="menu_courses"/>
+				</a>
+				<nav>
+					<cms:module
+						name="articles"
+						action="show_list"
+						template="parts/popup_menu_item.xml"
+						group="courses"
+						>
+						<param name="section" value="course"/>
+					</cms:module>
+				</nav>
+
+				<!-- Registration menu -->
+				<a class="registration">
+					<cms:svg file="sprite.svg" symbol="icon-diploma"/>
+					<cms:text constant="menu_registration"/>
+				</a>
+				<nav>
+					<a
+						href="URL::make(array(), 'registration_acceptance.xml')"
+						cms:eval="href"
+						>
+						<cms:text constant="menu_registration_acceptance"/>
+					</a>
+					<a
+						href="URL::make(array(), 'registration_sign_up.xml')"
+						cms:eval="href"
+						>
+						<cms:text constant="menu_registration_sign_up"/>
+					</a>
+					<a
+						href="URL::make(array(), 'registration_faq.xml')"
+						cms:eval="href"
+						>
+						<cms:text constant="menu_registration_faq"/>
+					</a>
+				</nav>
+
+				<a href="URL::make(array(), 'contact_us.xml')" cms:eval="href">
+					<cms:svg file="sprite.svg" symbol="icon-envelope"/>
+					<cms:text constant="menu_contact_us"/>
+				</a>
+			</nav>
+		</div>
 
 		<a
 			href="URL::make()"

@@ -7,6 +7,7 @@
  */
 
 header {
+	@size: 2.3rem;
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -21,8 +22,7 @@ header {
 	text-align: center;
 	z-index: 10000;
 
-	a {
-		@size: 2.3rem;
+	> a {
 		display: inline-block;
 
 		svg {
@@ -40,9 +40,93 @@ header {
 			}
 		}
 
-		&.login svg,
-		&.menu svg {
+		&.login svg {
 			width: @size;
+		}
+	}
+
+	// popup menu container
+	div.menu {
+		display: inline-block;
+		position: relative;
+
+		// dummy link hovering which shows the menu
+		> a {
+			display: inline-block;
+			width: @size;
+
+			svg {
+				width: 100%;
+				display: inline-block;
+				fill: @color_bright;
+				max-height: @size;
+			}
+		}
+
+		// menu items container
+		nav {
+			position: absolute;
+			top: 100%;
+			right: 0;
+			min-width: 200px;
+			padding: 2px;
+
+			opacity: 0;
+			pointer-events: none;
+
+			background-color: fade(@color_dark, 80);
+			box-shadow: 0px 2px 3px fade(@color_dark, 50);
+
+			// menu items
+			a {
+				display: block;
+				padding: 0.5em;
+				transition: all 0.3s;
+
+				color: @color_bright;
+				text-align: right;
+				text-decoration: none;
+				cursor: pointer;
+
+				svg {
+					display: inline-block;
+					vertical-align: middle;
+					width: 1.5em;
+					height: 1.5em;
+					margin-right: @header_spacing / 2;
+					fill: currentColor;
+
+					html[dir=rtl] & {
+						margin-right: 0;
+						margin-left: @header_spacing / 2;
+					}
+				}
+
+				&.program {
+					color: @color_program;
+					&:hover { background-color: darken(@color_program, 20); }
+				}
+
+				&.courses {
+					color: @color_courses;
+					&:hover { background-color: darken(@color_courses, 20); }
+				}
+
+				&.registration {
+					color: @color_registration;
+					&:hover { background-color: darken(@color_registration, 20); }
+				}
+
+				&:hover {
+					color: @color_bright;
+					background-color: darken(@color_contact, 20);
+				}
+			}
+		}
+
+		&:hover nav {
+			opacity: 1;
+			pointer-events: auto;
 		}
 	}
 }

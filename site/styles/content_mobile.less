@@ -246,6 +246,8 @@ section#locations {
 			.popup();
 			border-radius: 0.5rem;
 			text-align: initial;
+			height: 75vh;
+			overflow: scroll;
 
 			// popup title
 			h3 {
@@ -389,12 +391,12 @@ section#course > svg {
 	background-color: fade(@color_dark, 30);
 
 	svg:first-child {
-		stroke: @color_program;
+		stroke: @color_courses;
 		fill: none;
 	}
 
 	svg:last-child {
-		fill: @color_program;
+		fill: @color_courses;
 		transform: translate(20%, 20%) scale(0.6);
 	}
 }

@@ -2,6 +2,9 @@
 <!DOCTYPE document SYSTEM "../../../units/schema/language.dtd">
 <document>
 	<footer>
+		<!-- part of text removed from initial logo -->
+		<p><cms:text constant="college_description"/></p>
+
 		<!-- Links -->
 		<div class="links">
 			<a href="http://math.biu.ac.il" target="_blank">

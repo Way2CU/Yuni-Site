@@ -357,6 +357,48 @@ section#course {
 	}
 }
 
+section#program div#our_team_images_holder {
+	display: block;
+	margin: 0 auto;
+	padding: 1rem 1rem;
+	text-align: center;
+	transition: all 1s;
+
+	figure {
+		display: block;
+		text-align: center;
+		background-color: fade(@color_dark, 80%);
+		position: relative;
+		overflow: hidden;
+		transition: all 0.5s;
+
+		img {
+			margin-top: 2rem;
+		}
+
+		figcaption {
+
+			h4 {
+				display: none;
+			}
+
+			div {
+			    padding: 1rem;
+			    transition: all 0.5s;
+
+			    h3 {
+			    	padding-top: 1rem;
+			    	line-height: 1;
+			    }
+
+			    p {
+			    	line-height: 1;
+			    }
+			}
+		}
+	}
+}
+
 section#program > svg {
 	display: block;
 	width: 7rem;

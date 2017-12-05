@@ -354,6 +354,73 @@ section#course {
 	}
 }
 
+section#program div#our_team_images_holder {
+	display: block;
+	margin: 0 auto;
+	padding: 1rem 1rem;
+	text-align: center;
+	transition: all 1s;
+
+	figure {
+		.elements-in-row(4, 1rem);
+		display: inline-block;
+		text-align: center;
+		background-color: fade(@color_dark, 80%);
+		position: relative;
+		min-height: 263px;
+		overflow: hidden;
+		transition: all 0.5s;
+
+		&:hover {
+			transition: all 0.5s;
+
+			div {
+				transform: perspective(150px) rotate3d(1,0,0,0deg);
+			    transform-style: preserve-3d;
+			    transform-origin: 50% 0;
+				transition: all 0.5s;
+			}
+		}
+
+		img {
+			margin-top: 2rem;
+		}
+
+		figcaption {
+
+			h4 {
+				position: absolute;
+			    bottom: 20px;
+			    right: 50%;
+			    transform: translateX(50%);
+			}
+
+			div {
+				background-color: @color_program;
+			    padding: 1rem;
+			    position: absolute;
+			    top: 0;
+			    right: 0;
+			    width: 90%;
+			  	height: 88%;
+			  	transform: rotate3d(1,0,0,90deg);
+			    transform-style: preserve-3d;
+			    transform-origin: 50% 0;
+			    transition: all 0.5s;
+
+			    h3 {
+			    	padding-top: 1rem;
+			    	line-height: 1rem;
+			    }
+
+			    p {
+			    	line-height: 1;
+			    }
+			}
+		}
+	}
+}
+
 section#program > svg {
 	display: block;
 	width: 10rem;

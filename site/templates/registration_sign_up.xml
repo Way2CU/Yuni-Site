@@ -16,7 +16,21 @@
 			<!-- Floating menu and title -->
 			<cms:template file="parts/header.xml"/>
 
-			<section>
+			<section class="registration">
+
+				<svg>
+					<cms:svg file="squiggle.svg"/>
+					<cms:svg file="sprite.svg" symbol="icon-diploma"/>
+				</svg>
+
+				<!-- Page image -->
+				<cms:module
+					name="gallery"
+					action="show_image"
+					text_id="sign_up"
+					group="registration"
+					/>
+
 				<h1><cms:text constant="menu_registration_sign_up"/></h1>
 
 				<nav id="page">

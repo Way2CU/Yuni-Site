@@ -593,3 +593,35 @@ section#faq {
 		}
 	}
 }
+
+section.registration {
+
+	> svg {
+		display: block;
+		width: 10rem;
+		height: 10rem;
+		position: absolute;
+		top: 15vw;
+		left: 45vw;
+
+		border-radius: 0.5rem;
+		background-color: fade(@color_dark, 30);
+
+		svg:first-child {
+			stroke: @color_registration;
+			fill: none;
+		}
+
+		svg:last-child {
+			fill: @color_registration;
+			transform: translate(20%, 20%) scale(0.6);
+		}
+	}
+
+	// page image
+	img {
+		width: 100%;
+		margin-bottom: -5px;
+	}
+
+}

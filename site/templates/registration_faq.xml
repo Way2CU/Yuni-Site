@@ -17,7 +17,21 @@
 			<!-- Floating menu and title -->
 			<cms:template file="parts/header.xml"/>
 
-			<section id="faq">
+			<section id="faq" class="registration">
+
+				<svg>
+					<cms:svg file="squiggle.svg"/>
+					<cms:svg file="sprite.svg" symbol="icon-diploma"/>
+				</svg>
+
+				<!-- Page image -->
+				<cms:module
+					name="gallery"
+					action="show_image"
+					text_id="faq"
+					group="registration"
+					/>
+
 				<!-- Article for additional information -->
 				<cms:module
 					name="articles"

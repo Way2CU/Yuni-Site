@@ -49,8 +49,15 @@ Site.is_mobile = function() {
  * Function called when document and images have been completely loaded.
  */
 Site.on_load = function() {
-	// create news system
-	Site.news = new NewsSystem('news', 0, 2000, 500);
+
+	// controls for moving through news feeds
+	Site.news_controls = new PageControl('div#news', 'a.news');
+	Site.news_controls
+		.attachNextControl($('a.next'))
+		.attachPreviousControl($('a.previous'))
+		.setWrapAround(true)
+		.setPauseOnHover(true)
+		.setInterval(3000);
 };
 
 

@@ -149,7 +149,7 @@ nav#page {
 // home page news container
 div#news {
 	position: relative;
-	min-height: 1rem;
+	min-height: 5rem;
 	margin: 2rem;
 	padding: 1rem;
 
@@ -159,9 +159,57 @@ div#news {
 
 	text-align: center;
 
+	div#controls {
+		line-height: 0;
+		position: relative;
+
+		&:after {
+			content: "";
+			width: 1px;
+			height: 275px;
+			transform: translate(130px, -105px) rotate(90deg);
+			position: absolute;
+			background-color: @color_contact;
+			top: 0;
+			left: 0;
+		}
+	}
+
+	a.previous {
+		display: inline-block;
+		width: 0;
+		height: 0;
+		border-top: 10px solid transparent;
+		border-bottom: 10px solid transparent;
+		border-left: 10px solid @color_contact;
+		margin: 0 2rem;
+		z-index: 100;
+		vertical-align: middle;
+		cursor: pointer;
+	}
+
+	p {
+		display: inline-block;
+		vertical-align: middle;
+		margin: 0;
+	}
+
+	a.next {
+		display: inline-block;
+		width: 0;
+		height: 0;
+		border-top: 10px solid transparent;
+		border-bottom: 10px solid transparent;
+		border-right: 10px solid @color_contact;
+		margin: 0 2rem;
+		z-index: 100;
+		vertical-align: middle;
+		cursor: pointer;
+	}
+
 	a.news {
 		position: absolute;
-		top: 0rem;
+		top: 3.5rem;
 		left: 0rem;
 		right: 0rem;
 		padding: 0.3rem;
@@ -169,6 +217,11 @@ div#news {
 
 		color: @color_gray;
 		text-decoration: none;
+
+		&.visible {
+			display: block;
+			opacity: 1;
+		}
 	}
 }
 

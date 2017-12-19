@@ -50,14 +50,22 @@ Site.is_mobile = function() {
  */
 Site.on_load = function() {
 
-	// controls for moving through news feeds
-	Site.news_controls = new PageControl('div#news', 'a.news');
-	Site.news_controls
-		.attachNextControl($('a.next'))
-		.attachPreviousControl($('a.previous'))
-		.setWrapAround(true)
-		.setPauseOnHover(true)
-		.setInterval(3000);
+	// this should work only on home page
+	if (window.location.pathname != '/') {
+		return;
+	} else {
+
+		// controls for moving through news feeds
+		Site.news_controls = new PageControl('div#news', 'a.news');
+		Site.news_controls
+			.attachNextControl($('a.next'))
+			.attachPreviousControl($('a.previous'))
+			.setWrapAround(true)
+			.setPauseOnHover(true)
+			.setInterval(3000);
+	}
+
+
 };
 
 

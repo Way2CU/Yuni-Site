@@ -74,8 +74,6 @@ nav#main {
 		h3 svg {
 			display: inline-block;
 			vertical-align: middle;
-			width: 1em;
-			height: 1em;
 			margin-right: @header_spacing / 2;
 			fill: currentColor;
 
@@ -83,6 +81,27 @@ nav#main {
 				margin-right: 0;
 				margin-left: @header_spacing / 2;
 			}
+		}
+
+		&#program h3 svg {
+			@svg_size: 1.5rem;
+			@ratio: 2.83;
+			width: @svg_size * @ratio;
+			height: @svg_size;
+		}
+
+		&#courses h3 svg {
+			@svg_size: 1.8rem;
+			@ratio: 2.33;
+			width: @svg_size * @ratio;
+			height: @svg_size;
+		}
+
+		&#registration h3 svg {
+			@svg_size: 2rem;
+			@ratio: 1.72;
+			width: @svg_size * @ratio;
+			height: @svg_size;
 		}
 
 		// popup menus

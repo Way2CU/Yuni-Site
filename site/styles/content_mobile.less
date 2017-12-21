@@ -636,9 +636,20 @@ section#contact {
 				margin-bottom: 1rem;
 			}
 
+			select {
+				box-sizing: border-box;
+				display: block;
+				width: 100%;
+				padding: 0.7rem 0.2rem;
+				border: transparent;
+				border-radius: 3px;
+				margin-bottom: 1rem;
+				background-color: @color_bright;
+			}
+
 			span {
 				display: block;
-				width: 30%;
+				width: 50%;
 
 				&:before {
 					content: "";
@@ -654,7 +665,7 @@ section#contact {
 			}
 
 			&:nth-of-type(1) span:before {
-				background-position: -10px -30px;
+				background-position: -10px -33px;
 			}
 
 			&:nth-of-type(2) span:before {
@@ -663,6 +674,11 @@ section#contact {
 
 			&:nth-of-type(3) span:before {
 				background-position: -85px -30px;
+			}
+
+			&:nth-of-type(5) span:before {
+				background-position: 9px 0px;
+				background-size: 400px 115px;
 			}
 		}
 

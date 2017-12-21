@@ -48,14 +48,29 @@
 					/>
 				<cms:if condition="$_REQUEST['program'] == 'our-team'">
 					<div id="our_team_images_holder">
-						<cms:module
-							name="gallery"
-							action="show_image_list"
-							group="our-team"
-							template="parts/our_team_gallery_item.xml"
-							>
-							<param name="thumbnail_size" value="200"/>
-						</cms:module>
+						<a class="previous" href="javascript:void(0);"></a>
+						<cms:desktop>
+							<cms:module
+								name="gallery"
+								action="show_image_list"
+								group="our-team"
+								template="parts/our_team_gallery_item.xml"
+								>
+								<param name="thumbnail_size" value="250"/>
+							</cms:module>
+						</cms:desktop>
+
+						<cms:mobile>
+							<cms:module
+								name="gallery"
+								action="show_image_list"
+								group="our-team"
+								template="parts/our_team_gallery_item.xml"
+								>
+								<param name="thumbnail_size" value="200"/>
+							</cms:module>
+						</cms:mobile>
+						<a class="next" href="javascript:void(0);"></a>
 					</div>
 				</cms:if>
 			</section>

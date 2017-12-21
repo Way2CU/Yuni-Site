@@ -1,14 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE document SYSTEM "../../units/schema/language.dtd">
 <document>
-	<figure>
+	<figure class="image">
 		<img
 			src="gallery::getThumbnailById($params['id'], null, $template['thumbnail_size'], isset($template['constrain']) ? constant($template['constrain']) : Thumbnail::CONSTRAIN_BOTH)"
 			alt="$params['title'][$language]"
 			cms:eval="src,alt"
 			/>
+
+			<!-- details button only on mobile version -->
+			<cms:mobile>
+				<a href="javascript:void(0);" class="details">
+					<cms:text constant="details_button"/>
+				</a>
+			</cms:mobile>
+
 			<figcaption>
-				<h4><cms:var param="title" multilanguage="yes"/></h4>
+				<p><cms:var param="title" multilanguage="yes"/></p>
 				<div>
 					<cms:markdown param="description" multilanguage="yes"/>
 				</div>

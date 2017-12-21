@@ -407,21 +407,35 @@ section#course {
 }
 
 section#program div#our_team_images_holder {
-	display: block;
 	margin: 0 auto;
+	height: 350px;
 	padding: 1rem 1rem;
 	text-align: center;
+	position: relative;
+	overflow: hidden;
 	transition: all 1s;
 
 	figure {
-		.elements-in-row(4, 1rem);
 		display: inline-block;
-		text-align: center;
-		background-color: fade(@color_dark, 80%);
-		position: relative;
-		min-height: 263px;
+		position: absolute;
+		margin: 0;
+		top: 50%;
+		left: -100%;
+		transform: translateY(-50%);
+		border: 1px solid darken(@color_bright, 30%);
+		transition: all 0.8s;
+
+		html[dir="rtl"] & {
+			left: auto;
+			right: -100%;
+		}
+
+		&.transit {
+			transition: none;
+		}
+
+		min-height: 130px;
 		overflow: hidden;
-		transition: all 0.5s;
 
 		&:hover {
 			transition: all 0.5s;
@@ -434,15 +448,23 @@ section#program div#our_team_images_holder {
 			}
 		}
 
+		&:before {
+			content: '';
+			display: inline-block;
+			height: 100%;
+			width: 0;
+			vertical-align: middle;
+		}
+
 		img {
-			margin-top: 2rem;
+			vertical-align: middle;
 		}
 
 		figcaption {
 
-			h4 {
+			> p {
 				position: absolute;
-			    bottom: 20px;
+			    bottom: 5px;
 			    right: 50%;
 			    transform: translateX(50%);
 			}
@@ -465,10 +487,77 @@ section#program div#our_team_images_holder {
 			    	line-height: 1rem;
 			    }
 
-			    p {
+			    > p {
 			    	line-height: 1;
 			    }
 			}
+		}
+	}
+
+	a.next,
+	a.previous {
+		position: absolute;
+		top: 50%;
+		padding: 1em;
+
+		color: @color_gray;
+
+		transform: translateY(-50%);
+		transition: all 0.3s;
+		z-index: 10;
+
+		&:before {
+			display: inline-block;
+			width: 2em;
+			height: 2em;
+
+			content: "";
+
+			border: 3px solid transparent;
+			border-top-color: currentColor;
+			border-right-color: currentColor;
+			transition: all 0.3s;
+		}
+
+		&:active,
+		&:hover {
+			color: @color_program;
+		}
+	}
+
+	a.next {
+		left: auto;
+		right: 1em;
+
+		html[dir=rtl] & {
+			left: 1em;
+			right: auto;
+		}
+
+		&:before {
+			transform: rotate(45deg);
+		}
+
+		html[dir=rtl] &:before {
+			transform: rotate(-135deg);
+		}
+	}
+
+	a.previous {
+		left: 1em;
+		right: auto;
+
+		html[dir=rtl] & {
+			left: auto;
+			right: 1em;
+		}
+
+		&:before {
+			transform: rotate(-135deg);
+		}
+
+		html[dir=rtl] &:before {
+			transform: rotate(45deg);
 		}
 	}
 }

@@ -703,6 +703,8 @@ section#faq {
 		padding: 1rem;
 
 		dt {
+			padding-bottom: 0.5rem;
+
 			&:before {
 				display: inline-block;
 				width: 0;
@@ -717,6 +719,20 @@ section#faq {
 
 			&.expanded:before {
 				transform: rotate(-90deg);
+			}
+		}
+
+		dd {
+
+			> p {
+				padding: 0.5rem;
+				padding-right: 1rem;
+				border-right: 1px solid @color_bright;
+				font-size: 0.9rem;
+
+				> a {
+					.regular-button();
+				}
 			}
 		}
 	}

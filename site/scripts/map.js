@@ -2,7 +2,7 @@
  * Map JavaScript
  * Yuni
  *
- * Copyright (c) 2017. by Way2CU, http://way2cu.com
+ * Copyright (c) 2018. by Way2CU, http://way2cu.com
  * Authors: Mladen Mijatov
  */
 
@@ -15,7 +15,6 @@ Site.Map = function() {
 	self.map = null;
 	self.area = null;
 	self.worker = null;
-	self.delay_timer = null;
 	self.matches = null;
 	self.points = new Array();
 	self.handler = new Object();
@@ -94,7 +93,7 @@ Site.Map = function() {
 
 		// calculate relative position of the pointer
 		var pos_x = event.clientX - self.map.offsetLeft;
-		var pos_y = event.clientY - self.map.offsetTop;
+		var pos_y = event.clientY - self.map.offsetTop + window.scrollY;
 
 		// show message
 		alert('Your `text_id` is: ' + pos_x + ' ' + pos_y);
@@ -108,7 +107,7 @@ Site.Map = function() {
 	self.handler.map_mouse_move = function(event) {
 		// calculate relative position of the pointer
 		var pos_x = event.clientX - self.map.offsetLeft;
-		var pos_y = event.clientY - self.map.offsetTop;
+		var pos_y = event.clientY - self.map.offsetTop + window.scrollY;
 
 		// update area indicator position
 		with (self.area.style) {
@@ -127,10 +126,7 @@ Site.Map = function() {
 	 * @param object event
 	 */
 	self.handler.worker_message = function(event) {
-		if (self.delay_timer != null)
-			clearTimeout(self.delay_timer);
 		self.matches = event.data;
-		// self.delay_timer = setTimeout(self.handler.process_update, 50);
 		self.handler.process_update();
 	};
 
@@ -138,9 +134,6 @@ Site.Map = function() {
 	 * Handle delayed updates to map points.
 	 */
 	self.handler.process_update = function() {
-		// reset timer so worker handler doesn't get confused
-		self.delay_timer = null;
-
 		// update classes for all points according to last match
 		for (var i=0, count=self.points.length; i<count; i++)
 			self.points[i].classList.remove('visible');

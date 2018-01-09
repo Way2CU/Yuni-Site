@@ -34,6 +34,7 @@ Site.Map = function() {
 			addEventListener('mouseenter', self.handler.map_mouse_enter);
 			addEventListener('mouseleave', self.handler.map_mouse_leave);
 			addEventListener('mousemove', self.handler.map_mouse_move);
+			addEventListener('click', self.handler.map_mouse_click);
 		}
 
 		// create area indicator
@@ -83,6 +84,23 @@ Site.Map = function() {
 	};
 
 	/**
+	 * Handle clicking on the map.
+	 *
+	 * @param object event
+	 */
+	self.handler.map_mouse_click = function(event) {
+		if (!event.ctrlKey)
+			return;
+
+		// calculate relative position of the pointer
+		var pos_x = event.clientX - self.map.offsetLeft;
+		var pos_y = event.clientY - self.map.offsetTop;
+
+		// show message
+		alert('Your `text_id` is: ' + pos_x + ' ' + pos_y);
+	};
+
+	/**
 	 * Handle moving mouse around the map.
 	 *
 	 * @param object event
@@ -112,14 +130,14 @@ Site.Map = function() {
 		if (self.delay_timer != null)
 			clearTimeout(self.delay_timer);
 		self.matches = event.data;
-		// self.delay_timer = setTimeout(self.handler.update_timer, 50);
-		self.handler.update_timer();
+		// self.delay_timer = setTimeout(self.handler.process_update, 50);
+		self.handler.process_update();
 	};
 
 	/**
 	 * Handle delayed updates to map points.
 	 */
-	self.handler.update_timer = function() {
+	self.handler.process_update = function() {
 		// reset timer so worker handler doesn't get confused
 		self.delay_timer = null;
 

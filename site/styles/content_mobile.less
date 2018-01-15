@@ -402,6 +402,10 @@ section#course {
 				.regular-button();
 				text-align: center;
 			}
+
+			> strong a {
+				.regular-button();
+			}
 		}
 
 		blockquote {
@@ -432,6 +436,17 @@ section#course {
 		> ul,
 		> ol {
 			padding: 2rem (@paragraph_spacing * 2);
+		}
+
+		> ul li {
+
+			p a {
+				.regular-button();
+			}
+
+			a {
+				.regular-button();
+			}
 		}
 	}
 }

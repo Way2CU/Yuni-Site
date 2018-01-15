@@ -8,6 +8,7 @@
 				<cms:raw text=" - "/>
 				<cms:text constant="menu_locations"/>
 			</title>
+			<cms:script src="_BASEURL.'/site/scripts/map.js'" cms:eval="src"/>
 			<cms:module name="head_tag" action="print_tag"/>
 		</head>
 
@@ -17,36 +18,17 @@
 
 			<section id="locations">
 				<h1><cms:text constant="menu_locations"/></h1>
-				<cms:module
-					name="articles"
-					action="show_group"
-					text_id="region-center"
-					template="parts/location_group.xml"
-					/>
-				<cms:module
-					name="articles"
-					action="show_group"
-					text_id="region-sharon"
-					template="parts/location_group.xml"
-					/>
-				<cms:module
-					name="articles"
-					action="show_group"
-					text_id="region-north"
-					template="parts/location_group.xml"
-					/>
-				<cms:module
-					name="articles"
-					action="show_group"
-					text_id="region-south"
-					template="parts/location_group.xml"
-					/>
-				<cms:module
-					name="articles"
-					action="show_group"
-					text_id="region-jerusalem"
-					template="parts/location_group.xml"
-					/>
+				<figure id="map">
+					<cms:svg file="map.svg"/>
+					<figcaption>
+						<cms:module
+							name="articles"
+							action="show_list"
+							group="locations"
+							template="parts/location_info.xml"
+							/>
+					</figcaption>
+				</figure>
 			</section>
 
 			<!-- Footer and copyright -->

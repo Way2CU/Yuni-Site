@@ -4,6 +4,7 @@
 	"/news": "news.xml",
 	"/calendar": "calendar.xml",
 	"/locations": "locations.xml",
+	"/locations/{n:id}": "view_location.xml",
 	"/courses/{s:course}": "course.xml",
 	"/program/{s:program}": "program.xml",
 	"/registration/acceptance": "registration_acceptance.xml",

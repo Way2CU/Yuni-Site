@@ -48,8 +48,8 @@
 					/>
 				<cms:if condition="$_REQUEST['program'] == 'our-team'">
 					<div id="our_team_images_holder">
-						<a class="previous" href="javascript:void(0);"></a>
 						<cms:desktop>
+							<a class="previous" href="javascript:void(0);"></a>
 							<cms:module
 								name="gallery"
 								action="show_image_list"
@@ -58,6 +58,7 @@
 								>
 								<param name="thumbnail_size" value="250"/>
 							</cms:module>
+							<a class="next" href="javascript:void(0);"></a>
 						</cms:desktop>
 
 						<cms:mobile>
@@ -67,10 +68,9 @@
 								group="our-team"
 								template="parts/our_team_gallery_item.xml"
 								>
-								<param name="thumbnail_size" value="200"/>
+								<param name="thumbnail_size" value="160"/>
 							</cms:module>
 						</cms:mobile>
-						<a class="next" href="javascript:void(0);"></a>
 					</div>
 				</cms:if>
 			</section>

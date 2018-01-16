@@ -8,15 +8,9 @@
 			cms:eval="src,alt"
 			/>
 
-			<!-- details button only on mobile version -->
-			<cms:mobile>
-				<a href="javascript:void(0);" class="details">
-					<cms:text constant="details_button"/>
-				</a>
-			</cms:mobile>
-
 			<figcaption>
-				<p><cms:var param="title" multilanguage="yes"/></p>
+				<h4><cms:var param="title" multilanguage="yes"/></h4>
+
 				<div>
 					<cms:markdown param="description" multilanguage="yes"/>
 				</div>

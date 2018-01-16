@@ -452,120 +452,42 @@ section#course {
 }
 
 section#program div#our_team_images_holder {
-	margin-left: auto;
-	margin-right: auto;
-	height: 300px;
-	position: relative;
-	overflow: hidden;
-	transition: all 1s;
-
-	a.details {
-		.regular-button();
-		padding: 0.8rem 1rem;
-		position: absolute;
-		text-decoration: none;
-		color: @color_bright;
-		bottom: -25%;
-		left: 0;
-		transform: translateX(42%);
-
-		&:focus {
-			border: 1px solid @color_bright;
-		}
-	}
-
-	a.previous,
-	a.next {
-		position: absolute;
-		top: 50%;
-		left: 1em;
-		width: 3em;
-		height: 3em;
-		transform: translatey(-50%);
-		z-index: 10;
-		transition: all 0.3s;
-	}
-
-	a.next:before,
-	a.previous:before {
-		content: "";
-		position: absolute;
-		top: 50%;
-		right: 1em;
-		width: 2em;
-		height: 2em;
-		border-top: 2px solid @color_bright;
-		border-right: 2px solid @color_bright;
-		transform: translatey(-50%) rotate(45deg);
-		transition: all 0.3s;
-	}
-
-	a.next:before {
-		border: none;
-		border-bottom: 2px solid @color_bright;
-		border-left: 2px solid @color_bright;
-		right: auto;
-		left: 1em;
-	}
-
-	a.previous {
-		left: auto;
-		right: 1em;
-		border: none;
-	}
-
-	a.previous:active,
-	a.next:active {
-		border-color: @color_program;
-	}
+	display: block;
+	padding: 1em 0.5em;
+	margin: 0 auto;
 
 	figure {
+		.elements-in-row(2, 0.5em);
 		display: inline-block;
-		position: absolute;
-		margin: 0;
-		width: 199px;
-		top: 50%;
-		left: -100%;
-		transform : translateY(-50%);
-		transition: all 0.3s;
+		text-align: center;
+		border: 2px solid @color_bright;
+
+		img {
+			width: 100%;
+			vertical-align: middle;
+		}
 
 		figcaption {
+			line-height: 1;
 
-			> p {
-				position: absolute;
-				bottom: 0;
-				left: 20%;
-				transform: translateX(50%);
+			> h4 {
+				background-image:
+					url(../images/squiggle_background.svg),
+					url(../images/squiggle_background.svg),
+					url(../images/squiggle_background.svg);
+				background-repeat: no-repeat;
+				background-size: 100% 100%;
+				background-position: 0px 0px, 1px 0px, 0px 1px;
+				padding: 1em;
+				margin: 0;
 			}
 
 			div {
-				background-color: @color_program;
-			    padding: 1rem;
-			    position: absolute;
-			    top: 0;
-			    right: 0;
-			    width: 83%;
-			  	height: 81%;
-			  	text-align: center;
-			  	transform: rotate3d(1,0,0,90deg);
-			    transform-style: preserve-3d;
-			    transform-origin: 50% 0;
-			    transition: all 0.5s;
-
-			    > h3 {
-			    	padding-top: 1rem;
-			    	line-height: 1;
-			    }
+				background-color: @color_dark;
+				padding: 1em;
 
 			    > p {
 			    	line-height: 1;
-			    }
-
-			    &.toggle {
-			    	transform: perspective(150px) rotate3d(1,0,0,0deg);
-			    	transform-style: preserve-3d;
-			    	transform-origin: 50% 0;
-			    	transition: all 0.5s;
 			    }
 			}
 		}

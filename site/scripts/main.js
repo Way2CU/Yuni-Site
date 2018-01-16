@@ -68,33 +68,24 @@ Site.on_load = function() {
 		// controls for moving through news feeds
 		Site.news_controls = new PageControl('div#news', 'a.news');
 		Site.news_controls
-		.attachNextControl($('a.next'))
-		.attachPreviousControl($('a.previous'))
-		.setWrapAround(true)
-		.setPauseOnHover(true)
-		.setInterval(3000);
+			.attachNextControl($('a.next'))
+			.attachPreviousControl($('a.previous'))
+			.setWrapAround(true)
+			.setPauseOnHover(true)
+			.setInterval(3000);
 	}
 
-	Site.our_team_gallery = new Caracal.Gallery.Slider(4, false);
-	Site.our_team_gallery
-		.images.set_container('div#our_team_images_holder')
-		.images.set_center(true)
-		.images.set_spacing(40)
-		.images.add('div#our_team_images_holder figure')
-		.controls.attach_next('div#our_team_images_holder a.next')
-		.controls.attach_previous('div#our_team_images_holder a.previous')
-		// .controls.set_auto(4000)
-		.controls.set_pause_on_hover(true)
-		.images.update();
-
-	if(Site.is_mobile()) {
-		Site.our_team_gallery.images.set_visible_count(1);
-
-		// add event listener for all details links
-		Site.details_links = document.querySelectorAll('a.details');
-		for(var i=0; i < Site.details_links.length; i++) {
-			Site.details_links[i].addEventListener('click', Site.handle_toggling);
-		}
+	if(!Site.is_mobile()) {
+		Site.our_team_gallery = new Caracal.Gallery.Slider(4, false);
+		Site.our_team_gallery
+			.images.set_container('div#our_team_images_holder')
+			.images.set_center(true)
+			.images.set_spacing(40)
+			.images.add('div#our_team_images_holder figure')
+			.controls.attach_next('div#our_team_images_holder a.next')
+			.controls.attach_previous('div#our_team_images_holder a.previous')
+			.controls.set_pause_on_hover(true)
+			.images.update();
 	}
 };
 

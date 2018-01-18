@@ -37,6 +37,8 @@
 					name="articles"
 					action="show"
 					text_id="faq"
+					group="registration"
+					template="stock/article_generic.xml"
 					/>
 
 				<!-- Questions and answers themselves. -->

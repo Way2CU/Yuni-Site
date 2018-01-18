@@ -32,6 +32,15 @@
 
 				<h1><cms:text constant="menu_registration_acceptance"/></h1>
 
+				<!-- Article for additional information -->
+				<cms:module
+					name="articles"
+					action="show"
+					text_id="acceptance"
+					group="registration"
+					template="stock/article_generic.xml"
+					/>
+
 				<nav id="page">
 					<!-- Show dynamically remaining page links -->
 					<cms:module

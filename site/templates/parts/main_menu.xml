@@ -104,5 +104,22 @@
 		<a class="locations" href="URL::make(array(), 'locations.xml')" cms:eval="href">
 			<cms:text constant="menu_locations"/>
 		</a>
+
+		<cms:desktop>
+			<cms:module
+				name="youtube"
+				action="show"
+				text_id="explanation_video"
+				embed="1"
+				width="500"
+				height="312"
+				template="parts/youtube_link.xml"
+				/>
+		</cms:desktop>
+
+		<cms:mobile>
+			<a href="https://www.youtube.com/watch?v=9rhRsUTqL0Q&amp;feature=youtu.be" class="youtube video">
+			</a>
+		</cms:mobile>
 	</nav>
 </document>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE document SYSTEM "../../../units/schema/language.dtd">
+<document>
+	<a
+		href="https://www.youtube.com/watch?v=9rhRsUTqL0Q&amp;feature=youtu.be"
+		data-embed-url="$params['url']"
+		data-width="$params['width']"
+		data-height="$params['height']"
+		data-fullscreen="0"
+		class="youtube video interactive"
+		cms:eval="data-embed-url,data-width,data-height"
+		>
+	</a>
+</document>

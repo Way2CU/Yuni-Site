@@ -305,6 +305,12 @@ section#news {
 
 // locations page and popups
 section#locations {
+	// prevent selection
+	* {
+		-moz-user-select: none;
+		-webkit-user-select: none;
+		user-select: none;
+	}
 
 	// map of Israel
 	figure#map {

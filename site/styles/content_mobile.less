@@ -308,6 +308,153 @@ section#news {
 
 // locations page and popups
 section#locations {
+	// prevent selection
+	* {
+		-moz-user-select: none;
+		-webkit-user-select: none;
+		user-select: none;
+	}
+
+	// map of Israel
+	figure#map {
+		position: relative;
+		width: 200px;
+		padding: 2rem;
+		padding-right: 0;
+
+		span.area {
+			@color: @color_blue;
+
+			opacity: 0;
+			position: absolute;
+			content: '';
+			width: 50px;
+			height: 50px;
+
+			border: 1px solid fade(@color, 70);
+			border-radius: 50%;
+			background: fade(@color, 20);
+
+			line-height: 0;
+			transform: translate(-25px, -25px);
+			transition: opacity 0.2s;
+			pointer-events: none;
+
+			&.active {
+				opacity: 1;
+			}
+		}
+
+		// points on map
+		figcaption {
+			a {
+				position: absolute;
+				font-size: 0;
+
+				&:before {
+					display: block;
+					content: '';
+					width: 4px;
+					height: 4px;
+
+					border-radius: 50%;
+					background-color: saturate(@color_red, -20%);
+					box-shadow: 0px 0px 0px 1px black;
+
+					transform: translate(-50%, -50%);
+					cursor: default;
+				}
+
+				&.visible:before {
+					width: 6px;
+					height: 6px;
+					background-color: saturate(@color_red, 50%);
+				}
+
+				span {
+					position: absolute;
+					top: 10px;
+					left: 50%;
+					width: 100px;
+
+					border-radius: 0.2rem;
+					transform: translatex(-50%);
+
+					font-size: 0.9rem;
+					text-align: center;
+					text-shadow: 1px 1px 1px black;
+
+					transition: all 0.3s;
+
+					cursor: pointer;
+					pointer-events: none;
+					opacity: 0;
+				}
+
+				// &.visible span {
+				// 	pointer-events: auto;
+				// 	opacity: 1;
+				// }
+			}
+		}
+
+		svg {
+			path#main_area {
+				fill: @color_yellow;
+			}
+
+			path#additional_area {
+				fill: darken(@color_yellow, 10);
+			}
+		}
+	}
+
+	// list of matched elements in map
+	div#map-details {
+		position: absolute;
+		padding: 0.2rem;
+
+		background-color: @color_bright;
+
+		opacity: 0;
+		pointer-events: none;
+
+		&.visible {
+			opacity: 1;
+			pointer-events: auto;
+		}
+
+		&:before {
+			display: block;
+			content: '';
+			position: absolute;
+			top: 50%;
+			right: 0;
+			width: 0;
+			height: 0;
+
+			border: 0.5rem solid transparent;
+			border-top-color: @color_bright;
+			border-right-color: @color_bright;
+			transform: translate(50%, -50%) rotate(45deg);
+			line-height: 0;
+		}
+
+		a {
+			display: block;
+			width: 110px;
+			padding: 0.3rem;
+
+			color: @color_dark;
+			text-decoration: none;
+
+			&:active {
+				color: @color_bright;
+				background-color: @color_red;
+			}
+		}
+	}
+
 	// individual location
 	article {
 		margin-bottom: @paragraph_spacing;

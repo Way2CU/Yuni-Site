@@ -31,11 +31,22 @@ Site.Map = function() {
 
 		// find map image and connect events
 		self.map = document.querySelector('figure#map');
-		with (self.map) {
-			addEventListener('mouseenter', self.handler.map_mouse_enter);
-			addEventListener('mouseleave', self.handler.map_mouse_leave);
-			addEventListener('mousemove', self.handler.map_mouse_move);
-			addEventListener('click', self.handler.map_mouse_click);
+		if (Site.is_mobile()) {
+			// connect mobile events
+			with (self.map) {
+				addEventListener('touchstart', self.handler.map_touch_start);
+				addEventListener('touchend', self.handler.map_touch_end);
+				addEventListener('touchmove', self.handler.map_touch_move);
+			}
+
+		} else {
+			// connect desktop events
+			with (self.map) {
+				addEventListener('mouseenter', self.handler.map_mouse_enter);
+				addEventListener('mouseleave', self.handler.map_mouse_leave);
+				addEventListener('mousemove', self.handler.map_mouse_move);
+				addEventListener('click', self.handler.map_mouse_click);
+			}
 		}
 
 		// create area indicator
@@ -66,6 +77,10 @@ Site.Map = function() {
 			// store point based on it's vertical coordinate
 			self.points.push(point);
 
+			// make a copy and store it in popup list
+			var menu_item = point.cloneNode(true);
+			self.popup.append(menu_item);
+
 			// attach event listeners
 			point.addEventListener('click', self.handler.point_click);
 		}
@@ -78,18 +93,22 @@ Site.Map = function() {
 	 * Show detailed location information.
 	 */
 	self.show_details = function() {
-		// remove existing nodes
-		while (self.popup.firstChild)
-			self.popup.removeChild(self.popup.firstChild);
+		// ensure we don't fix area for empty match list
+		if (self.matches == null || self.matches.length == 0) {
+			self.hide_details();
+			return;
+		}
+
+		// hide all points
+		for (var i=0, count=self.popup.children.length; i<count; i++) {
+			var child = self.popup.children[i];
+			child.style.display = 'none';
+		}
 
 		// update list content
 		for (var i=0, count=self.matches.length; i<count; i++) {
-			// duplicate matched point
-			var point = self.points[self.matches[i]];
-			var menu_item = point.cloneNode(true);
-
-			// add it to the list
-			self.popup.append(menu_item);
+			var child = self.popup.children[self.matches[i]];
+			child.style.display = 'block';
 		}
 
 		// update popup position
@@ -124,6 +143,58 @@ Site.Map = function() {
 	};
 
 	/**
+	 * Handle initial screen touch.
+	 *
+	 * @param object event
+	 */
+	self.handler.map_touch_start = function(event) {
+		self.hide_details();
+		self.area.classList.add('active');
+	};
+
+	/**
+	 * Handle end of screen touch.
+	 *
+	 * @param object event
+	 */
+	self.handler.map_touch_end = function(event) {
+		// calculate relative position of the pointer
+		var touch = event.changedTouches[0];
+		var pos_x = touch.clientX - self.map.offsetLeft;
+		var pos_y = touch.clientY - self.map.offsetTop + window.scrollY;
+
+		// update area indicator position
+		with (self.area.style) {
+			left = pos_x + 'px';
+			top = pos_y + 'px';
+		}
+
+		// post coordinates to worker for processing
+		self.worker.postMessage([pos_x, pos_y]);
+
+		// show details in delayed manner
+		setTimeout(self.show_details, 100);
+	};
+
+	/**
+	 * Handle movement while touch is active.
+	 *
+	 * @param object event
+	 */
+	self.handler.map_touch_move = function(event) {
+		// calculate relative position of the pointer
+		var touch = event.changedTouches[0];
+		var pos_x = touch.clientX - self.map.offsetLeft;
+		var pos_y = touch.clientY - self.map.offsetTop + window.scrollY;
+
+		// update area indicator position
+		with (self.area.style) {
+			left = pos_x + 'px';
+			top = pos_y + 'px';
+		}
+	};
+
+	/**
 	 * Handle mouse entering the map.
 	 *
 	 * @param object event
@@ -154,13 +225,9 @@ Site.Map = function() {
 	 */
 	self.handler.map_mouse_click = function(event) {
 		if (!event.ctrlKey) {
-			if (!self.fixed) {
-				// ensure we don't fix area for empty match list
-				if (self.matches != null && self.matches.length > 0)
-					self.show_details();
-			} else {
+			if (!self.fixed)
+				self.show_details(); else
 				self.hide_details();
-			}
 
 		} else {
 			// calculate relative position of the pointer

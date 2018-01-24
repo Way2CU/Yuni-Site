@@ -119,6 +119,7 @@
 
 		<cms:mobile>
 			<a href="https://www.youtube.com/watch?v=9rhRsUTqL0Q&amp;feature=youtu.be" class="youtube video">
+				<cms:text constant="youtube_link"/>
 			</a>
 		</cms:mobile>
 	</nav>

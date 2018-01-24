@@ -10,5 +10,6 @@
 		class="youtube video interactive"
 		cms:eval="data-embed-url,data-width,data-height"
 		>
+		<cms:text constant="youtube_link"/>
 	</a>
 </document>

@@ -46,6 +46,7 @@
 					<cms:module
 						name="articles"
 						action="show_list"
+						only_visible="1"
 						group="registration-acceptance"
 						template="parts/page_menu_item.xml"
 						>

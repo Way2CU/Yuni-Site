@@ -14,6 +14,7 @@
 					<cms:module
 						name="articles"
 						action="show_list"
+						only_visible="1"
 						template="parts/popup_menu_item.xml"
 						group="program"
 						>
@@ -30,6 +31,7 @@
 					<cms:module
 						name="articles"
 						action="show_list"
+						only_visible="1"
 						template="parts/popup_menu_item.xml"
 						group="courses"
 						>

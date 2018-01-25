@@ -24,6 +24,15 @@
 			<cms:template file="parts/header.xml"/>
 
 			<section id="location">
+				<!-- header image -->
+				<cms:module
+					name="gallery"
+					action="show_image"
+					text_id="$_REQUEST['id']"
+					group="location_headers"
+					cms:eval="text_id"
+					/>
+
 				<cms:module
 					name="articles"
 					action="show"

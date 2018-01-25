@@ -245,6 +245,7 @@ div#news {
 		right: 0rem;
 		padding: 0.3rem;
 		opacity: 0;
+		pointer-events: none;
 
 		color: @color_gray;
 		text-decoration: none;
@@ -252,6 +253,7 @@ div#news {
 		&.visible {
 			display: block;
 			opacity: 1;
+			pointer-events: auto;
 		}
 	}
 }
@@ -262,7 +264,7 @@ section {
 
 // news page section
 section#news {
-	padding: 1rem;
+	padding: 1rem calc(~'(100% - 800px) / 2');
 
 	div {
 		margin-bottom: @header_spacing;
@@ -293,6 +295,16 @@ section#news {
 			html[dir=rtl] & {
 				border-left-color: transparent;
 				border-right-color: @color_news_title;
+			}
+		}
+
+		// divs not in focus
+		&:not(:target) {
+			background-color: transparent;
+			color: @color_bright;
+
+			h3 {
+				color: @color_bright;
 			}
 		}
 

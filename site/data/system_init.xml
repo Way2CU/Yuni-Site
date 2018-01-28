@@ -16,6 +16,7 @@
 	<module name="faq" order="6" preload="no"/>
 	<module name="youtube" order="7" preload="no"/>
 	<module name="downloads" order="8" preload="no"/>
+	<module name="search" order="9" preload="no"/>
 
 	<user
 		fullname="Administrator"

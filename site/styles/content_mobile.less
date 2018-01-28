@@ -553,6 +553,8 @@ section#course {
 	// page image
 	> img {
 		width: 100%;
+		@ratio: (1 / 1.49);
+		min-height: 100vw * @ratio;
 	}
 
 	article {
@@ -737,6 +739,8 @@ section#contact {
 		width: 100%;
 		height: auto;
 		margin-bottom: -5px;
+		@ratio: (1 / 1.49);
+		min-height: 100vw * @ratio;
 	}
 
 	article {
@@ -936,21 +940,26 @@ section.registration {
 	> img {
 		width: 100%;
 		margin-bottom: -5px;
+		@ratio: (1 / 1.49);
+		min-height: 100vw * @ratio;
 	}
 
 }
 
 section#locations,
 section#location {
-	> img {
+	img {
 		width: 100%;
 		height: auto;
 		margin-bottom: -5px;
+		@ratio: (1 / 1.49);
+		min-height: 100vw * @ratio;
 	}
 
 	img.location {
 		width: 7rem;
 		height: 7rem;
+		min-height: 7rem;
 		position: absolute;
 		left: 50%;
 		transform: translate(-50%, 50%);
@@ -980,11 +989,14 @@ section#calendar {
 		width: 100%;
 		height: auto;
 		margin-bottom: -5px;
+		@ratio: (1 / 1.49);
+		min-height: 100vw * @ratio;
 	}
 
 	img.calendar {
 		width: 7rem;
 		height: 7rem;
+		min-height: 7rem;
 		position: absolute;
 		left: 50%;
 		transform: translateX(-50%);

@@ -561,6 +561,8 @@ section#course {
 	// page image
 	> img {
 		width: 100%;
+		@ratio: (1 / 1.49);
+		min-height: 100vw * @ratio;
 	}
 
 	article { position: relative;
@@ -847,6 +849,8 @@ section#contact {
 		width: 100%;
 		height: auto;
 		margin-bottom: -5px;
+		@ratio: (1 / 1.49);
+		min-height: 100vw * @ratio;
 	}
 
 	article {
@@ -953,12 +957,15 @@ section#calendar {
 		width: 100%;
 		height: auto;
 		margin-bottom: -5px;
+		@ratio: (1 / 1.49);
+		min-height: 100vw * @ratio;
 	}
 
 	img.calendar {
 		display: block;
 	    width: 10rem;
 	    height: 10rem;
+	    min-height: 10rem;
 	    position: absolute;
 	    top: 15vw;
 	    left: 45vw;
@@ -1085,6 +1092,8 @@ section.registration {
 	img {
 		width: 100%;
 		margin-bottom: -5px;
+		@ratio: (1 / 1.49);
+		min-height: 100vw * @ratio;
 	}
 
 }
@@ -1095,12 +1104,15 @@ section#location {
 		width: 100%;
 		height: auto;
 		margin-bottom: -5px;
+		@ratio: (1 / 1.49);
+		min-height: 100vw * @ratio;
 	}
 
 	img.location {
 		display: block;
 	    width: 10rem;
 	    height: 10rem;
+	    min-height: 10rem;
 	    position: absolute;
 	    top: 15vw;
 	    left: 45vw;

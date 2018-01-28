@@ -5,6 +5,17 @@
 		<div class="menu">
 			<a href="javascript: void(0);"><cms:svg file="sprite.svg" symbol="icon-menu"/></a>
 			<nav>
+				<form action="_BASEURL.'/search'" cms:eval="action" method="GET">
+					<label>
+						<span></span>
+						<input
+							type="search"
+							name="query"
+							/>
+					</label>
+					<button type="submit"><cms:text constant="search"/></button>
+				</form>
+
 				<!-- Program menu -->
 				<a class="program">
 					<cms:svg file="sprite.svg" symbol="icon-book"/>

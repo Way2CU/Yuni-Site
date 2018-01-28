@@ -11,5 +11,6 @@
 	"/registration/acceptance/{s:document}": "registration_acceptance_document.xml",
 	"/registration/sign-up": "registration_sign_up.xml",
 	"/registration/sign-up/{s:document}": "registration_sign_up_document.xml",
-	"/registration/faq": "registration_faq.xml"
+	"/registration/faq": "registration_faq.xml",
+	"/search": "search.xml"
 }

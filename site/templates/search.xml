@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE document SYSTEM "../units/schema/language.dtd">
+<document>
+	<html lang="$language" dir="$language_rtl ? 'rtl' : 'ltr'" cms:eval="lang,dir">
+		<head>
+			<title>
+				<cms:text constant="site_title"/>
+				<cms:raw text=" - "/>
+				<cms:text constant="search_results_title"/>
+			</title>
+			<cms:collection include="page_control"/>
+			<cms:module name="head_tag" action="print_tag"/>
+		</head>
+
+		<body>
+			<!-- Floating menu and title -->
+			<cms:template file="parts/header.xml"/>
+
+			<!-- Show search results -->
+			<section id="search_results">
+				<cms:module
+					name="search"
+					action="show_results"
+					query="fix_chars($_REQUEST['query'])"
+					module_list="articles"
+					threshold="10"
+					limit="50"
+					template="parts/search_result.xml"
+					cms:eval="query"
+					/>
+			</section>
+
+			<!-- Footer and copyright -->
+			<cms:template file="parts/footer.xml"/>
+		</body>
+	</html>
+</document>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE document SYSTEM "../../../units/schema/language.dtd">
+<document>
+	<article class="result">
+		<h2><cms:var param="title" multilanguage="yes"/></h2>
+		<p>
+			<cms:var param="content"/>
+		</p>
+	</article>
+</document>

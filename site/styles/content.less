@@ -820,7 +820,35 @@ section#course > svg {
 	}
 }
 
+section#contact > svg {
+	display: block;
+	width: 10rem;
+	height: 10rem;
+	position: absolute;
+	top: 15vw;
+	left: 45vw;
+
+	border-radius: 0.5rem;
+	background-color: fade(@color_dark, 30);
+
+	svg:first-child {
+		stroke: @color_contact;
+		fill: none;
+	}
+
+	svg:last-child {
+		fill: @color_contact;
+		transform: translate(20%, 20%) scale(0.6);
+	}
+}
+
 section#contact {
+	img {
+		width: 100%;
+		height: auto;
+		margin-bottom: -5px;
+	}
+
 	article {
 		text-align: center;
 		padding: 1rem;
@@ -921,6 +949,23 @@ section#contact {
 }
 
 section#calendar {
+	img {
+		width: 100%;
+		height: auto;
+		margin-bottom: -5px;
+	}
+
+	img.calendar {
+		display: block;
+	    width: 10rem;
+	    height: 10rem;
+	    position: absolute;
+	    top: 15vw;
+	    left: 45vw;
+	    border-radius: 2.5rem;
+	    background-color: rgba(0, 0, 0, 0.3);
+	}
+
 	iframe {
 		display: block;
 		margin: 0 auto;
@@ -1044,11 +1089,23 @@ section.registration {
 
 }
 
+section#locations,
 section#location {
-	> img {
+	img {
 		width: 100%;
 		height: auto;
 		margin-bottom: -5px;
+	}
+
+	img.location {
+		display: block;
+	    width: 10rem;
+	    height: 10rem;
+	    position: absolute;
+	    top: 15vw;
+	    left: 45vw;
+	    border-radius: 2.5rem;
+	    background-color: rgba(0, 0, 0, 0.3);
 	}
 
 	article {

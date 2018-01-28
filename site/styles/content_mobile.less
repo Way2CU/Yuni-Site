@@ -708,7 +708,37 @@ section#course > svg {
 	}
 }
 
+section#contact > svg {
+	display: block;
+	width: 7rem;
+	height: 7rem;
+	position: absolute;
+	top: 7vw;
+	left: 50%;
+	transform: translate(-50%, 50%);
+
+	border-radius: 0.5rem;
+	background-color: fade(@color_dark, 30);
+	transition: all 0.3s;
+
+	svg:first-child {
+		stroke: @color_contact;
+		fill: none;
+	}
+
+	svg:last-child {
+		fill: @color_contact;
+		transform: translate(20%, 20%) scale(0.6);
+	}
+}
+
 section#contact {
+	img {
+		width: 100%;
+		height: auto;
+		margin-bottom: -5px;
+	}
+
 	article {
 		text-align: center;
 		padding: 1rem;
@@ -910,11 +940,24 @@ section.registration {
 
 }
 
+section#locations,
 section#location {
 	> img {
 		width: 100%;
 		height: auto;
 		margin-bottom: -5px;
+	}
+
+	img.location {
+		width: 7rem;
+		height: 7rem;
+		position: absolute;
+		left: 50%;
+		transform: translate(-50%, 50%);
+		top: 7vw;
+		border-radius: 2.5rem;
+		background-color: fade(@color_dark, 20%);
+		transition: all 0.3s;
 	}
 
 	article {
@@ -927,5 +970,26 @@ section#location {
 			}
 		}
 
+	}
+}
+
+section#calendar {
+	position: relative;
+
+	img {
+		width: 100%;
+		height: auto;
+		margin-bottom: -5px;
+	}
+
+	img.calendar {
+		width: 7rem;
+		height: 7rem;
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		top: 7vw;
+		border-radius: 2.5rem;
+		background-color: fade(@color_dark, 20%);
 	}
 }

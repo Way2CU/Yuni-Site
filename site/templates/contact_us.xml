@@ -19,7 +19,7 @@
 
 				<svg>
 					<cms:svg file="squiggle.svg"/>
-					<cms:svg file="sprite.svg" symbol="icon-book"/>
+					<cms:svg file="sprite.svg" symbol="icon-envelope"/>
 				</svg>
 				<!-- Page image -->
 				<cms:module

@@ -17,6 +17,19 @@
 			<cms:template file="parts/header.xml"/>
 
 			<section id="locations">
+				<!-- matching logo for the page -->
+				<img
+					src="_BASEURL.'/site/images/'.'location.png'"
+					alt="locations"
+					class="location"
+					cms:eval="src"
+					/>
+
+				<cms:module
+					name="gallery"
+					action="show_image"
+					text_id="location"
+					/>
 				<h1><cms:text constant="menu_locations"/></h1>
 				<figure id="map">
 					<cms:svg file="map.svg"/>

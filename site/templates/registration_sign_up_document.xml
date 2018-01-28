@@ -25,7 +25,7 @@
 			<!-- Floating menu and title -->
 			<cms:template file="parts/header.xml"/>
 
-			<section id="course">
+			<section class="registration">
 				<!-- Page image -->
 				<cms:module
 					name="gallery"

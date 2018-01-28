@@ -244,6 +244,7 @@ div#news {
 		right: 0rem;
 		padding: 0.3rem;
 		opacity: 0;
+		pointer-events: none;
 
 		color: @color_gray;
 		text-decoration: none;
@@ -251,6 +252,7 @@ div#news {
 		&.visible {
 			display: block;
 			opacity: 1;
+			pointer-events: auto;
 		}
 	}
 }
@@ -291,6 +293,16 @@ section#news {
 			html[dir=rtl] & {
 				border-left-color: transparent;
 				border-right-color: @color_news_title;
+			}
+		}
+
+		// divs not in focus
+		&:not(:target) {
+			background-color: transparent;
+			color: @color_bright;
+
+			h3 {
+				color: @color_bright;
 			}
 		}
 
@@ -511,6 +523,26 @@ section#locations {
 	}
 }
 
+// specific pages main headers
+section#program article h1,
+section#locations h1,
+section#location article h1,
+section#calendar h1,
+header.mobile_title + h1 {
+	.page-main-header(@color_program, @color_dark);
+}
+
+section#course article h1 {
+	.page-main-header(@color_courses, @color_bright);
+}
+
+section.registration h1 {
+	.page-main-header(@color_registration, @color_bright);
+}
+
+section#contact h1 {
+	.page-main-header(@color_contact, @color_dark);
+}
 
 // program and course pages
 section#program,
@@ -526,22 +558,6 @@ section#course {
 	article {
 		position: relative;
 		line-height: 1;
-
-		// inspirational title above page title
-		h1 + h3 {
-			position: absolute;
-			bottom: 100%;
-			left: 0;
-			right: 0;
-			margin: 0;
-			padding: @button_padding;
-			padding-bottom: 0.5em;
-
-			background-color: fade(@color_dark, 70);
-			text-align: center;
-			font-family: 'fb-liddar-regular';
-			font-size: 2.5em;
-		}
 
 		// regular page components
 		> p {
@@ -692,7 +708,37 @@ section#course > svg {
 	}
 }
 
+section#contact > svg {
+	display: block;
+	width: 7rem;
+	height: 7rem;
+	position: absolute;
+	top: 7vw;
+	left: 50%;
+	transform: translate(-50%, 50%);
+
+	border-radius: 0.5rem;
+	background-color: fade(@color_dark, 30);
+	transition: all 0.3s;
+
+	svg:first-child {
+		stroke: @color_contact;
+		fill: none;
+	}
+
+	svg:last-child {
+		fill: @color_contact;
+		transform: translate(20%, 20%) scale(0.6);
+	}
+}
+
 section#contact {
+	img {
+		width: 100%;
+		height: auto;
+		margin-bottom: -5px;
+	}
+
 	article {
 		text-align: center;
 		padding: 1rem;
@@ -832,7 +878,36 @@ section#faq {
 section.registration {
 
 	article {
-		padding: 0 1.5em;
+
+		p {
+			padding: 0 1.5rem;
+
+			a {
+				.regular-button();
+			}
+		}
+
+		ul,
+		ol {
+			padding: 0rem 1.5rem;
+			list-style-type: none;
+		}
+
+		ul li {
+			padding: 1rem;
+
+			p {
+				padding: 0;
+			}
+
+			p a {
+				.regular-button();
+			}
+
+			a {
+				.regular-button();
+			}
+		}
 	}
 
 	> svg {
@@ -865,11 +940,24 @@ section.registration {
 
 }
 
+section#locations,
 section#location {
 	> img {
 		width: 100%;
 		height: auto;
 		margin-bottom: -5px;
+	}
+
+	img.location {
+		width: 7rem;
+		height: 7rem;
+		position: absolute;
+		left: 50%;
+		transform: translate(-50%, 50%);
+		top: 7vw;
+		border-radius: 2.5rem;
+		background-color: fade(@color_dark, 20%);
+		transition: all 0.3s;
 	}
 
 	article {
@@ -882,5 +970,26 @@ section#location {
 			}
 		}
 
+	}
+}
+
+section#calendar {
+	position: relative;
+
+	img {
+		width: 100%;
+		height: auto;
+		margin-bottom: -5px;
+	}
+
+	img.calendar {
+		width: 7rem;
+		height: 7rem;
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		top: 7vw;
+		border-radius: 2.5rem;
+		background-color: fade(@color_dark, 20%);
 	}
 }

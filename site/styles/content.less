@@ -245,6 +245,7 @@ div#news {
 		right: 0rem;
 		padding: 0.3rem;
 		opacity: 0;
+		pointer-events: none;
 
 		color: @color_gray;
 		text-decoration: none;
@@ -252,6 +253,7 @@ div#news {
 		&.visible {
 			display: block;
 			opacity: 1;
+			pointer-events: auto;
 		}
 	}
 }
@@ -262,7 +264,7 @@ section {
 
 // news page section
 section#news {
-	padding: 1rem;
+	padding: 1rem calc(~'(100% - 800px) / 2');
 
 	div {
 		margin-bottom: @header_spacing;
@@ -293,6 +295,16 @@ section#news {
 			html[dir=rtl] & {
 				border-left-color: transparent;
 				border-right-color: @color_news_title;
+			}
+		}
+
+		// divs not in focus
+		&:not(:target) {
+			background-color: transparent;
+			color: @color_bright;
+
+			h3 {
+				color: @color_bright;
 			}
 		}
 
@@ -520,6 +532,26 @@ section#locations {
 	}
 }
 
+// specific pages main headers
+section#program article h1,
+section#locations h1,
+section#location article h1,
+section#calendar h1,
+header.mobile_title + h1 {
+	.page-main-header(@color_program, @color_dark);
+}
+
+section#course article h1 {
+	.page-main-header(@color_courses, @color_bright);
+}
+
+section.registration h1 {
+	.page-main-header(@color_registration, @color_bright);
+}
+
+section#contact h1 {
+	.page-main-header(@color_contact, @color_dark);
+}
 
 // program and course pages
 section#program,
@@ -533,22 +565,6 @@ section#course {
 
 	article { position: relative;
 		line-height: 1;
-
-		// inspirational title above page title
-		h1 + h3 {
-			position: absolute;
-			bottom: 100%;
-			left: 0;
-			right: 0;
-			margin: 0;
-			padding: @button_padding;
-			padding-bottom: 0.5em;
-
-			background-color: fade(@color_dark, 70);
-			text-align: center;
-			font-family: 'fb-liddar-regular';
-			font-size: 2.5em;
-		}
 
 		// regular page components
 		> p {
@@ -804,7 +820,35 @@ section#course > svg {
 	}
 }
 
+section#contact > svg {
+	display: block;
+	width: 10rem;
+	height: 10rem;
+	position: absolute;
+	top: 15vw;
+	left: 45vw;
+
+	border-radius: 0.5rem;
+	background-color: fade(@color_dark, 30);
+
+	svg:first-child {
+		stroke: @color_contact;
+		fill: none;
+	}
+
+	svg:last-child {
+		fill: @color_contact;
+		transform: translate(20%, 20%) scale(0.6);
+	}
+}
+
 section#contact {
+	img {
+		width: 100%;
+		height: auto;
+		margin-bottom: -5px;
+	}
+
 	article {
 		text-align: center;
 		padding: 1rem;
@@ -905,6 +949,23 @@ section#contact {
 }
 
 section#calendar {
+	img {
+		width: 100%;
+		height: auto;
+		margin-bottom: -5px;
+	}
+
+	img.calendar {
+		display: block;
+	    width: 10rem;
+	    height: 10rem;
+	    position: absolute;
+	    top: 15vw;
+	    left: 45vw;
+	    border-radius: 2.5rem;
+	    background-color: rgba(0, 0, 0, 0.3);
+	}
+
 	iframe {
 		display: block;
 		margin: 0 auto;
@@ -972,10 +1033,29 @@ section#faq {
 section.registration {
 
 	article {
-		padding: 0 calc(~'(100% - 1200px) / 2');
 
 		p {
 			padding: 0 calc(~'(100% - 800px) / 2');
+
+			a {
+				.regular-button();
+			}
+		}
+
+		ul,
+		ol {
+			padding: 2rem calc(~'(100% - 700px) / 2');
+		}
+
+		ul li {
+
+			p a {
+				.regular-button();
+			}
+
+			a {
+				.regular-button();
+			}
 		}
 	}
 
@@ -1009,11 +1089,23 @@ section.registration {
 
 }
 
+section#locations,
 section#location {
-	> img {
+	img {
 		width: 100%;
 		height: auto;
 		margin-bottom: -5px;
+	}
+
+	img.location {
+		display: block;
+	    width: 10rem;
+	    height: 10rem;
+	    position: absolute;
+	    top: 15vw;
+	    left: 45vw;
+	    border-radius: 2.5rem;
+	    background-color: rgba(0, 0, 0, 0.3);
 	}
 
 	article {

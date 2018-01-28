@@ -16,6 +16,18 @@
 			<cms:template file="parts/header.xml"/>
 
 			<section id="contact">
+
+				<svg>
+					<cms:svg file="squiggle.svg"/>
+					<cms:svg file="sprite.svg" symbol="icon-book"/>
+				</svg>
+				<!-- Page image -->
+				<cms:module
+					name="gallery"
+					action="show_image"
+					text_id="contact_us"
+					/>
+
 				<h1><cms:text constant="menu_contact_us"/></h1>
 
 				<!-- Additional information -->

@@ -3,7 +3,18 @@
 <document>
 	<header class="mobile_title">
 		<div class="menu">
-			<a href="javascript: void(0);"><cms:svg file="sprite.svg" symbol="icon-menu"/></a>
+			<!-- menu button on mobile for toggling main menu-->
+			<cms:mobile>
+				<input type="checkbox" id="menu_toggle"/>
+				<label for="menu_toggle" id="expand-button">
+					<cms:svg file="sprite.svg" symbol="icon-menu"/>
+				</label>
+			</cms:mobile>
+
+			<!-- desktop version of menu button-->
+			<cms:desktop>
+				<a href="javascript: void(0);"><cms:svg file="sprite.svg" symbol="icon-menu"/></a>
+			</cms:desktop>
 			<nav>
 				<form action="_BASEURL.'/search'" cms:eval="action" method="GET">
 					<label>

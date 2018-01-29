@@ -50,8 +50,17 @@ header {
 			padding: 0.5rem 0.5rem 0.5rem 0rem;
 		}
 
-		// dummy link hovering which shows the menu
-		> a {
+		// checkbox for toggling menu
+		input#menu_toggle {
+			display: none;
+
+			&:checked ~ nav {
+				opacity: 1;
+				transition: all 0.3s;
+			}
+		}
+
+		> label {
 			display: inline-block;
 			width: @size;
 
@@ -77,6 +86,7 @@ header {
 
 			background-color: fade(@color_dark, 80);
 			box-shadow: 0px 2px 3px fade(@color_dark, 50);
+			transition: all 0.3s;
 
 			// menu items
 			a {
@@ -142,11 +152,6 @@ header {
 				padding: 0.5em;
 				padding-right: 2.5em;
 			}
-		}
-
-		&:hover > nav {
-			opacity: 1;
-			pointer-events: auto;
 		}
 	}
 }

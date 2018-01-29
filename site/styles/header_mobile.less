@@ -44,7 +44,11 @@ header {
 	div.menu {
 		display: inline-block;
 		position: relative;
-		padding: 0.5rem 0.5rem 0.5rem 0rem;
+		padding: 0.5rem 0rem 0.5rem 0.5rem;
+
+		html[dir=rtl] & {
+			padding: 0.5rem 0.5rem 0.5rem 0rem;
+		}
 
 		// dummy link hovering which shows the menu
 		> a {

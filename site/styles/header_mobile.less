@@ -9,7 +9,7 @@
 header {
 	@size: 2.3rem;
 
-	padding: @header_spacing / 2;
+	padding: 0;
 
 	border-bottom: 1px solid fade(@color_bright, 20);
 	background-color: @color_dark;
@@ -27,7 +27,7 @@ header {
 		}
 
 		&.logo {
-			width: calc(~'100% - 2.3rem');
+			width: calc(~'100% - 2.8rem');
 			text-align: center;
 
 			svg {
@@ -44,6 +44,7 @@ header {
 	div.menu {
 		display: inline-block;
 		position: relative;
+		padding: 0.5rem 0.5rem 0.5rem 0rem;
 
 		// dummy link hovering which shows the menu
 		> a {

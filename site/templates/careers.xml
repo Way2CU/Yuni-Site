@@ -16,7 +16,12 @@
 
 			<section id="career">
 
-				<cms:svg file="sprite.svg" symbol="icon-users"/>
+				<img
+					src="_BASEURL.'/site/images/'.'careers.png'"
+					alt="calendar"
+					class="career"
+					cms:eval="src"
+					/>
 				<!-- Page image -->
 				<cms:module
 					name="gallery"

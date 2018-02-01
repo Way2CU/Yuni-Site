@@ -129,7 +129,6 @@
 			class="career"
 			href="URL::make(array(), 'careers.xml')"
 			cms:eval="href">
-			<cms:svg file="sprite.svg" symbol="icon-users"/>
 			<cms:text constant="career_link"/>
 		</a>
 	</nav>

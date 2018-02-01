@@ -161,6 +161,7 @@ nav#other {
 		&.youtube { background-image: url(../images/youtube-icon.png);}
 
 		&.youtube.video { margin-left: 0;}
+		&.career { background-image: url(../images/careers.png);}
 	}
 }
 
@@ -1015,20 +1016,16 @@ section#career {
 		min-height: 100vw * @ratio;
 	}
 
-	svg {
-		fill: @color_contact;
-		padding: 0.5rem;
-
-		display: block;
+	img.career {
 		width: 7rem;
 		height: 7rem;
+		min-height: 7rem;
 		position: absolute;
-		top: 15vh;
-		left: 35vw;
-
-		border-radius: 0.5rem;
-		background-color: fade(@color_dark, 30);
-
+		left: 50%;
+		transform: translate(-50%, 50%);
+		top: 7vw;
+		border-radius: 2.5rem;
+		background-color: fade(@color_dark, 20%);
 	}
 
 	> ul {

@@ -153,15 +153,7 @@ nav#other {
 		&.calendar { background-image: url(../images/calendar.png); }
 		&.locations { background-image: url(../images/location.png); }
 		&.youtube { background-image: url(../images/youtube-icon.png);}
-		&.career {
-			svg {
-				fill: @color_bright;
-				width: 4rem;
-				height: 4rem;
-				margin-bottom: 0.5rem;
-				background-color: transparent;
-			}
-		}
+		&.career { background-image: url(../images/careers.png);}
 	}
 
 	iframe {
@@ -1155,19 +1147,16 @@ section#career {
 		min-height: 100vw * @ratio;
 	}
 
-	svg {
+	img.career {
 		display: block;
-		width: 10rem;
-		height: 10rem;
-		position: absolute;
-		top: 15vw;
-		left: 45vw;
-		fill: @color_contact;
-		padding: 0.5rem;
-
-		border-radius: 0.5rem;
-		background-color: fade(@color_dark, 30);
-
+	    width: 10rem;
+	    height: 10rem;
+	    min-height: 10rem;
+	    position: absolute;
+	    top: 15vw;
+	    left: 45vw;
+	    border-radius: 2.5rem;
+	    background-color: rgba(0, 0, 0, 0.3);
 	}
 
 	> ul {

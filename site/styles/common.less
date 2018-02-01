@@ -132,3 +132,37 @@
 	font-family: 'fb-liddar-regular';
 	font-size: 2.5em;
 }
+
+.table-style(@heading_color, @text_color) {
+	table-layout: fixed;
+	width: 70%;
+	margin: 3rem auto;
+	border-collapse: collapse;
+	border: 1px solid @color_contact;
+
+	thead > tr > th {
+		border: 1px solid @color_contact;
+		background-color: @heading_color;
+		text-align: center;
+		color: @text_color;
+		padding: 0.5rem;
+	}
+
+	tbody > tr {
+
+		&:nth-child(even) {
+			background-color: fade(@color_bright, 10%);
+		}
+
+		> td {
+			text-align: center;
+			border: 1px solid @color_contact;
+			padding: 0.5rem;
+			color: @text_color;
+
+			&:first-of-type {
+				background-color: fade(@heading_color, 30%);
+			}
+		}
+	}
+}

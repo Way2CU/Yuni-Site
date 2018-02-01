@@ -261,6 +261,22 @@ section {
 	min-height: 48vh;
 }
 
+section > article > table {
+	.table-style(@color_program, @color_bright);
+}
+
+section#program > article > table {
+	.table-style(@color_program, @color_bright);
+}
+
+section#course > article > table {
+	.table-style(@color_courses, @color_bright);
+}
+
+section.registration > article > table {
+	.table-style(@color_registration, @color_bright);
+}
+
 // news page section
 section#news {
 	padding: 1rem calc(~'(100% - 800px) / 2');
@@ -560,6 +576,7 @@ section#course {
 
 	// page image
 	> img {
+		display: block;
 		width: 100%;
 		@ratio: (1 / 1.49);
 		min-height: 100vw * @ratio;

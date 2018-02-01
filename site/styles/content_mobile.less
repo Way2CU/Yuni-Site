@@ -262,6 +262,26 @@ section {
 	min-height: 52vh;
 }
 
+section > article > table {
+	.table-style(@color_program, @color_bright);
+	width: 90%;
+}
+
+section#program > article > table {
+	.table-style(@color_program, @color_bright);
+	width: 90%;
+}
+
+section#course > article > table {
+	.table-style(@color_courses, @color_bright);
+	width: 90%;
+}
+
+section.registration > article > table {
+	.table-style(@color_registration, @color_bright);
+	width: 90%;
+}
+
 // news page section
 section#news {
 	padding: 1rem;
@@ -747,7 +767,6 @@ section#contact {
 	article {
 		text-align: center;
 		padding: 1rem;
-		width: 80%;
 		margin: 0 auto;
 
 		& h1 {

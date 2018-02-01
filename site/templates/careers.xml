@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE document SYSTEM "../../../units/schema/language.dtd">
+<document>
+	<html lang="$language" dir="$language_rtl ? 'rtl' : 'ltr'" cms:eval="lang,dir">
+		<head>
+			<title>
+				<cms:text constant="site_title"/>
+				<cms:raw text=" - "/>
+				<cms:text constant="career_title"/>
+			</title>
+			<cms:module name="head_tag" action="print_tag"/>
+		</head>
+		<body>
+			<!-- Floating menu and title -->
+			<cms:template file="parts/header.xml"/>
+
+			<section id="career">
+
+				<cms:svg file="sprite.svg" symbol="icon-users"/>
+				<!-- Page image -->
+				<cms:module
+					name="gallery"
+					action="show_image"
+					text_id="career_main_page"
+					group="careers"
+					/>
+
+				<!-- main title -->
+				<h1><cms:text constant="main_title_careers"/></h1>
+
+				<!-- list of opened job positions -->
+				<ul>
+					<cms:module
+						name="articles"
+						action="show_list"
+						group="careers"
+						template="parts/career_item_view.xml"
+						>
+						<param name="section" value="career"/>
+					</cms:module>
+				</ul>
+			</section>
+
+			<!-- Footer and copyright -->
+			<cms:template file="parts/footer.xml"/>
+		</body>
+	</html>
+</document>

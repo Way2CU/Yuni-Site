@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE document SYSTEM "../../../units/schema/language.dtd">
+<document>
+	<li>
+		<!-- short job description -->
+		<cms:markdown param="content" multilanguage="yes" chars="200"/>
+
+		<!-- read more button -->
+		<a
+			href="URL::make(array($template['section'] => $params['text_id']))"
+			class="read_more"
+			cms:eval="href"
+			>
+			<cms:text constant="read_more_button"/>
+		</a>
+	</li>
+</document>

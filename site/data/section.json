@@ -12,5 +12,7 @@
 	"/registration/sign-up": "registration_sign_up.xml",
 	"/registration/sign-up/{s:document}": "registration_sign_up_document.xml",
 	"/registration/faq": "registration_faq.xml",
-	"/search": "search.xml"
+	"/search": "search.xml",
+	"/careers": "careers.xml",
+	"/careers/{s:career}": "career_view.xml"
 }

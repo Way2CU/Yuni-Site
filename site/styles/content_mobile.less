@@ -1005,3 +1005,141 @@ section#calendar {
 		background-color: fade(@color_dark, 20%);
 	}
 }
+
+section#career {
+	img {
+		width: 100%;
+		height: auto;
+		margin-bottom: -5px;
+		@ratio: 1 / 1.49;
+		min-height: 100vw * @ratio;
+	}
+
+	svg {
+		fill: @color_contact;
+		padding: 0.5rem;
+
+		display: block;
+		width: 7rem;
+		height: 7rem;
+		position: absolute;
+		top: 15vh;
+		left: 35vw;
+
+		border-radius: 0.5rem;
+		background-color: fade(@color_dark, 30);
+
+	}
+
+	> ul {
+		margin: 0;
+		padding: 2rem 2rem;
+		list-style-type: none;
+
+		li {
+			display: block;
+			padding: 1rem 1rem;
+			margin-bottom: 2rem;
+			background-color: @color_bright;
+			color: @color_dark;
+			text-align: center;
+			h3 {
+				color: @color_green;
+			}
+
+			p {
+
+			}
+
+			a {
+				.regular-button();
+			}
+		}
+	}
+
+	article {
+		padding: 1rem 2rem;
+	}
+
+	form {
+		padding: 1rem;
+
+		label {
+			width: 100%;
+
+			input {
+				box-sizing: border-box;
+				display: block;
+				width: 100%;
+				padding: 0.7rem 0.2rem;
+				border: transparent;
+				border-radius: 3px;
+				margin-bottom: 1rem;
+			}
+
+			select {
+				box-sizing: border-box;
+				display: block;
+				width: 100%;
+				padding: 0.7rem 0.2rem;
+				border: transparent;
+				border-radius: 3px;
+				margin-bottom: 1rem;
+				background-color: @color_bright;
+			}
+
+			span {
+				display: block;
+				width: 50%;
+
+				&:before {
+					content: "";
+					display: inline-block;
+					vertical-align: middle;
+					background-image: url(../images/form-icons.svg);
+					background-repeat: no-repeat;
+					background-position: 0px 0px;
+					background-size: 300px 100px;
+					width: 50px;
+					height: 50px;
+				}
+			}
+
+			&:nth-of-type(1) span:before {
+				background-position: -10px -33px;
+			}
+
+			&:nth-of-type(2) span:before {
+				background-position: -85px -30px;
+			}
+
+			&:nth-of-type(3) span:before {
+				background-position: -160px -30px;
+			}
+
+			&:nth-of-type(4) span:before {
+				display: none;
+			}
+
+			&:nth-of-type(4) span {
+				width: 97%;
+				text-align: center;
+				padding: 0.3rem;
+				background-color: fade(@color_dark, 30%);
+				margin-bottom: 0.5rem;
+				margin-top: 1.5rem;
+				text-align: center;
+			}
+		}
+
+		div.controls {
+			text-align: center;
+
+			button {
+				.regular-button();
+				padding-left: 2rem;
+				padding-right: 2rem;
+			}
+		}
+	}
+}

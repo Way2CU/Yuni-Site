@@ -952,6 +952,23 @@ section#contact {
 				}
 			}
 
+			select {
+				box-sizing: border-box;
+				display: block;
+				width: 70%;
+				padding: 0.7rem 0.2rem;
+				border: transparent;
+				border-radius: 3px;
+				margin: 0 auto;
+				margin-bottom: 1rem;
+				background-color: @color_bright;
+
+				&:hover,
+				&:focus {
+					border: 1px solid @color_green;
+				}
+			}
+
 			span {
 				display: block;
 				width: 70%;
@@ -1251,7 +1268,7 @@ section#career {
 		display: block;
 		margin: 0 auto;
 		margin-bottom: 2rem;
-		padding: 1rem calc(~'(100% - 800px) / 2');
+		padding: 1rem calc(~'(100% - 700px) / 2');
 
 		label {
 			width: 100%;
@@ -1268,20 +1285,8 @@ section#career {
 
 				&:hover,
 				&:focus {
-					border: 2px solid @color_green;
+					border: 1px solid @color_green;
 				}
-			}
-
-			select {
-				box-sizing: border-box;
-				display: block;
-				width: 70%;
-				padding: 0.7rem 0.2rem;
-				border: transparent;
-				border-radius: 3px;
-				margin: 0 auto;
-				margin-bottom: 1rem;
-				background-color: @color_bright;
 			}
 
 			textarea {

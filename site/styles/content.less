@@ -15,10 +15,10 @@ nav#main {
 	box-sizing: border-box;
 
 	// menu items
-	> a { .main-menu-button(@color_contact, 4); }
-	> a.program { .main-menu-button(@color_program, 4); }
-	> a.courses { .main-menu-button(@color_courses, 4); }
-	> a.registration { .main-menu-button(@color_registration, 4); }
+	> a { .main-menu-button(@color_contact, 4); .button-hover-focus-style();}
+	> a.program { .main-menu-button(@color_program, 4); .button-hover-focus-style();}
+	> a.courses { .main-menu-button(@color_courses, 4); .button-hover-focus-style();}
+	> a.registration { .main-menu-button(@color_registration, 4); .button-hover-focus-style();}
 
 	// sub-menu popups
 	div.popup {
@@ -150,10 +150,34 @@ nav#other {
 
 		.main-menu-button(@color_contact);
 
-		&.calendar { background-image: url(../images/calendar.png); }
-		&.locations { background-image: url(../images/location.png); }
-		&.youtube { background-image: url(../images/youtube-icon.png);}
-		&.career { background-image: url(../images/careers.png);}
+		&.calendar {
+			background-image: url(../images/calendar.png);
+			&:hover,
+			&:active {
+				transform: scale(1.05);
+			}
+		}
+		&.locations {
+			background-image: url(../images/location.png);
+			&:hover,
+			&:active {
+				transform: scale(1.05);
+			}
+		}
+		&.youtube {
+			background-image: url(../images/youtube-icon.png);
+			&:hover,
+			&:active {
+				transform: scale(1.05);
+			}
+		}
+		&.career {
+			background-image: url(../images/careers.png);
+			&:hover,
+			&:active {
+				transform: scale(1.05);
+			}
+		}
 	}
 
 	iframe {
@@ -217,6 +241,13 @@ div#news {
 		z-index: 100;
 		vertical-align: middle;
 		cursor: pointer;
+		transition: all 0.3s;
+
+		&:hover,
+		&:active {
+			transform: scale(1.1);
+			transition: all 0.3s;
+		}
 	}
 
 	p {
@@ -235,6 +266,13 @@ div#news {
 		z-index: 100;
 		vertical-align: middle;
 		cursor: pointer;
+		transition: all 0.3s;
+
+		&:hover,
+		&:active {
+			transform: scale(1.1);
+			transition: all 0.3s;
+		}
 	}
 
 	a.news {

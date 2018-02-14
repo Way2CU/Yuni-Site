@@ -22,14 +22,14 @@ All of these need to be checked manually, changed and then committed. System wil
 	- [x] Code in `main.js` targets all pages. Code meant for individual pages is in separate files;
 	- [x] Styles are written to target LTR by default with RTL modifications, even on RTL-only sites.
 - Contact form:
-	- [?] SendGrid API access is configured;
+	- [x] SendGrid API access is configured;
 	> - [x] Mandrill API access is configured;
 	> - [x] SMTP credentials are configured and working;
-	- [?] Default sender email;
-	- [?] Default recipient;
-	- [?] Forms have honeypot field;
-	- [?] Templates for each form are created and assigned to form;
-	- [?] Templates have subject properly defined;
+	- [x] Default sender email;
+	- [x] Default recipient;
+	- [x] Forms have honeypot field;
+	- [x] Templates for each form are created and assigned to form;
+	- [x] Templates have subject properly defined;
 	- [?] Form submits and client/developer receives email.
 - Shop:
 	> - [x] Desired payment method is enabled and configured;

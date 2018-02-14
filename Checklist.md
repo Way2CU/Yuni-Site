@@ -30,7 +30,7 @@ All of these need to be checked manually, changed and then committed. System wil
 	- [x] Forms have honeypot field;
 	- [x] Templates for each form are created and assigned to form;
 	- [x] Templates have subject properly defined;
-	- [?] Form submits and client/developer receives email.
+	- [x] Form submits and client/developer receives email.
 - Shop:
 	> - [x] Desired payment method is enabled and configured;
 	> - [x] Default warehouse is created;

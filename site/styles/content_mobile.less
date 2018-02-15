@@ -654,10 +654,19 @@ section#program div#our_team_images_holder {
 		display: inline-block;
 		text-align: center;
 		border: 2px solid @color_bright;
+		vertical-align: middle;
 
-		img {
+		div.image-holder {
 			width: 100%;
-			vertical-align: middle;
+			height: 130px;
+			overflow: hidden;
+
+			img {
+				width: auto;
+				display: block;
+				margin: 0 auto;
+				vertical-align: middle;
+			}
 		}
 
 		figcaption {
@@ -671,13 +680,14 @@ section#program div#our_team_images_holder {
 				background-repeat: no-repeat;
 				background-size: 100% 100%;
 				background-position: 0px 0px, 1px 0px, 0px 1px;
-				padding: 1em;
+				padding: 0.8em 1em;
 				margin: 0;
 			}
 
 			div {
 				background-color: @color_dark;
 				padding: 1em;
+				min-height: 100px;
 
 			    > p {
 			    	line-height: 1;

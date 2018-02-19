@@ -30,14 +30,32 @@
 					<cms:svg file="squiggle.svg"/>
 					<cms:svg file="sprite.svg" symbol="icon-hat"/>
 				</svg>
-				<!-- Page image -->
+
+				<!-- background header image -->
 				<cms:module
 					name="gallery"
 					action="show_image"
 					text_id="$_REQUEST['course']"
 					group="courses"
 					cms:eval="text_id"
-					/>
+					template="parts/header_image.xml"
+					>
+					<param name="thumbnail_size" value="70"/>
+					<param name="class" value="background"/>
+				</cms:module>
+
+				<!-- page image -->
+				<cms:module
+					name="gallery"
+					action="show_image"
+					text_id="$_REQUEST['course']"
+					group="courses"
+					cms:eval="text_id"
+					template="parts/header_image.xml"
+					>
+					<param name="thumbnail_size" value="600"/>
+					<param name="class" value="thumbnail"/>
+				</cms:module>
 
 				<cms:module
 					name="articles"

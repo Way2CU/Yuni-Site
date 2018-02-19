@@ -32,13 +32,30 @@
 					cms:eval="src"
 					/>
 
-				<!-- Page image -->
+				<!-- background header image -->
 				<cms:module
 					name="gallery"
 					action="show_image"
 					text_id="career_main_page"
 					group="careers"
-					/>
+					template="parts/header_image.xml"
+					>
+					<param name="thumbnail_size" value="70"/>
+					<param name="class" value="background"/>
+				</cms:module>
+
+				<!-- page image -->
+				<cms:module
+					name="gallery"
+					action="show_image"
+					text_id="career_main_page"
+					group="careers"
+					template="parts/header_image.xml"
+					>
+					<param name="thumbnail_size" value="600"/>
+					<param name="class" value="thumbnail"/>
+				</cms:module>
+
 
 				<!-- main title -->
 				<h1><cms:text constant="main_title_careers"/></h1>

@@ -24,14 +24,40 @@
 			<cms:template file="parts/header.xml"/>
 
 			<section id="location">
-				<!-- header image -->
+
+				<!-- matching logo for the page -->
+				<img
+					src="_BASEURL.'/site/images/'.'location.png'"
+					alt="locations"
+					class="location"
+					cms:eval="src"
+					/>
+
+				<!-- background header image -->
 				<cms:module
 					name="gallery"
 					action="show_image"
 					text_id="$_REQUEST['id']"
 					group="location_headers"
 					cms:eval="text_id"
-					/>
+					template="parts/header_image.xml"
+					>
+					<param name="thumbnail_size" value="70"/>
+					<param name="class" value="background"/>
+				</cms:module>
+
+				<!-- page image -->
+				<cms:module
+					name="gallery"
+					action="show_image"
+					text_id="$_REQUEST['id']"
+					group="location_headers"
+					cms:eval="text_id"
+					template="parts/header_image.xml"
+					>
+					<param name="thumbnail_size" value="600"/>
+					<param name="class" value="thumbnail"/>
+				</cms:module>
 
 				<cms:module
 					name="articles"

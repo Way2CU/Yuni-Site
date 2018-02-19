@@ -24,11 +24,28 @@
 					cms:eval="src"
 					/>
 
+				<!-- background header image -->
 				<cms:module
 					name="gallery"
 					action="show_image"
 					text_id="calendar"
-					/>
+					template="parts/header_image.xml"
+					>
+					<param name="thumbnail_size" value="70"/>
+					<param name="class" value="background"/>
+				</cms:module>
+
+				<!-- page image -->
+				<cms:module
+					name="gallery"
+					action="show_image"
+					text_id="calendar"
+					template="parts/header_image.xml"
+					>
+					<param name="thumbnail_size" value="600"/>
+					<param name="class" value="thumbnail"/>
+				</cms:module>
+
 				<h1><cms:text constant="menu_calendar"/></h1>
 
 				<!-- Google Calendar embed code -->

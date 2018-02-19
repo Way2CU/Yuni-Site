@@ -1103,22 +1103,52 @@ section#faq {
 		content: '';
 
 		dt {
-			padding-bottom: 0.5rem;
+			padding: 1rem 0rem;
+			padding-right: 2rem;
+			margin: 0.5rem 0rem;
+			position: relative;
+
 
 			&:before {
-				display: inline-block;
-				width: 0;
-				height: 0;
-				content: '';
-
-				border: 5px solid transparent;
-				border-right-color: white;
-				transform: rotate(0deg);
-				transition: transform 0.5s;
+				border-right: 2px solid;
+			    content: '';
+			    display: block;
+			    height: 8px;
+			    margin-top: -6px;
+			    position: absolute;
+			    transform: rotate(225deg);
+			    right: 10px;
+			    top: 50%;
+			    width: 0;
 			}
 
-			&.expanded:before {
-				transform: rotate(-90deg);
+			&:after {
+				border-right: 2px solid;
+			    content: '';
+			    display: block;
+			    height: 8px;
+			    margin-top: -1px;
+			    position: absolute;
+			    right: 10px;
+			    top: 50%;
+			    width: 0;
+			    transform: rotate(-40deg);
+			    transition: all 0.3s;
+			}
+
+			&.expanded:after {
+				top: 41%;
+				right: 15px;
+				transform: rotate(135deg);
+				transition: all 0.3s;
+			}
+
+			&:nth-of-type(odd) {
+				background-color: fade(@color_bright, 20%);
+			}
+
+			&:nth-of-type(even) {
+				background-color: fade(@color_dark, 20%);
 			}
 		}
 
@@ -1127,7 +1157,6 @@ section#faq {
 			> p {
 				padding: 0.5rem;
 				padding-right: 1rem;
-				border-right: 1px solid @color_bright;
 				font-size: 0.9rem;
 
 				> a {

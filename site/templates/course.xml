@@ -63,7 +63,12 @@
 					text_id="$_REQUEST['course']"
 					group="courses"
 					cms:eval="text_id"
-					/>
+					template="stock/article_generic.xml"
+					>
+					<param name="class" value=""/>
+					<param name="title" value=""/>
+					<param name="title_tag" value="h1"/>
+				</cms:module>
 			</section>
 
 			<!-- Footer and copyright -->

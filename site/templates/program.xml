@@ -63,7 +63,12 @@
 					text_id="$_REQUEST['program']"
 					group="program"
 					cms:eval="text_id"
-					/>
+					template="stock/article_generic.xml"
+					>
+					<param name="class" value=""/>
+					<param name="title" value=""/>
+					<param name="title_tag" value="h1"/>
+				</cms:module>
 
 				<cms:if condition="$_REQUEST['program'] == 'our-team'">
 					<div id="our_team_images_holder">

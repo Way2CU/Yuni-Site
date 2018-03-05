@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE document SYSTEM "../../../units/schema/language.dtd">
 <document>
-	<!-- youtube video -->
-	<iframe width="560" height="315" src="https://www.youtube.com/embed/9rhRsUTqL0Q" frameborder="0"
-	 allowfullscreen="allowfullscreen"></iframe>
+	<!-- display youtube video only on desktop version, mobile will lead to you tube app -->
+	<cms:desktop>
+		<!-- youtube video -->
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/9rhRsUTqL0Q" frameborder="0"
+		 allowfullscreen="allowfullscreen"></iframe>
+	</cms:desktop>
 
 	<!-- Menu links -->
 	<nav id="main">

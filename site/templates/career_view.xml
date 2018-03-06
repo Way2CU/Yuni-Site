@@ -40,7 +40,7 @@
 					group="careers"
 					template="parts/header_image.xml"
 					>
-					<param name="thumbnail_size" value="70"/>
+					<param name="thumbnail_size" value="50"/>
 					<param name="class" value="background"/>
 				</cms:module>
 

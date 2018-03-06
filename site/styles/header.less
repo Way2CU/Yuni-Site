@@ -73,6 +73,37 @@ header {
 			background-color: fade(@color_dark, 80);
 			box-shadow: 0px 2px 3px fade(@color_dark, 50);
 
+
+			form {
+
+				label {
+
+					input {
+						width: 90%;
+						padding: 0.5rem 0rem;
+						border: 1px solid transparent;
+						border-radius: 3px;
+						display: block;
+						margin: 0 auto;
+						margin-top: 1rem;
+
+						&:hover {
+							border: 1px solid @color_green;
+						}
+					}
+				}
+
+				button {
+					margin-top: 0.8rem;
+					.regular-button();
+
+					&:hover {
+						border: 2px solid lighten(@color_green, 10%);
+					}
+				}
+			}
+
+
 			// menu items
 			a {
 				display: block;

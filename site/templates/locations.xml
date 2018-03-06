@@ -48,18 +48,12 @@
 				</cms:module>
 
 				<h1><cms:text constant="menu_locations"/></h1>
-				<figure id="map">
-					<cms:svg file="map.svg"/>
-					<figcaption>
-						<cms:module
-							name="articles"
-							action="show_list"
-							only_visible="1"
-							group="locations"
-							template="parts/location_info.xml"
-							/>
-					</figcaption>
-				</figure>
+					<cms:module
+						name="articles"
+						action="show_list"
+						group="locations"
+						template="parts/location_info.xml"
+						/>
 			</section>
 
 			<!-- Footer and copyright -->

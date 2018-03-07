@@ -32,17 +32,19 @@
 				</svg>
 
 				<!-- background header image -->
-				<cms:module
-					name="gallery"
-					action="show_image"
-					text_id="$_REQUEST['program']"
-					group="program"
-					cms:eval="text_id"
-					template="parts/header_image.xml"
-					>
-					<param name="thumbnail_size" value="50"/>
-					<param name="class" value="background"/>
-				</cms:module>
+				<cms:desktop>
+					<cms:module
+						name="gallery"
+						action="show_image"
+						text_id="$_REQUEST['program']"
+						group="program"
+						cms:eval="text_id"
+						template="parts/header_image.xml"
+						>
+						<param name="thumbnail_size" value="50"/>
+						<param name="class" value="background"/>
+					</cms:module>
+				</cms:desktop>
 
 				<!-- page image -->
 				<cms:module

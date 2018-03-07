@@ -383,10 +383,9 @@ section#news {
 // locations page and popups
 section#locations {
 
-		> a {
-			.regular-button();
-		}
-
+	> a {
+		.regular-button();
+	}
 }
 
 // specific pages main headers
@@ -901,13 +900,19 @@ section#program div#our_team_images_holder {
 	}
 }
 
+section#career > img.career,
+section#location > img.location,
+section#locations > img.location,
+section#calendar > img.calendar,
 section#program > svg {
 	display: block;
 	width: 10rem;
 	height: 10rem;
 	position: absolute;
-	top: 15vw;
-	left: 45vw;
+	top: 100px;
+	left: 50%;
+	transform: translateX(-50%);
+	transition: transform 0.3s;
 	z-index: 1000;
 
 	border-radius: 0.5rem;
@@ -929,8 +934,10 @@ section#course > svg {
 	width: 10rem;
 	height: 10rem;
 	position: absolute;
-	top: 15vw;
-	left: 45vw;
+	top: 100px;
+	left: 50%;
+	transform: translateX(-50%);
+	transition: transform 0.3s;
 	z-index: 1000;
 
 	border-radius: 0.5rem;
@@ -952,8 +959,10 @@ section#contact > svg {
 	width: 10rem;
 	height: 10rem;
 	position: absolute;
-	top: 15vw;
-	left: 45vw;
+	top: 100px;
+	left: 50%;
+	transform: translateX(-50%);
+	transition: transform 0.3s;
 	z-index: 1000;
 
 	border-radius: 0.5rem;
@@ -1111,17 +1120,8 @@ section#calendar {
 		transition: all 0.3s;
 	}
 
-	img.calendar {
-		display: block;
-	    width: 10rem;
-	    height: 10rem;
-	    min-height: 10rem;
-	    position: absolute;
-	    top: 15vw;
-	    left: 45vw;
-	    border-radius: 2.5rem;
-	    background-color: rgba(0, 0, 0, 0.3);
-	    z-index: 1000;
+	> img.calendar {
+		border-radius: 3rem;
 	}
 
 	iframe {
@@ -1260,8 +1260,10 @@ section.registration {
 		width: 10rem;
 		height: 10rem;
 		position: absolute;
-		top: 15vw;
-		left: 45vw;
+		top: 100px;
+		left: 50%;
+		transform: translateX(-50%);
+		transition: transform 0.3s;
 		z-index: 1000;
 
 		border-radius: 0.5rem;
@@ -1295,17 +1297,8 @@ section#location {
 		transition: all 0.3s;
 	}
 
-	img.location {
-		display: block;
-	    width: 10rem;
-	    height: 10rem;
-	    min-height: 10rem;
-	    position: absolute;
-	    top: 15vw;
-	    left: 45vw;
-	    border-radius: 2.5rem;
-	    background-color: rgba(0, 0, 0, 0.3);
-	    z-index: 1000;
+	> img.location {
+		border-radius: 3rem;
 	}
 
 	article {
@@ -1318,6 +1311,15 @@ section#location {
 			}
 		}
 
+	}
+
+	> div {
+		padding: 4rem calc(~'(100% - 1200px) / 2');
+		text-align: center;
+
+		a {
+			.regular-button();
+		}
 	}
 }
 
@@ -1336,17 +1338,8 @@ section#career {
 		transition: all 0.3s;
 	}
 
-	img.career {
-		display: block;
-	    width: 10rem;
-	    height: 10rem;
-	    min-height: 10rem;
-	    position: absolute;
-	    top: 15vw;
-	    left: 45vw;
-	    border-radius: 2.5rem;
-	    background-color: rgba(0, 0, 0, 0.3);
-	    z-index: 1000;
+	> img.career {
+		border-radius: 3rem;
 	}
 
 	> ul {

@@ -26,33 +26,35 @@
 					/>
 
 				<!-- background header image -->
-				<cms:desktop>
+				<div class="header-images">
+					<cms:desktop>
+						<cms:module
+							name="gallery"
+							action="show_image"
+							text_id="location"
+							template="parts/header_image.xml"
+							>
+							<param name="thumbnail_size" value="50"/>
+							<param name="class" value="background"/>
+						</cms:module>
+					</cms:desktop>
+
+					<!-- page image -->
 					<cms:module
 						name="gallery"
 						action="show_image"
 						text_id="location"
 						template="parts/header_image.xml"
 						>
-						<param name="thumbnail_size" value="50"/>
-						<param name="class" value="background"/>
+						<param name="thumbnail_size" value="525"/>
+						<param name="class" value="thumbnail"/>
 					</cms:module>
-				</cms:desktop>
-
-				<!-- page image -->
-				<cms:module
-					name="gallery"
-					action="show_image"
-					text_id="location"
-					template="parts/header_image.xml"
-					>
-					<param name="thumbnail_size" value="600"/>
-					<param name="class" value="thumbnail"/>
-				</cms:module>
+				</div>
 
 				<h1><cms:text constant="menu_locations"/></h1>
 
 				<!-- locations groups -->
-				<div>
+				<div class="location-group">
 					<h3><cms:text constant="region-north"/></h3>
 					<cms:module
 						name="articles"
@@ -62,7 +64,7 @@
 						/>
 				</div>
 
-				<div>
+				<div class="location-group">
 					<h3><cms:text constant="region-south"/></h3>
 					<cms:module
 						name="articles"
@@ -72,7 +74,7 @@
 						/>
 				</div>
 
-				<div>
+				<div class="location-group">
 					<h3><cms:text constant="region-center"/></h3>
 					<cms:module
 						name="articles"
@@ -82,7 +84,7 @@
 						/>
 				</div>
 
-				<div>
+				<div class="location-group">
 					<h3><cms:text constant="region-sharon"/></h3>
 					<cms:module
 						name="articles"
@@ -92,7 +94,7 @@
 						/>
 				</div>
 
-				<div>
+				<div class="location-group">
 					<h3><cms:text constant="region-jerusalem"/></h3>
 					<cms:module
 						name="articles"

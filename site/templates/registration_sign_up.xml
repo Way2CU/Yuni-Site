@@ -24,7 +24,21 @@
 				</svg>
 
 				<!-- background header image -->
-				<cms:desktop>
+				<div class="header-images">
+					<cms:desktop>
+						<cms:module
+							name="gallery"
+							action="show_image"
+							text_id="sign_up"
+							group="registration"
+							template="parts/header_image.xml"
+							>
+							<param name="thumbnail_size" value="50"/>
+							<param name="class" value="background"/>
+						</cms:module>
+					</cms:desktop>
+
+					<!-- page image -->
 					<cms:module
 						name="gallery"
 						action="show_image"
@@ -32,22 +46,10 @@
 						group="registration"
 						template="parts/header_image.xml"
 						>
-						<param name="thumbnail_size" value="50"/>
-						<param name="class" value="background"/>
+						<param name="thumbnail_size" value="525"/>
+						<param name="class" value="thumbnail"/>
 					</cms:module>
-				</cms:desktop>
-
-				<!-- page image -->
-				<cms:module
-					name="gallery"
-					action="show_image"
-					text_id="sign_up"
-					group="registration"
-					template="parts/header_image.xml"
-					>
-					<param name="thumbnail_size" value="600"/>
-					<param name="class" value="thumbnail"/>
-				</cms:module>
+				</div>
 
 				<h1><cms:text constant="menu_registration_sign_up"/></h1>
 

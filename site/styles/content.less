@@ -659,19 +659,27 @@ section#course {
 	}
 }
 
+// container for header images
+div.header-images {
+	display: block;
+	width: 100%;
+	height: 352px;
+	overflow: hidden;
+}
+
 // program and course pages
 section#program,
 section#course {
 	line-height: 0;
 
 	// page image
-	> img.background {
+	img.background {
 		display: block;
 		width: 100%;
-		height: 400px;
+		height: auto;
 	}
 
-	> img.thumbnail {
+	img.thumbnail {
 		position: absolute;
 		top: 50px;
 		right: 50%;
@@ -980,14 +988,15 @@ section#contact > svg {
 }
 
 section#contact {
+
 	// page image
-	> img.background {
+	img.background {
 		display: block;
 		width: 100%;
-		height: 400px;
+		height: auto;
 	}
 
-	> img.thumbnail {
+	img.thumbnail {
 		position: absolute;
 		top: 50px;
 		right: 50%;
@@ -1106,13 +1115,13 @@ section#contact {
 
 section#calendar {
 
-	> img.background {
+	img.background {
 		display: block;
 		width: 100%;
-		height: 400px;
+		height: auto;
 	}
 
-	> img.thumbnail {
+	img.thumbnail {
 		position: absolute;
 		top: 50px;
 		right: 50%;
@@ -1120,7 +1129,7 @@ section#calendar {
 		transition: all 0.3s;
 	}
 
-	> img.calendar {
+	img.calendar {
 		border-radius: 3rem;
 	}
 
@@ -1219,13 +1228,13 @@ section#faq {
 
 section.registration {
 
-	> img.background {
+	img.background {
 		display: block;
 		width: 100%;
-		height: 400px;
+		height: auto;
 	}
 
-	> img.thumbnail {
+	img.thumbnail {
 		position: absolute;
 		top: 50px;
 		right: 50%;
@@ -1283,13 +1292,14 @@ section.registration {
 
 section#locations,
 section#location {
-	> img.background {
+
+	img.background {
 		display: block;
 		width: 100%;
-		height: 400px;
+		height: auto;
 	}
 
-	> img.thumbnail {
+	img.thumbnail {
 		position: absolute;
 		top: 50px;
 		right: 50%;
@@ -1297,7 +1307,7 @@ section#location {
 		transition: all 0.3s;
 	}
 
-	> img.location {
+	img.location {
 		border-radius: 3rem;
 	}
 
@@ -1313,7 +1323,7 @@ section#location {
 
 	}
 
-	> div {
+	div.location-group {
 		padding: 4rem calc(~'(100% - 1200px) / 2');
 		text-align: center;
 
@@ -1324,13 +1334,13 @@ section#location {
 }
 
 section#career {
-	> img.background {
+	img.background {
 		display: block;
 		width: 100%;
 		height: 400px;
 	}
 
-	> img.thumbnail {
+	img.thumbnail {
 		position: absolute;
 		top: 50px;
 		right: 50%;
@@ -1338,7 +1348,7 @@ section#career {
 		transition: all 0.3s;
 	}
 
-	> img.career {
+	img.career {
 		border-radius: 3rem;
 	}
 

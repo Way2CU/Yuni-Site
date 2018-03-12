@@ -34,7 +34,22 @@
 					/>
 
 				<!-- background header image -->
-				<cms:desktop>
+				<div class="header-images">
+					<cms:desktop>
+						<cms:module
+							name="gallery"
+							action="show_image"
+							text_id="$_REQUEST['id']"
+							group="location_headers"
+							cms:eval="text_id"
+							template="parts/header_image.xml"
+							>
+							<param name="thumbnail_size" value="50"/>
+							<param name="class" value="background"/>
+						</cms:module>
+					</cms:desktop>
+
+					<!-- page image -->
 					<cms:module
 						name="gallery"
 						action="show_image"
@@ -43,23 +58,10 @@
 						cms:eval="text_id"
 						template="parts/header_image.xml"
 						>
-						<param name="thumbnail_size" value="50"/>
-						<param name="class" value="background"/>
+						<param name="thumbnail_size" value="525"/>
+						<param name="class" value="thumbnail"/>
 					</cms:module>
-				</cms:desktop>
-
-				<!-- page image -->
-				<cms:module
-					name="gallery"
-					action="show_image"
-					text_id="$_REQUEST['id']"
-					group="location_headers"
-					cms:eval="text_id"
-					template="parts/header_image.xml"
-					>
-					<param name="thumbnail_size" value="600"/>
-					<param name="class" value="thumbnail"/>
-				</cms:module>
+				</div>
 
 				<cms:module
 					name="articles"

@@ -63,7 +63,10 @@
 					text_id="$_REQUEST['document']"
 					group="registration-acceptance"
 					cms:eval="text_id"
-					/>
+					template="stock/article_generic.xml"
+					>
+					<param name="class" value=""/>
+				</cms:module>
 			</section>
 
 			<!-- Footer and copyright -->

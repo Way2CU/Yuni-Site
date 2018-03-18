@@ -63,15 +63,13 @@
 					/>
 
 				<nav id="page">
-					<a href="https://pay.yuni.co.il/Screens/MainPage.aspx?IsSecure=True">
-						<cms:text constant="billing_information_6th_link"/>
-					</a>
-					<a href="https://pay.yuni.co.il/Screens/MainPage.aspx?IsSecure=True">
-						<cms:text constant="billing_information_9th_link"/>
-					</a>
-					<a href="https://app.tepez.co.il/#/f/550feadef0db8db40697db02/run/">
-						<cms:text constant="transition_form_link"/>
-					</a>
+					<!-- external links -->
+					<cms:module
+						name="articles"
+						action="show"
+						text_id="external_links"
+						template="parts/external_links.xml"
+						/>
 
 					<!-- Show dynamically remaining page links -->
 					<cms:module

@@ -1,0 +1,4 @@
+<document>
+	<!-- external links -->
+	<cms:markdown param="content" multilanguage="yes"/>
+</document>

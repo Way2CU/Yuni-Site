@@ -26,6 +26,10 @@
 			<cms:template file="parts/header.xml"/>
 
 			<section class="registration">
+				<svg>
+					<cms:svg file="squiggle.svg"/>
+					<cms:svg file="sprite.svg" symbol="icon-diploma"/>
+				</svg>
 
 				<!-- background header image -->
 				<div class="header-images">

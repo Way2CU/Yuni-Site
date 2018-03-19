@@ -39,9 +39,7 @@
 						<cms:module
 							name="gallery"
 							action="show_image"
-							text_id="$_REQUEST['id']"
-							group="location_headers"
-							cms:eval="text_id"
+							text_id="location"
 							template="parts/header_image.xml"
 							>
 							<param name="thumbnail_size" value="50"/>
@@ -53,9 +51,7 @@
 					<cms:module
 						name="gallery"
 						action="show_image"
-						text_id="$_REQUEST['id']"
-						group="location_headers"
-						cms:eval="text_id"
+						text_id="location"
 						template="parts/header_image.xml"
 						>
 						<param name="thumbnail_size" value="525"/>

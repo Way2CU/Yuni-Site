@@ -89,9 +89,11 @@ header {
 						display: block;
 						margin: 0 auto;
 						margin-top: 1rem;
+						transition: all 0.3s;
 
 						&:hover {
-							box-shadow: 1px 0px 1px 1px lighten(@color_green, 10%);
+							border: 1px solid @color_green;
+							transition: all 0.3s;
 						}
 					}
 				}
@@ -99,10 +101,6 @@ header {
 				button {
 					margin-top: 0.8rem;
 					.regular-button();
-
-					&:hover {
-						box-shadow: 1px 0px 1px 1px lighten(@color_green, 10%);
-					}
 				}
 			}
 

@@ -107,7 +107,7 @@ header {
 						transition: all 0.5s;
 
 						&:focus {
-							box-shadow: 1px 0px 1px 1px lighten(@color_green, 10%);
+							border: 1px solid @color_green;
 							transition: all 0.5s;
 						}
 					}
@@ -117,11 +117,6 @@ header {
 					.regular-button();
 					display: inline-block;
 					margin-top: 1rem;
-					transition: all 0.5s;
-
-					&:focus {
-						box-shadow: 1px 0px 1px 1px lighten(@color_green, 10%);
-					}
 				}
 			}
 

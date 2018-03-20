@@ -114,6 +114,7 @@ nav#main {
 
 				color: @color_bright;
 				text-decoration: none;
+				transition: all 0.3s;
 
 				// skip border on last item
 				&:last-of-type {
@@ -124,6 +125,11 @@ nav#main {
 				&:focus {
 					background-color: @color_bright;
 					color: @color_dark;
+				}
+
+				&:hover {
+					background-color: fade(@color_dark, 50%);
+					transition: all 0.3s;
 				}
 			}
 		}
@@ -154,12 +160,14 @@ nav#other {
 		background-size: 64px 64px;
 
 		.main-menu-button(@color_contact, 3);
+		transition: all 0.3s;
 
 		&.calendar {
 			background-image: url(../images/calendar.png);
 			&:hover,
 			&:active {
 				transform: scale(1.05);
+				transition: all 0.3s;
 			}
 		}
 		&.locations {
@@ -168,20 +176,16 @@ nav#other {
 			&:hover,
 			&:active {
 				transform: scale(1.05);
+				transition: all 0.3s;
 			}
 		}
-		&.youtube {
-			background-image: url(../images/youtube-icon.png);
-			&:hover,
-			&:active {
-				transform: scale(1.05);
-			}
-		}
+
 		&.career {
 			background-image: url(../images/careers.png);
 			&:hover,
 			&:active {
 				transform: scale(1.05);
+				transition: all 0.3s;
 			}
 		}
 	}
@@ -293,11 +297,13 @@ div#news {
 
 		color: @color_gray;
 		text-decoration: none;
+		transition: all 0.3s;
 
 		&.visible {
 			display: block;
 			opacity: 1;
 			pointer-events: auto;
+			transition: all 0.3s;
 		}
 	}
 }
@@ -1101,10 +1107,12 @@ section#contact {
 				border-radius: 3px;
 				margin: 0 auto;
 				margin-bottom: 1rem;
+				transition: all 0.5s;
 
 				&:hover,
 				&:focus {
 					box-shadow: 1px 0px 1px 1px lighten(@color_green, 10%);
+					transition: all 0.5s;
 				}
 			}
 
@@ -1118,10 +1126,12 @@ section#contact {
 				margin: 0 auto;
 				margin-bottom: 1rem;
 				background-color: @color_bright;
+				transition: all 0.5s;
 
 				&:hover,
 				&:focus {
 					box-shadow: 1px 0px 1px 1px lighten(@color_green, 10%);
+					transition: all 0.5s;
 				}
 			}
 
@@ -1471,10 +1481,12 @@ section#career {
 				border-radius: 3px;
 				margin: 0 auto;
 				margin-bottom: 1rem;
+				transition: all 0.5s;
 
 				&:hover,
 				&:focus {
 					box-shadow: 1px 0px 2px 1px lighten(@color_green, 10%);
+					transition: all 0.5s;
 				}
 			}
 
@@ -1489,6 +1501,13 @@ section#career {
 				margin-bottom: 1rem;
 				background-color: @color_bright;
 				resize: vertical;
+				transition: all 0.5s;
+
+				&:hover,
+				&:focus {
+					box-shadow: 1px 0px 2px 1px lighten(@color_green, 10%);
+					transition: all 0.5s;
+				}
 			}
 
 			span {

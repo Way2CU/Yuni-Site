@@ -104,9 +104,11 @@ header {
 						display: block;
 						margin: 0 auto;
 						margin-top: 1rem;
+						transition: all 0.5s;
 
 						&:focus {
 							box-shadow: 1px 0px 1px 1px lighten(@color_green, 10%);
+							transition: all 0.5s;
 						}
 					}
 				}
@@ -115,6 +117,7 @@ header {
 					.regular-button();
 					display: inline-block;
 					margin-top: 1rem;
+					transition: all 0.5s;
 
 					&:focus {
 						box-shadow: 1px 0px 1px 1px lighten(@color_green, 10%);
@@ -161,22 +164,26 @@ header {
 				}
 
 				// allow highlight only on links with href
-				&.contact:hover {
+				&.contact:active {
 					color: @color_bright;
 					background-color: darken(@color_contact, 20);
+					transition: all 0.3s;
 				}
 
 				// custom inner menu highliths
-				&.program + nav a:hover {
+				&.program + nav a:active {
 					background-color: darken(@color_program, 20);
+					transition: all 0.3s;
 				}
 
-				&.courses + nav a:hover {
+				&.courses + nav a:active {
 					background-color: darken(@color_courses, 20);
+					transition: all 0.3s;
 				}
 
-				&.registration + nav a:hover {
+				&.registration + nav a:active {
 					background-color: darken(@color_registration, 20);
+					transition: all 0.3s;
 				}
 			}
 

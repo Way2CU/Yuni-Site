@@ -117,6 +117,7 @@ header {
 				text-decoration: none;
 				line-height: 1;
 				cursor: pointer;
+				transition: all 0.3s;
 
 				svg {
 					display: inline-block;
@@ -135,33 +136,55 @@ header {
 				// menu section colors
 				&.program {
 					color: @color_program;
+
+					&:hover {
+						background-color: darken(@color_program, 20%);
+						color: @color_bright;
+						transition: all 0.3s;
+					}
 				}
 
 				&.courses {
 					color: @color_courses;
+
+					&:hover {
+						background-color: darken(@color_courses, 20%);
+						color: @color_bright;
+						transition: all 0.3s;
+					}
 				}
 
 				&.registration {
 					color: @color_registration;
+
+					&:hover {
+						background-color: darken(@color_registration, 20%);
+						color: @color_bright;
+						transition: all 0.3s;
+					}
 				}
 
 				// allow highlight only on links with href
 				&.contact:hover {
 					color: @color_bright;
 					background-color: darken(@color_contact, 20);
+					transition: all 0.3s;
 				}
 
 				// custom inner menu highliths
 				&.program + nav a:hover {
 					background-color: darken(@color_program, 20);
+					transition: all 0.3s;
 				}
 
 				&.courses + nav a:hover {
 					background-color: darken(@color_courses, 20);
+					transition: all 0.3s;
 				}
 
 				&.registration + nav a:hover {
 					background-color: darken(@color_registration, 20);
+					transition: all 0.3s;
 				}
 			}
 

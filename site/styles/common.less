@@ -36,10 +36,12 @@
 .regular-link() {
 	color: @color_green;
 	text-decoration: underline;
+	transition: all 0.3s;
 
 	&:hover {
 		text-decoration: none;
 		background-color: lighten(@color_yellow, 30);
+		transition: all 0.3s;
 	}
 }
 
@@ -61,13 +63,16 @@
 
 	color: @color_bright;
 	text-decoration: none;
+	transition: all 0.3s;
 
 	&:hover {
 		border-color: lighten(@color_green, 20);
+		transition: all 0.3s;
 	}
 
 	&:active {
 		border-color: darken(@color_green, 20);
+		transition: all 0.3s;
 	}
 }
 
@@ -116,10 +121,12 @@
 	transform: translate(-50%, -50%);
 	pointer-events: none;
 	opacity: 0;
+	transition: all 0.3s;
 
 	&:target {
 		pointer-events: auto;
 		opacity: 1;
+		transition: all 0.3s;
 	}
 }
 
@@ -175,5 +182,6 @@
 	&:hover,
 	&:focus {
 		transform: scale(1.05);
+		transition: transform 0.3s;
 	}
 }

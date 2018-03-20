@@ -6,25 +6,17 @@
 			<title>
 				<cms:text constant="site_title"/>
 				<cms:raw text=" - "/>
-				<cms:text constant="search_results_title"/>
-				<cms:raw text=" - "/>
 				<cms:module
 					name="articles"
 					action="show"
-					id="$_REQUEST['result']"
 					template="parts/article_title.xml"
-					cms:eval="id"
+					id="isset($_REQUEST['id']) ? $_REQUEST['id'] : false"
+					text_id="isset($_REQUEST['text_id']) ? $_REQUEST['text_id'] : false"
+					cms:optional="id,text_id"
 					/>
 			</title>
 			<cms:collection include="page_control"/>
 			<cms:module name="head_tag" action="print_tag"/>
-
-			<!-- Canonical item link -->
-			<link
-				rel="canonical"
-				href="URL::make(array('id' => $_REQUEST['result']), 'view_article.xml')"
-				cms:eval="href"
-				/>
 		</head>
 
 		<body>
@@ -36,8 +28,9 @@
 				<cms:module
 					name="articles"
 					action="show"
-					id="$_REQUEST['result']"
-					cms:eval="id"
+					id="isset($_REQUEST['id']) ? $_REQUEST['id'] : false"
+					text_id="isset($_REQUEST['text_id']) ? $_REQUEST['text_id'] : false"
+					cms:optional="id,text_id"
 					/>
 			</section>
 

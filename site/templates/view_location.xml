@@ -17,6 +17,13 @@
 					/>
 			</title>
 			<cms:module name="head_tag" action="print_tag"/>
+
+			<!-- Canonical item link -->
+			<link
+				rel="canonical"
+				href="URL::make(array('id' => $_REQUEST['id']), 'view_article.xml')"
+				cms:eval="href"
+				/>
 		</head>
 
 		<body>

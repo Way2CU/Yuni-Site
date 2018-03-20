@@ -181,10 +181,18 @@ header {
 			}
 
 			// second level menus
-			nav a {
-				display: block;
-				padding: 0.5em;
-				padding-right: 2.5em;
+			nav {
+				display: none;
+
+				&.active {
+					display: block;
+				}
+
+				a {
+					display: block;
+					padding: 0.5em;
+					padding-right: 2.5em;
+				}
 			}
 		}
 	}

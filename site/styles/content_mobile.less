@@ -268,22 +268,22 @@ section {
 
 section > article > table {
 	.table-style(@color_program, @color_bright);
-	width: 90%;
+	min-width: 90%;
 }
 
 section#program > article > table {
 	.table-style(@color_program, @color_bright);
-	width: 90%;
+	min-width: 90%;
 }
 
 section#course > article > table {
 	.table-style(@color_courses, @color_bright);
-	width: 90%;
+	min-width: 90%;
 }
 
 section.registration > article > table {
 	.table-style(@color_registration, @color_bright);
-	width: 90%;
+	min-width: 90%;
 }
 
 // news page section
@@ -1075,6 +1075,75 @@ section#search_results {
 			.regular-button();
 			display: block;
 			margin: 0 auto;
+			width: 100px;
 		}
 	}
+}
+
+section#result {
+
+	article {
+
+		h1 {
+			padding: 0.5rem;
+		    background-color: @color_contact;
+		    color: #000;
+		    text-align: center;
+		    font-family: 'fb-liddar-regular';
+		    font-size: 2.5em;
+		}
+
+		h3 {
+			padding: 0rem 0.5rem;
+		}
+
+		p {
+			padding: 1rem 1rem;
+
+			a {
+				.regular-button();
+			}
+
+			img {
+				width: 80%;
+				display: block;
+				margin: 0 auto;
+			}
+		}
+
+		blockquote {
+
+			p {
+				display: inline-block;
+				padding: 0rem 1rem;
+				margin: 0 auto;
+			}
+		}
+
+		ul,
+		ol {
+			padding: 0rem 2rem;
+
+			li {
+				text-align: right;
+
+				p {
+					padding: 0;
+				}
+
+				a {
+					.regular-button();
+				}
+			}
+		}
+
+		hr {
+			width: 90%;
+			border: 0;
+			border-bottom: 1px solid @color_contact;
+			margin-top: 30px;
+			margin-bottom: 30px;
+		}
+	}
+
 }

@@ -1580,6 +1580,70 @@ section#search_results {
 			.regular-button();
 			display: block;
 			margin: 0 auto;
+			width: 100px;
 		}
 	}
+}
+
+section#result {
+	padding-bottom: 20%;
+
+	article {
+		text-align: center;
+
+
+		h1 {
+			padding: 0.5rem;
+		    background-color: @color_contact;
+		    color: #000;
+		    text-align: center;
+		    font-family: 'fb-liddar-regular';
+		    font-size: 2.5em;
+		}
+
+		p {
+			padding: 1rem calc(~'(100% - 800px) / 2');
+
+			a {
+				.regular-button();
+			}
+
+			img:only-child {
+				float: left;
+				margin: 2rem 2rem;
+			}
+		}
+
+		blockquote {
+
+			p {
+				display: inline-block;
+				padding: 0rem 1rem;
+				margin: 0 auto;
+			}
+		}
+
+		ul,
+		ol {
+			padding: 2rem calc(~'(100% - 700px) / 2');
+
+			li {
+				text-align: right;
+
+				a {
+					.regular-button();
+				}
+			}
+		}
+
+		hr {
+			width: 80%;
+			border: 0;
+			border-bottom: 1px solid @color_contact;
+			margin-top: 50px;
+			margin-bottom: 50px;
+			clear: left;
+		}
+	}
+
 }

@@ -13,6 +13,7 @@
 	"/registration/sign-up/{s:document}": "registration_sign_up_document.xml",
 	"/registration/faq": "registration_faq.xml",
 	"/search": "search.xml",
+	"/search/result/{n:result}": "search_result.xml",
 	"/careers": "careers.xml",
 	"/careers/{s:career}": "career_view.xml"
 }

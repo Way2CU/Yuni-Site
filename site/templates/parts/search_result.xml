@@ -3,8 +3,12 @@
 <document>
 	<article class="result">
 		<h2><cms:var param="title" multilanguage="yes"/></h2>
-		<p>
-			<cms:var param="content"/>
-		</p>
+		<p><cms:var param="content"/></p>
+		<a
+			href="URL::make(array('result' => $params['id']), 'search_result.xml')"
+			cms:eval="href"
+			>
+			<cms:text constant="read_more_button"/>
+		</a>
 	</article>
 </document>

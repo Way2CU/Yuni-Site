@@ -87,6 +87,15 @@ Site.on_load = function() {
 			.controls.set_pause_on_hover(true)
 			.images.update();
 	}
+
+	// create expanding menu
+	var menu_items = document.querySelectorAll('div.menu > nav > a');
+	for (var i=0, count=menu_items.length; i<count; i++)
+		if (menu_items[i].href == '')
+			menu_items[i].addEventListener('click', function(event) {
+				event.preventDefault();
+				event.currentTarget.nextSibling.classList.toggle('active');
+			});
 };
 
 

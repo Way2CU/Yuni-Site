@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE document SYSTEM "../units/schema/language.dtd">
+<document>
+	<html lang="$language" dir="$language_rtl ? 'rtl' : 'ltr'" cms:eval="lang,dir">
+		<head>
+			<title>
+				<cms:text constant="site_title"/>
+				<cms:raw text=" - "/>
+				<cms:module
+					name="articles"
+					action="show"
+					template="parts/article_title.xml"
+					id="isset($_REQUEST['id']) ? $_REQUEST['id'] : false"
+					text_id="isset($_REQUEST['text_id']) ? $_REQUEST['text_id'] : false"
+					cms:optional="id,text_id"
+					/>
+			</title>
+			<cms:collection include="page_control"/>
+			<cms:module name="head_tag" action="print_tag"/>
+		</head>
+
+		<body>
+			<!-- Floating menu and title -->
+			<cms:template file="parts/header.xml"/>
+
+			<!-- Show search results -->
+			<section id="result">
+				<cms:module
+					name="articles"
+					action="show"
+					id="isset($_REQUEST['id']) ? $_REQUEST['id'] : false"
+					text_id="isset($_REQUEST['text_id']) ? $_REQUEST['text_id'] : false"
+					cms:optional="id,text_id"
+					/>
+			</section>
+
+			<!-- Footer and copyright -->
+			<cms:template file="parts/footer.xml"/>
+		</body>
+	</html>
+</document>

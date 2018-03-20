@@ -30,6 +30,7 @@
 					action="show_image"
 					text_id="location"
 					/>
+
 				<h1><cms:text constant="menu_locations"/></h1>
 				<figure id="map">
 					<cms:svg file="map.svg"/>

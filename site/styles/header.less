@@ -83,7 +83,7 @@ header {
 
 					input {
 						width: 95%;
-						padding: 0.5rem 0rem;
+						padding: 0.5rem 0.5rem;
 						border: 1px solid transparent;
 						border-radius: 3px;
 						display: block;
@@ -91,7 +91,7 @@ header {
 						margin-top: 1rem;
 
 						&:hover {
-							border: 1px solid @color_green;
+							box-shadow: 1px 0px 1px 1px lighten(@color_green, 10%);
 						}
 					}
 				}
@@ -101,7 +101,7 @@ header {
 					.regular-button();
 
 					&:hover {
-						border: 2px solid lighten(@color_green, 10%);
+						box-shadow: 1px 0px 1px 1px lighten(@color_green, 10%);
 					}
 				}
 			}

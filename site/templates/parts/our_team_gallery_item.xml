@@ -2,13 +2,23 @@
 <!DOCTYPE document SYSTEM "../../units/schema/language.dtd">
 <document>
 	<figure class="image">
-		<div class="image-holder">
+		<cms:mobile>
+			<div class="image-holder">
+				<img
+					src="gallery::getThumbnailById($params['id'], null, $template['thumbnail_size'], isset($template['constrain']) ? constant($template['constrain']) : Thumbnail::CONSTRAIN_BOTH)"
+					alt="$params['title'][$language]"
+					cms:eval="src,alt"
+					/>
+			</div>
+		</cms:mobile>
+
+		<cms:desktop>
 			<img
 				src="gallery::getThumbnailById($params['id'], null, $template['thumbnail_size'], isset($template['constrain']) ? constant($template['constrain']) : Thumbnail::CONSTRAIN_BOTH)"
 				alt="$params['title'][$language]"
 				cms:eval="src,alt"
 				/>
-		</div>
+		</cms:desktop>
 
 		<figcaption>
 			<h4><cms:var param="title" multilanguage="yes"/></h4>

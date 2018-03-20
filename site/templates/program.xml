@@ -30,14 +30,36 @@
 					<cms:svg file="squiggle.svg"/>
 					<cms:svg file="sprite.svg" symbol="icon-book"/>
 				</svg>
-				<!-- Page image -->
-				<cms:module
-					name="gallery"
-					action="show_image"
-					text_id="$_REQUEST['program']"
-					group="program"
-					cms:eval="text_id"
-					/>
+
+				<!-- background header image -->
+				<div class="header-images">
+					<cms:desktop>
+						<cms:module
+							name="gallery"
+							action="show_image"
+							text_id="$_REQUEST['program']"
+							group="program"
+							cms:eval="text_id"
+							template="parts/header_image.xml"
+							>
+							<param name="thumbnail_size" value="50"/>
+							<param name="class" value="background"/>
+						</cms:module>
+					</cms:desktop>
+
+					<!-- page image -->
+					<cms:module
+						name="gallery"
+						action="show_image"
+						text_id="$_REQUEST['program']"
+						group="program"
+						cms:eval="text_id"
+						template="parts/header_image.xml"
+						>
+						<param name="thumbnail_size" value="525"/>
+						<param name="class" value="thumbnail"/>
+					</cms:module>
+				</div>
 
 				<cms:module
 					name="articles"
@@ -45,7 +67,13 @@
 					text_id="$_REQUEST['program']"
 					group="program"
 					cms:eval="text_id"
-					/>
+					template="stock/article_generic.xml"
+					>
+					<param name="class" value=""/>
+					<param name="title" value=""/>
+					<param name="title_tag" value="h1"/>
+				</cms:module>
+
 				<cms:if condition="$_REQUEST['program'] == 'our-team'">
 					<div id="our_team_images_holder">
 						<cms:desktop>

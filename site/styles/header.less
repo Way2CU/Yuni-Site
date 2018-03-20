@@ -64,7 +64,7 @@ header {
 			position: absolute;
 			top: 100%;
 			right: 0;
-			min-width: 200px;
+			min-width: 400px;
 			padding: 2px;
 
 			opacity: 0;
@@ -72,6 +72,40 @@ header {
 
 			background-color: fade(@color_dark, 80);
 			box-shadow: 0px 2px 3px fade(@color_dark, 50);
+			transition-delay: 0.6s;
+
+
+			form {
+
+				label {
+					display: inline-block;
+					width: 70%;
+
+					input {
+						width: 95%;
+						padding: 0.5rem 0rem;
+						border: 1px solid transparent;
+						border-radius: 3px;
+						display: block;
+						margin: 0 auto;
+						margin-top: 1rem;
+
+						&:hover {
+							border: 1px solid @color_green;
+						}
+					}
+				}
+
+				button {
+					margin-top: 0.8rem;
+					.regular-button();
+
+					&:hover {
+						border: 2px solid lighten(@color_green, 10%);
+					}
+				}
+			}
+
 
 			// menu items
 			a {
@@ -142,6 +176,7 @@ header {
 		&:hover > nav {
 			opacity: 1;
 			pointer-events: auto;
+			transition-delay: 0.1s;
 		}
 	}
 }

@@ -26,14 +26,40 @@
 			<cms:template file="parts/header.xml"/>
 
 			<section class="registration">
-				<!-- Page image -->
-				<cms:module
-					name="gallery"
-					action="show_image"
-					text_id="$_REQUEST['document']"
-					group="registration-sign-up"
-					cms:eval="text_id"
-					/>
+				<svg>
+					<cms:svg file="squiggle.svg"/>
+					<cms:svg file="sprite.svg" symbol="icon-diploma"/>
+				</svg>
+
+				<!-- background header image -->
+				<div class="header-images">
+					<cms:desktop>
+						<cms:module
+							name="gallery"
+							action="show_image"
+							text_id="$_REQUEST['document']"
+							group="registration-sign-up"
+							cms:eval="text_id"
+							template="parts/header_image.xml"
+							>
+							<param name="thumbnail_size" value="50"/>
+							<param name="class" value="background"/>
+						</cms:module>
+					</cms:desktop>
+
+					<!-- page image -->
+					<cms:module
+						name="gallery"
+						action="show_image"
+						text_id="$_REQUEST['document']"
+						group="registration-sign-up"
+						cms:eval="text_id"
+						template="parts/header_image.xml"
+						>
+						<param name="thumbnail_size" value="525"/>
+						<param name="class" value="thumbnail"/>
+					</cms:module>
+				</div>
 
 				<cms:module
 					name="articles"
@@ -41,7 +67,10 @@
 					text_id="$_REQUEST['document']"
 					group="registration-sign-up"
 					cms:eval="text_id"
-					/>
+					template="stock/article_generic.xml"
+					>
+					<param name="class" value=""/>
+				</cms:module>
 			</section>
 
 			<!-- Footer and copyright -->

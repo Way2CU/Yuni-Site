@@ -8,7 +8,6 @@
 				<cms:raw text=" - "/>
 				<cms:text constant="menu_locations"/>
 			</title>
-			<cms:script src="_BASEURL.'/site/scripts/map.js'" cms:eval="src"/>
 			<cms:module name="head_tag" action="print_tag"/>
 		</head>
 
@@ -25,25 +24,84 @@
 					cms:eval="src"
 					/>
 
-				<cms:module
-					name="gallery"
-					action="show_image"
-					text_id="location"
-					/>
+				<!-- background header image -->
+				<div class="header-images">
+					<cms:desktop>
+						<cms:module
+							name="gallery"
+							action="show_image"
+							text_id="location"
+							template="parts/header_image.xml"
+							>
+							<param name="thumbnail_size" value="50"/>
+							<param name="class" value="background"/>
+						</cms:module>
+					</cms:desktop>
+
+					<!-- page image -->
+					<cms:module
+						name="gallery"
+						action="show_image"
+						text_id="location"
+						template="parts/header_image.xml"
+						>
+						<param name="thumbnail_size" value="525"/>
+						<param name="class" value="thumbnail"/>
+					</cms:module>
+				</div>
 
 				<h1><cms:text constant="menu_locations"/></h1>
-				<figure id="map">
-					<cms:svg file="map.svg"/>
-					<figcaption>
-						<cms:module
-							name="articles"
-							action="show_list"
-							only_visible="1"
-							group="locations"
-							template="parts/location_info.xml"
-							/>
-					</figcaption>
-				</figure>
+
+				<!-- locations groups -->
+				<div class="location-group">
+					<h3><cms:text constant="region-north"/></h3>
+					<cms:module
+						name="articles"
+						action="show_list"
+						group="region-north"
+						template="parts/location_info.xml"
+						/>
+				</div>
+
+				<div class="location-group">
+					<h3><cms:text constant="region-south"/></h3>
+					<cms:module
+						name="articles"
+						action="show_list"
+						group="region-south"
+						template="parts/location_info.xml"
+						/>
+				</div>
+
+				<div class="location-group">
+					<h3><cms:text constant="region-center"/></h3>
+					<cms:module
+						name="articles"
+						action="show_list"
+						group="region-center"
+						template="parts/location_info.xml"
+						/>
+				</div>
+
+				<div class="location-group">
+					<h3><cms:text constant="region-sharon"/></h3>
+					<cms:module
+						name="articles"
+						action="show_list"
+						group="region-sharon"
+						template="parts/location_info.xml"
+						/>
+				</div>
+
+				<div class="location-group">
+					<h3><cms:text constant="region-jerusalem"/></h3>
+					<cms:module
+						name="articles"
+						action="show_list"
+						group="region-jerusalem"
+						template="parts/location_info.xml"
+						/>
+				</div>
 			</section>
 
 			<!-- Footer and copyright -->

@@ -5,7 +5,6 @@
 		<head>
 			<title><cms:text constant="site_title"/></title>
 			<cms:collection include="page_control"/>
-			<cms:script src="_BASEURL.'/site/scripts/interactive.js'" cms:eval="src"/>
 			<cms:module name="head_tag" action="print_tag"/>
 		</head>
 

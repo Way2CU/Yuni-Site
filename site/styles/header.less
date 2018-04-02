@@ -74,7 +74,11 @@ header {
 			box-shadow: 0px 2px 3px fade(@color_dark, 50);
 			transition-delay: 0.6s;
 
-
+			&.input-focused {
+				opacity: 1;
+				pointer-events: auto;
+				transition-delay: 0.3s;
+			}
 			form {
 
 				label {

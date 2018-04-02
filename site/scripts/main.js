@@ -45,6 +45,11 @@ Site.is_mobile = function() {
 	return result;
 };
 
+/**
+ *	Handle toggling between image and image description
+ *
+ *	@param object event
+ */
 Site.handle_toggling = function(event) {
 	event.preventDefault();
 
@@ -86,6 +91,18 @@ Site.on_load = function() {
 			.controls.attach_previous('div#our_team_images_holder a.previous')
 			.controls.set_pause_on_hover(true)
 			.images.update();
+
+		// handle navigation visibility dependable on focus and blur events on search input
+		var search_input = document.querySelector('div.menu form input');
+		var header_menu = document.querySelector('div.menu > nav');
+		search_input.addEventListener('focus', function(event) {
+			event.preventDefault();
+			header_menu.classList.add('input-focused');
+		});
+		search_input.addEventListener('blur', function(event) {
+			event.preventDefault();
+			header_menu.classList.remove('input-focused');
+		});
 	}
 
 	// create expanding menu

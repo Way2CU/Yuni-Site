@@ -288,10 +288,23 @@ section.registration > article > table {
 
 // news page section
 section#news {
-	padding: 1rem;
+	position: relative;
 
-	div {
+	// page image
+	div.header-images img {
+		width: 100%;
+		@ratio: (1 / 1.49);
+		min-height: 100vw * @ratio;
+	}
+
+	h1 {
+		margin-bottom: 3rem;
+	}
+
+	div.news-article {
+		margin: 0 auto;
 		margin-bottom: @header_spacing;
+		width: 80%;
 		padding: 1rem;
 
 		background-color: @color_bright;
@@ -564,7 +577,8 @@ section#program div#our_team_images_holder {
 	}
 }
 
-section#program > svg {
+section#program > svg,
+section#news > svg {
 	display: block;
 	width: 7rem;
 	height: 7rem;

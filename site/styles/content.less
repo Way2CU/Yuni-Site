@@ -330,9 +330,30 @@ section.registration > article > table {
 
 // news page section
 section#news {
-	padding: 1rem calc(~'(100% - 800px) / 2');
 
-	div {
+	// page image
+	img.background {
+		display: block;
+		width: 100%;
+		height: auto;
+	}
+
+	img.thumbnail {
+		position: absolute;
+		top: 50px;
+		right: 50%;
+		transform: translateX(50%);
+		transition: all 0.3s;
+	}
+
+	h1 {
+		.page-main-header(@color_program, @color_dark);
+		margin-bottom: 3rem;
+	}
+
+	div.news-article {
+		width: 900px;
+		margin: 0 auto;
 		margin-bottom: @header_spacing;
 		padding: 1rem;
 		text-align: center;
@@ -732,7 +753,7 @@ section.registration {
 div.header-images {
 	display: block;
 	width: 100%;
-	height: 352px;
+	height: 350px;
 	overflow: hidden;
 }
 
@@ -979,6 +1000,7 @@ section#career > img.career,
 section#location > img.location,
 section#locations > img.location,
 section#calendar > img.calendar,
+section#news > svg,
 section#program > svg {
 	display: block;
 	width: 10rem;

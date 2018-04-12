@@ -5,7 +5,7 @@
 	<cms:desktop>
 		<!-- youtube video -->
 		<iframe width="560" height="315" src="https://www.youtube.com/embed/9rhRsUTqL0Q" frameborder="0"
-		 allowfullscreen="allowfullscreen"></iframe>
+		 allowfullscreen="allowfullscreen" title="התכנית לנוער מוכשר במתמטיקה בשיתוף אוניברסיטת בר אילן"></iframe>
 	</cms:desktop>
 
 	<!-- Menu links -->

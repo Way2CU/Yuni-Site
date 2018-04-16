@@ -39,34 +39,15 @@
 					cms:eval="src"
 					/>
 
-				<!-- background header image -->
-				<div class="header-images">
-					<cms:desktop>
-						<cms:module
-							name="gallery"
-							action="show_image"
-							text_id="career_main_page"
-							group="careers"
-							template="parts/header_image.xml"
-							>
-							<param name="thumbnail_size" value="50"/>
-							<param name="class" value="background"/>
-						</cms:module>
-					</cms:desktop>
-
-					<!-- page image -->
-					<cms:module
-						name="gallery"
-						action="show_image"
-						text_id="career_main_page"
-						group="careers"
-						template="parts/header_image.xml"
-						>
-						<param name="thumbnail_size" value="525"/>
-						<param name="class" value="thumbnail"/>
-					</cms:module>
-				</div>
-
+				<!-- header images -->
+				<cms:module
+					name="gallery"
+					action="show_image"
+					text_id="career_main_page"
+					group="careers"
+					cms:eval="text_id"
+					template="parts/header_images_view.xml"
+					/>
 
 				<!-- main title -->
 				<h1><cms:text constant="main_title_careers"/></h1>

@@ -107,6 +107,11 @@
 			transform: translate(20%, 20%) scale(0.6);
 		}
 	}
+
+	&:hover > svg,
+	&:focus > svg {
+		background-color: fade(@color_dark, 80);
+	}
 }
 
 // popup with different states

@@ -40,7 +40,10 @@
 					text_id="faq"
 					group="registration"
 					template="stock/article_generic.xml"
-					/>
+					>
+					<param name="title" value=""/>
+					<param name="title_tag" value="h1"/>
+				</cms:module>
 
 				<!-- Questions and answers themselves. -->
 				<dl>

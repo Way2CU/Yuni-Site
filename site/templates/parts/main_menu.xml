@@ -56,7 +56,7 @@
 					<param name="section" value="program"/>
 				</cms:module>
 			</nav>
-			<a class="close" href="#"/>
+			<a class="close" href="#" title="close" cms:constant="title"/>
 		</div>
 		<div class="popup" id="courses">
 			<h3>
@@ -74,7 +74,7 @@
 					<param name="section" value="course"/>
 				</cms:module>
 			</nav>
-			<a class="close" href="#"/>
+			<a class="close" href="#" title="close" cms:constant="title"/>
 		</div>
 		<div class="popup" id="registration">
 			<h3>
@@ -101,7 +101,7 @@
 					<cms:text constant="menu_registration_faq"/>
 				</a>
 			</nav>
-			<a class="close" href="#"/>
+			<a class="close" href="#" title="close" cms:constant="title"/>
 		</div>
 	</nav>
 

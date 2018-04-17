@@ -41,6 +41,8 @@
 						name="articles"
 						action="show_list"
 						group="region-north"
+						order_by="'title'.$language"
+						cms:eval="order_by"
 						template="parts/location_info.xml"
 						/>
 				</div>
@@ -51,6 +53,8 @@
 						name="articles"
 						action="show_list"
 						group="region-south"
+						order_by="'title'.$language"
+						cms:eval="order_by"
 						template="parts/location_info.xml"
 						/>
 				</div>
@@ -61,6 +65,8 @@
 						name="articles"
 						action="show_list"
 						group="region-center"
+						order_by="'title'.$language"
+						cms:eval="order_by"
 						template="parts/location_info.xml"
 						/>
 				</div>
@@ -71,6 +77,8 @@
 						name="articles"
 						action="show_list"
 						group="region-sharon"
+						order_by="'title'.$language"
+						cms:eval="order_by"
 						template="parts/location_info.xml"
 						/>
 				</div>
@@ -81,6 +89,8 @@
 						name="articles"
 						action="show_list"
 						group="region-jerusalem"
+						order_by="'title'.$language"
+						cms:eval="order_by"
 						template="parts/location_info.xml"
 						/>
 				</div>

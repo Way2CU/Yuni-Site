@@ -21,33 +21,14 @@
 					<cms:svg file="sprite.svg" symbol="icon-book"/>
 				</svg>
 
-				<!-- background header image -->
-				<div class="header-images">
-					<cms:desktop>
-						<cms:module
-							name="gallery"
-							action="show_image"
-							text_id="news-feeds"
-							group="news"
-							template="parts/header_image.xml"
-							>
-							<param name="thumbnail_size" value="50"/>
-							<param name="class" value="background"/>
-						</cms:module>
-					</cms:desktop>
-
-					<!-- page image -->
-					<cms:module
-						name="gallery"
-						action="show_image"
-						text_id="news-feeds"
-						group="news"
-						template="parts/header_image.xml"
-						>
-						<param name="thumbnail_size" value="525"/>
-						<param name="class" value="thumbnail"/>
-					</cms:module>
-				</div>
+				<!-- header images -->
+				<cms:module
+					name="gallery"
+					action="show_image"
+					text_id="news-feeds"
+					group="news"
+					template="parts/header_images_view.xml"
+					/>
 
 				<h1><cms:text constant="menu_news"/></h1>
 

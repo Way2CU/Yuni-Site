@@ -388,12 +388,20 @@ section#news {
 			}
 		}
 
+		&:target small.timestamp {
+			color: mix(@color_bright, @color_dark, 50);
+		}
+
 		// divs not in focus
 		&:not(:target) {
 			background-color: transparent;
 			color: @color_bright;
 
 			h3 {
+				color: @color_bright;
+			}
+
+			small.timestamp {
 				color: @color_bright;
 			}
 		}
@@ -405,10 +413,6 @@ section#news {
 		// remove margin from last paragraph
 		p:last-child {
 			margin-bottom: 0;
-		}
-
-		small.timestamp {
-			color: mix(@color_bright, @color_dark, 50);
 		}
 	}
 }

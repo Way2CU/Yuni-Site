@@ -334,6 +334,11 @@ section#news {
 			}
 		}
 
+		// compensate fixed header height so block is displayed correctly
+		&:target {
+			padding-top: 54px;
+		}
+
 		// divs not in focus
 		&:not(:target) {
 			background-color: transparent;

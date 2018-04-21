@@ -214,11 +214,15 @@ header {
 			}
 		}
 
-		&:hover > nav,
-		&:focus > nav {
+		.visible-nav {
 			opacity: 1;
 			pointer-events: auto;
 			transition-delay: 0.1s;
+		}
+
+		&:hover > nav,
+		&:focus > nav {
+			.visible-nav;
 		}
 	}
 }

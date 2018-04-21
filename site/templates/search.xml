@@ -18,6 +18,17 @@
 
 			<!-- Show search results -->
 			<section id="search_results">
+				<!-- header images -->
+				<cms:module
+					name="gallery"
+					action="show_image"
+					text_id="search_result"
+					group="search"
+					template="parts/header_images_view.xml"
+					/>
+
+				<h1><cms:text constant="search_results"/></h1>
+
 				<cms:module
 					name="search"
 					action="show_results"

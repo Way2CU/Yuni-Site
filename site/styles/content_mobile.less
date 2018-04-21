@@ -1087,6 +1087,13 @@ section#career {
 }
 
 section#search_results {
+	div img.thumbnail {
+		width: 100%;
+		height: auto;
+		margin-bottom: -5px;
+		@ratio: (1 / 1.49);
+		min-height: 100vw * @ratio;
+	}
 
 	article {
 		padding: 1rem 1rem;

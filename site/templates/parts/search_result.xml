@@ -3,7 +3,7 @@
 <document>
 	<article class="result">
 		<h2><cms:var param="title" multilanguage="yes"/></h2>
-		<p><cms:var param="content"/></p>
+		<p><cms:markdown param="content" chars="200" clear_text="yes"/></p>
 		<a
 			href="URL::make(array('result' => $params['id']), 'search_result.xml')"
 			cms:eval="href"

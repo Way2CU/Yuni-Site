@@ -59,6 +59,7 @@
 						action="show_list"
 						only_visible="1"
 						group="registration-sign-up"
+						order_by="text_id"
 						template="parts/page_menu_item.xml"
 						>
 						<param name="file" value="registration_sign_up_document.xml"/>

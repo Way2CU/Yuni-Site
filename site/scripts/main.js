@@ -63,6 +63,17 @@ Site.handle_toggling = function(event) {
 };
 
 /**
+ *	Handle visibility toggling on main menu
+ *
+ *	@param object event
+ */
+Site.handle_menu_toggling = function(event) {
+	event.preventDefault();
+	var header_menu = document.querySelector('div.menu > nav');
+	header_menu.classList.toggle('input-focused');
+};
+
+/**
  * Function called when document and images have been completely loaded.
  */
 Site.on_load = function() {
@@ -94,25 +105,46 @@ Site.on_load = function() {
 
 		// handle navigation visibility dependable on focus and blur events on search input
 		var search_input = document.querySelector('div.menu form input');
-		var header_menu = document.querySelector('div.menu > nav');
-		search_input.addEventListener('focus', function(event) {
-			event.preventDefault();
-			header_menu.classList.add('input-focused');
-		});
-		search_input.addEventListener('blur', function(event) {
-			event.preventDefault();
-			header_menu.classList.remove('input-focused');
-		});
+		var search_submit_button = document.querySelector('div.menu form button[type=submit]');
+		var menu_button = document.querySelector('#menu_button');
+		var contact_link = document.querySelector('a.contact');
+
+		search_input.addEventListener('focus', Site.handle_menu_toggling);
+		search_input.addEventListener('blur', Site.handle_menu_toggling);
+		search_submit_button.addEventListener('focus', Site.handle_menu_toggling);
+		search_submit_button.addEventListener('blur', Site.handle_menu_toggling);
+
+		// prevent menu from closing when contact link is focused
+		contact_link.addEventListener('focus', Site.handle_menu_toggling);
+		contact_link.addEventListener('blur', Site.handle_menu_toggling);
 	}
 
 	// create expanding menu
 	var menu_items = document.querySelectorAll('div.menu > nav > a');
-	for (var i=0, count=menu_items.length; i<count; i++)
-		if (menu_items[i].href == '')
+	for(var i=0, count=menu_items.length; i<count; i++) {
+		if (menu_items[i].classList.contains('category')) {
 			menu_items[i].addEventListener('click', function(event) {
 				event.preventDefault();
 				event.currentTarget.nextSibling.classList.toggle('active');
 			});
+			menu_items[i].addEventListener('keydown', function(event) {
+				if(event.keyCode === 13) {
+					event.preventDefault();
+					event.currentTarget.nextSibling.classList.toggle('active');
+				}
+			});
+
+			// prevent menu form closing when top level links have focus
+			menu_items[i].addEventListener('focus', Site.handle_menu_toggling);
+			menu_items[i].addEventListener('blur', Site.handle_menu_toggling);
+		}
+	}
+
+	var second_level_menu = document.querySelectorAll('div.menu > nav > nav > a');
+	for(var i=0, count=second_level_menu.length; i < count; i++) {
+		second_level_menu[i].addEventListener('focus', Site.handle_menu_toggling);
+		second_level_menu[i].addEventListener('blur', Site.handle_menu_toggling);
+	}
 };
 
 

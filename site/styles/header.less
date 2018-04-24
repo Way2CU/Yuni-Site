@@ -87,6 +87,7 @@ header {
 				pointer-events: auto;
 				transition-delay: 0.3s;
 			}
+
 			form {
 
 				label {
@@ -148,7 +149,8 @@ header {
 				&.program {
 					color: @color_program;
 
-					&:hover {
+					&:hover,
+					&:focus {
 						background-color: darken(@color_program, 30%);
 						color: @color_bright;
 						transition: all 0.3s;
@@ -158,7 +160,8 @@ header {
 				&.courses {
 					color: @color_courses;
 
-					&:hover {
+					&:hover,
+					&:focus {
 						background-color: darken(@color_courses, 20%);
 						color: @color_bright;
 						transition: all 0.3s;
@@ -168,7 +171,8 @@ header {
 				&.registration {
 					color: @color_registration;
 
-					&:hover {
+					&:hover,
+					&:focus {
 						background-color: darken(@color_registration, 20%);
 						color: @color_bright;
 						transition: all 0.3s;
@@ -176,24 +180,28 @@ header {
 				}
 
 				// allow highlight only on links with href
-				&.contact:hover {
+				&.contact:hover,
+				&.contact:focus {
 					color: @color_bright;
 					background-color: darken(@color_contact, 40);
 					transition: all 0.3s;
 				}
 
 				// custom inner menu highliths
-				&.program + nav a:hover {
+				&.program + nav a:hover,
+				&.program + nav a:focus {
 					background-color: darken(@color_program, 30);
 					transition: all 0.3s;
 				}
 
-				&.courses + nav a:hover {
+				&.courses + nav a:hover,
+				&.courses + nav a:focus {
 					background-color: darken(@color_courses, 20);
 					transition: all 0.3s;
 				}
 
-				&.registration + nav a:hover {
+				&.registration + nav a:hover,
+				&.registration + nav a:focus {
 					background-color: darken(@color_registration, 20);
 					transition: all 0.3s;
 				}

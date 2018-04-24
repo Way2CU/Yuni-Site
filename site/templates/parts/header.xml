@@ -35,7 +35,7 @@
 				</form>
 
 				<!-- Program menu -->
-				<a class="program">
+				<a class="program category" href="javascript:void(0);">
 					<cms:svg file="sprite.svg" symbol="icon-book"/>
 					<cms:text constant="menu_program"/>
 				</a>
@@ -52,7 +52,7 @@
 				</nav>
 
 				<!-- Courses menu -->
-				<a class="courses">
+				<a class="courses category" href="javascript:void(0);">
 					<cms:svg file="sprite.svg" symbol="icon-hat"/>
 					<cms:text constant="menu_courses"/>
 				</a>
@@ -69,7 +69,7 @@
 				</nav>
 
 				<!-- Registration menu -->
-				<a class="registration">
+				<a class="registration category" href="javascript:void(0);">
 					<cms:svg file="sprite.svg" symbol="icon-diploma"/>
 					<cms:text constant="menu_registration"/>
 				</a>

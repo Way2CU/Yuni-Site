@@ -39,12 +39,11 @@
 				<ul>
 					<cms:module
 						name="articles"
-						action="show_list"
+						action="show"
+						text_id="no_open_position_message"
 						group="careers"
-						template="parts/career_item_view.xml"
-						>
-						<param name="section" value="career"/>
-					</cms:module>
+						template="parts/no_open_position_article.xml"
+						/>
 				</ul>
 			</section>
 

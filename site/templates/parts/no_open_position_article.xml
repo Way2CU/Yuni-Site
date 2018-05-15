@@ -1,0 +1,18 @@
+<document>
+	<cms:if condition="$params['visible']" cms:eval="condition">
+		<li>
+			<cms:markdown param="content" multilanguage="yes" chars="200"/>
+		</li>
+	</cms:if>
+
+	<cms:if condition="!$params['visible']" cms:eval="condition">
+		<cms:module
+			name="articles"
+			action="show_list"
+			group="careers"
+			template="parts/career_item_view.xml"
+			>
+			<param name="section" value="career"/>
+		</cms:module>
+	</cms:if>
+</document>

@@ -1,29 +1,61 @@
 <document>
-	<cms:desktop>
-		<div
-			class="header-images"
-			style="'background-image: url('.gallery::getThumbnailById($params['id'], null, 50, Thumbnail::CONSTRAIN_BOTH).');'"
-			cms:eval="style"
-			>
+	<cms:if condition="isset($template['image'])" cms:eval="condition">
+		<cms:desktop>
+			<div
+				class="header-images"
+				style="'background-image: url('.gallery::getThumbnailById(null, $template['image'], 50, Thumbnail::CONSTRAIN_BOTH).');'"
+				cms:eval="style"
+				>
 
-			<!-- page image -->
-			<img
-				src="gallery::getThumbnailById($params['id'], null, 525, isset($template['constrain']) ? constant($template['constrain']) : Thumbnail::CONSTRAIN_BOTH)"
-				alt="$params['title'][$language]"
-				class="thumbnail"
-				cms:eval="src,alt"
-				/>
-		</div>
-	</cms:desktop>
-	<cms:mobile>
-		<div class="header-images">
-			<!-- page image -->
-			<img
-				src="gallery::getThumbnailById($params['id'], null, 525, isset($template['constrain']) ? constant($template['constrain']) : Thumbnail::CONSTRAIN_BOTH)"
-				alt="$params['title'][$language]"
-				class="thumbnail"
-				cms:eval="src,alt"
-				/>
-		</div>
-	</cms:mobile>
+				<!-- page image -->
+				<img
+					src="gallery::getThumbnailById(null, $template['image'], 525, isset($template['constrain']) ? constant($template['constrain']) : Thumbnail::CONSTRAIN_BOTH)"
+					alt="$template['image']"
+					class="thumbnail"
+					cms:eval="src,alt"
+					/>
+				</div>
+			</cms:desktop>
+			<cms:mobile>
+				<div class="header-images">
+					<!-- page image -->
+					<img
+						src="gallery::getThumbnailById(null, $template['image'], 525, isset($template['constrain']) ? constant($template['constrain']) : Thumbnail::CONSTRAIN_BOTH)"
+						alt="$template['image']"
+						class="thumbnail"
+						cms:eval="src,alt"
+						/>
+				</div>
+			</cms:mobile>
+	</cms:if>
+
+	<cms:if condition="!isset($template['image'])" cms:eval="condition">
+		<cms:desktop>
+			<div
+				class="header-images"
+				style="'background-image: url('.gallery::getThumbnailById($params['id'], null, 50, Thumbnail::CONSTRAIN_BOTH).');'"
+				cms:eval="style"
+				>
+
+				<!-- page image -->
+				<img
+					src="gallery::getThumbnailById($params['id'], null, 525, isset($template['constrain']) ? constant($template['constrain']) : Thumbnail::CONSTRAIN_BOTH)"
+					alt="$params['title'][$language]"
+					class="thumbnail"
+					cms:eval="src,alt"
+					/>
+			</div>
+		</cms:desktop>
+		<cms:mobile>
+			<div class="header-images">
+				<!-- page image -->
+				<img
+					src="gallery::getThumbnailById($params['id'], null, 525, isset($template['constrain']) ? constant($template['constrain']) : Thumbnail::CONSTRAIN_BOTH)"
+					alt="$params['title'][$language]"
+					class="thumbnail"
+					cms:eval="src,alt"
+					/>
+			</div>
+		</cms:mobile>
+	</cms:if>
 </document>

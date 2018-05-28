@@ -649,7 +649,9 @@ section#program {
 	}
 
 	article.news1 {
-		padding: 0 calc(~'(100% - 700px) / 2');
+		ul {
+			padding: 0 calc(~'(100% - 700px) / 2');
+		}
 	}
 }
 
@@ -779,6 +781,10 @@ div.header-images {
 
 	background-repeat: no-repeat;
 	background-size: 100% auto;
+}
+
+div.header-images + div.header-images {
+	display: none;
 }
 
 // program and course pages

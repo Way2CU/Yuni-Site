@@ -48,6 +48,11 @@
 					template="parts/header_images_view.xml"
 					/>
 
+				<!-- default header images -->
+				<cms:template file="parts/header_images_view.xml">
+					<param name="image" value="math-enrichment"/>
+				</cms:template>
+
 				<cms:module
 					name="articles"
 					action="show"

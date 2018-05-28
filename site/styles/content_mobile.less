@@ -377,6 +377,10 @@ div.header-images {
 	line-height: 0;
 }
 
+div.header-images + div.header-images {
+	display: none;
+}
+
 // specific pages main headers
 section#program article h1,
 section#locations h1,
@@ -679,6 +683,10 @@ section#contact {
 			width: 80%;
 			background-color: @color_contact;
 			margin-bottom: 1rem;
+		}
+
+		p > a {
+			.regular-button();
 		}
 	}
 

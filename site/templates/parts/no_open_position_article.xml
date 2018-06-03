@@ -10,6 +10,7 @@
 			name="articles"
 			action="show_list"
 			group="careers"
+			only_visible="1"
 			template="parts/career_item_view.xml"
 			>
 			<param name="section" value="career"/>
